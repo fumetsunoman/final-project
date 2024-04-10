@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>收件地址</title>
+	<!-- 引入 Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- 引入 Bootstrap Datepicker CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+		rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	<!-- 引入 jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+
+		input[type="text"],
+		input[type="email"],
+		input[type="password"],
+		input[type="tel"],
+		select {
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid black;
+			/* 下划线颜色和样式可以根据需求进行调整 */
+			outline: none;
+			/* 去除默认的输入框轮廓样式 */
+			border-radius: 0px;
+			height: 30px;
+			/* 將高度設置為 25px */
+		}
+
+
+		button[type="submit"] {
+			font-weight: 600;
+			width: 100%;
+			border: 1px solid #918989;
+			border-radius: 5px;
+			background-color: #ffffff;
+			color: #000000;
+			cursor: pointer;
+
+		}
+
+
+
+
+		.form-control {
+			margin-top: 5px;
+			background-color: #f8f9fa;
+			/* 设置输入框背景颜色为浅灰色 */
+		}
+
+
+
+		/* 将占位符颜色设置为黑色 */
+		input::placeholder {
+			color: black;
+		}
+
+
+	</style>
+
+
+</head>
+
+<body>
+<div style="width:60% ; margin:30px auto">
+	<div style="margin-bottom: 40px;">
+		<div style="font-size: 32px; font-weight: 600; margin-bottom: 5px;">收件地址一覽</div>
+		<div style="font-size: 16px; font-weight: 600; ">可更新您的宅配配送地址</div>
+	</div>
+
+	<form action="/edit" method="post" style="position: relative;width: 100%;">
+		<div style="font-size: 20px; font-weight: 600;width: 100%;  ">配送地址</div>
+			<div>
+				<input type="text" id="addAdress" name="addAddress" placeholder="最多可以創建20個地址" style="height: 20px; width:100% ;position:absolute;" required>
+				<button style="border:none;outline:none ;background-color: #ffffff; position:absolute; right:0;top:23px"><i class="fa-solid fa-plus"></i></button>
+		  </div>
+	</form>
+
+</div>
+
+
+
+  <script src="https://kit.fontawesome.com/564c252918.js" crossorigin="anonymous"></script>
+
+	<!-- 引入 Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- 引入 Bootstrap Datepicker JS -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+	<script>
+	
+	</script>
+
+</body>
+
+</html>

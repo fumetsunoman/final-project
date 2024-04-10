@@ -44,8 +44,10 @@
 		select {
 			width: 100%;
 			border: none;
-      border-bottom: 1px solid black ; /* 下划线颜色和样式可以根据需求进行调整 */
-      outline: none ; /* 去除默认的输入框轮廓样式 */
+			border-bottom: 1px solid black;
+			/* 下划线颜色和样式可以根据需求进行调整 */
+			outline: none;
+			/* 去除默认的输入框轮廓样式 */
 			border-radius: 0px;
 			height: 30px;
 			/* 將高度設置為 25px */
@@ -63,9 +65,20 @@
 
 		}
 
-		button[type="submit"]:hover {
+		/* button[type="submit"]:hover {
 			background-color: black;
 			color: white;
+		} */
+
+		/* button[type="submit"] #cancel :hover {
+			background-color: white;
+			color: black;
+		} */
+
+		/* 当按钮被悬停时 */
+		button:hover {
+			transform: translateY(-5px);
+			transition: transform 0.3s ease;
 		}
 
 
@@ -91,21 +104,21 @@
 		}
 
 
-
-
-
 		/* 将占位符颜色设置为黑色 */
-input::placeholder {
-    color: black;
-}
+		input::placeholder {
+			color: black;
+		}
 	</style>
+
+
 </head>
 
 <body>
 	<div class="container mt-5">
 		<div style="margin-bottom: 20px;">
 			<div style="font-size: 28px; font-weight: 600; margin-bottom: 5px;">個人資料
-				<button style="height: 20px; font-size: 12px; font-weight: 600; color:white; border-radius: 5px ; border:none ; background-color: rgb(227, 96, 96);outline: none;">修改</button>
+				<button
+					style="height: 20px; font-size: 12px; font-weight: 600; color:white; border-radius: 5px ; border:none ; background-color: #EEA68D;outline: none;">修改</button>
 			</div>
 
 			<div style="font-size: 18px; font-weight: 600; ">完成填寫個人資料可享有更多會員專屬權益</div>
@@ -115,17 +128,15 @@ input::placeholder {
 			<div class="d-flex " style="margin-top: 15px;">
 				<div style="width: 30%; margin-right: 30px; ">
 					<label for="name">姓名</label><br>
-					<input type="text" id="firstName" name="name"  placeholder="姓" style="height: 38px;"
-						required>
+					<input type="text" id="firstName" name="name" placeholder="姓" style="height: 38px;" required>
 				</div>
-				<div style="width:30% ;display: flex; align-items: flex-end;" >
-					<input type="text" id="lastName" name="name"  placeholder="名"
-						style="height: 38px;" required>
+				<div style="width:30% ;display: flex; align-items: flex-end;">
+					<input type="text" id="lastName" name="name" placeholder="名" style="height: 38px;" required>
 				</div>
 			</div>
 
 			<div class="d-flex justify-content-between" style="margin-top: 15px;">
-				<div  style="width: 45%;">
+				<div style="width: 45%;">
 					<label for="email">性別</label>
 					<div style="margin-top: 10px;">
 						<input type="checkbox" id="male" name="gender" value="male" style="margin-right: 2px;">
@@ -152,7 +163,7 @@ input::placeholder {
 						</script>
 					</select>
 				</div>
-				<div style="width:33% ; margin-right: 30px;" >
+				<div style="width:33% ; margin-right: 30px;">
 					<label for="month">月份</label>
 					<select id="month" name="month">
 						<option value="1">一月</option>
@@ -173,65 +184,62 @@ input::placeholder {
 				<div style="width: 33%;">
 					<label for="day">日期</label>
 					<select id="day" name="day"></select>
-			</div>
+				</div>
 			</div>
 
 
 			<div class="d-flex" style="margin-top: 20px;">
-					<div style="width:33% ; margin-right: 30px;" >
-						<label for="city">居住縣市:</label><br>
-						<select id="city" name="city" onchange="populateDistricts()"  required>
-							<option value="">請選擇居住縣市</option>
-							<option value="基隆市">基隆市</option>
-							<option value="台北市">台北市</option>
-							<option value="新北市">新北市</option>
-							<option value="桃園市">桃園市</option>
-							<option value="新竹市">新竹市</option>
-							<option value="新竹縣">新竹縣</option>
-							<option value="苗栗縣">苗栗縣</option>
-							<option value="台中市">台中市</option>
-							<option value="彰化縣">彰化縣</option>
-							<option value="南投縣">南投縣</option>
-							<option value="雲林縣">雲林縣</option>
-							<option value="嘉義市">嘉義市</option>
-							<option value="嘉義縣">嘉義縣</option>
-							<option value="台南市">台南市</option>
-							<option value="高雄市">高雄市</option>
-							<option value="屏東縣">屏東縣</option>
-							<option value="台東縣">台東縣</option>
-							<option value="花蓮縣">花蓮縣</option>
-							<option value="宜蘭縣">宜蘭縣</option>
-							<option value="澎湖縣">澎湖縣</option>
-							<option value="金門縣">金門縣</option>
-							<option value="連江縣">連江縣</option>
-						</select>
-					</div>
-					<div style="width:33% ; margin-right: 30px;">
-						<label for="district">鄉鎮區</label><br>
-						<select id="district" name="district"  required>
-							<option value="" class="form-control">請選擇鄉鎮區</option>
-						</select>
-					</div>
-					<div style="width: 33%;">
-						<label for="address">居住地址</label><br>
-						<input type="text" id="address" name="address" placeholder="請輸入地址" 
-							required>
-					</div>
+				<div style="width:33% ; margin-right: 30px;">
+					<label for="city">居住縣市:</label><br>
+					<select id="city" name="city" onchange="populateDistricts()" required>
+						<option value="">請選擇居住縣市</option>
+						<option value="基隆市">基隆市</option>
+						<option value="台北市">台北市</option>
+						<option value="新北市">新北市</option>
+						<option value="桃園市">桃園市</option>
+						<option value="新竹市">新竹市</option>
+						<option value="新竹縣">新竹縣</option>
+						<option value="苗栗縣">苗栗縣</option>
+						<option value="台中市">台中市</option>
+						<option value="彰化縣">彰化縣</option>
+						<option value="南投縣">南投縣</option>
+						<option value="雲林縣">雲林縣</option>
+						<option value="嘉義市">嘉義市</option>
+						<option value="嘉義縣">嘉義縣</option>
+						<option value="台南市">台南市</option>
+						<option value="高雄市">高雄市</option>
+						<option value="屏東縣">屏東縣</option>
+						<option value="台東縣">台東縣</option>
+						<option value="花蓮縣">花蓮縣</option>
+						<option value="宜蘭縣">宜蘭縣</option>
+						<option value="澎湖縣">澎湖縣</option>
+						<option value="金門縣">金門縣</option>
+						<option value="連江縣">連江縣</option>
+					</select>
+				</div>
+				<div style="width:33% ; margin-right: 30px;">
+					<label for="district">鄉鎮區</label><br>
+					<select id="district" name="district" required>
+						<option value="" class="form-control">請選擇鄉鎮區</option>
+					</select>
+				</div>
+				<div style="width: 33%;">
+					<label for="address">居住地址</label><br>
+					<input type="text" id="address" name="address" placeholder="請輸入地址" required>
+				</div>
 			</div>
 
 			<div class="d-flex " style="margin-top: 20px;">
 				<div style="width: 40%; margin-right: 30px; ">
 					<label for="email">電子郵件地址</label><br>
-					<input type="text" id="email" name="email" style="height: 20px;"
-						required>
+					<input type="text" id="email" name="email" style="height: 20px;" required>
 				</div>
 			</div>
 
 			<div class="d-flex " style="margin-top: 20px;">
 				<div style="width: 12%; margin-right: 30px; ">
 					<label for="phone">手機號碼</label><br>
-					<input type="text" id="phone" name="phone" style="height: 30px; "
-						value="09-XXXXX001"  required>
+					<input type="text" id="phone" name="phone" style="height: 30px; " value="09-XXXXX001" required>
 				</div>
 			</div>
 
@@ -242,7 +250,7 @@ input::placeholder {
 				</div>
 				<div style="width: 40%;">
 					<button type="submit" style="font-size: 25px;background-color: #0a0a0a;
-					color: #fcf4f4;">儲存</button>
+					color: #fcf4f4;" id="save">儲存</button>
 				</div>
 			</div>
 
@@ -323,35 +331,35 @@ input::placeholder {
 
 
 
-    // 获取年份、月份和日期的下拉菜单
-    var yearDropdown = document.getElementById("year");
-    var monthDropdown = document.getElementById("month");
-    var dayDropdown = document.getElementById("day");
+		// 获取年份、月份和日期的下拉菜单
+		var yearDropdown = document.getElementById("year");
+		var monthDropdown = document.getElementById("month");
+		var dayDropdown = document.getElementById("day");
 
-    // 根据选择的年份和月份动态生成日期选项
-    function updateDays() {
-        var selectedMonth = parseInt(monthDropdown.value);
-        var selectedYear = parseInt(yearDropdown.value);
-        var daysInMonth = new Date(selectedYear, selectedMonth, 0).getDate();
+		// 根据选择的年份和月份动态生成日期选项
+		function updateDays() {
+			var selectedMonth = parseInt(monthDropdown.value);
+			var selectedYear = parseInt(yearDropdown.value);
+			var daysInMonth = new Date(selectedYear, selectedMonth, 0).getDate();
 
-        // 清空日期下拉菜单
-        dayDropdown.innerHTML = "";
+			// 清空日期下拉菜单
+			dayDropdown.innerHTML = "";
 
-        // 生成日期选项
-        for (var day = 1; day <= daysInMonth; day++) {
-            var option = document.createElement("option");
-            option.value = day;
-            option.text = day;
-            dayDropdown.appendChild(option);
-        }
-    }
+			// 生成日期选项
+			for (var day = 1; day <= daysInMonth; day++) {
+				var option = document.createElement("option");
+				option.value = day;
+				option.text = day;
+				dayDropdown.appendChild(option);
+			}
+		}
 
-    // 当月份或年份选择发生变化时更新日期选项
-    monthDropdown.addEventListener("change", updateDays);
-    yearDropdown.addEventListener("change", updateDays);
+		// 当月份或年份选择发生变化时更新日期选项
+		monthDropdown.addEventListener("change", updateDays);
+		yearDropdown.addEventListener("change", updateDays);
 
-    // 页面加载时立即更新日期选项
-    updateDays();
+		// 页面加载时立即更新日期选项
+		updateDays();
 
 	</script>
 

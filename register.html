@@ -139,12 +139,11 @@
           <div class="input-group">
             <input type="text" class="form-control" id="birthdate" name="birthdate" placeholder="年 / 月 / 日"
               style="height: 38px;" required>
-            <div class="input-group-prepend" style="margin-top: 5px;">
-              <span class="input-group-text " style="height: 38px; ">
-                <!--行內元素不能設寬高，但因為bootstrap input-group-text的關係 讓span元素轉為display: inline-flex 所以可以制定寬高-->
-                <i class="fa fa-calendar"></i>
-              </span>
-            </div>
+              <div class="input-group-prepend" style="margin-top: 5px;">
+                <span class="input-group-text" style="height: 38px;">
+                  <i id="calendar-icon" class="fa fa-calendar" style="cursor: pointer;"></i>
+                </span>
+              </div>
           </div>
         </div>
       </div>
@@ -281,13 +280,19 @@
     }
 
 
-    // 初始化日期选择器
-    $(document).ready(function () {
-      $('#birthdate').datepicker({
-        format: 'yyyy-mm-dd', // 日期格式
-        autoclose: true // 选择日期后自动关闭
-      });
-    });
+ // Initialize datepicker with orientation option
+$(document).ready(function () {
+  $('#birthdate').datepicker({
+    format: 'yyyy-mm-dd', // Date format
+    autoclose: true, // Close the datepicker when date is selected
+    orientation: 'auto bottom' // Open the dropdown downwards
+  });
+});
+
+  // Add event listener to calendar icon
+  $('#calendar-icon').click(function() {
+    $('#birthdate').datepicker('show');
+  });
   </script>
 
 </body>

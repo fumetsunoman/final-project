@@ -22,81 +22,234 @@
 
   <style>
     body {
-	font-family: Arial, sans-serif;
-}
+      font-family: Arial, sans-serif;
+    }
 
-.container {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 20px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-}
-
-
-label {
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-select {
-	width: 100%;
-	border: 1px solid #ccc;
-	border-radius: 5px;
-	height: 30px;
-	/* 將高度設置為 25px */
-}
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
 
 
-button[type="submit"] {
-	font-weight: 600;
-	width: 100%;
-	border: 1px solid #918989;
-	border-radius: 5px;
-	background-color: #ffffff;
-	color: #000000;
-	cursor: pointer;
+    .accountAndPassword {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-}
+    .email {
+      width: 100%;
+    }
 
-button[type="submit"]:hover {
-	background-color: black;
-	color: white;
-}
+    .password {
+      width: 100%;
+      margin-top: 15px;
+    }
 
 
 
-/* 調整出生年月日輸入框高度 */
-#birthdate {
-	height: 30px;
-	/* 設置輸入框高度為 30px */
-}
-
-.form-control {
-	margin-top: 5px;
-	background-color: #f8f9fa;
-	/* 设置输入框背景颜色为浅灰色 */
-}
-
-.form-control:focus {
-	border-color: #EEA68D;
-	/* 获取焦点时的外边框颜色为浅橘色 */
-	box-shadow: 0 0 0 0.1rem #EEA68D;
-	/* 可选的获取焦点时阴影效果 */
-}
+    .nameGenderBirthdate div {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
 
 
 
-/* 調整圖示高度 */
-.input-group-text {
-	height: 30px;
-	/* 設置圖示高度為 30px */
-}
+    .name {
+      width: 35%;
+      margin-right: 15px;
+    }
 
+    .gender {
+      width: 19%
+    }
+
+    .birthdate {
+      width: 60%;
+      margin-top: 15px;
+    }
+
+    .phone {
+      margin-top: 15px;
+    }
+
+    .phone div {
+      width: 45%;
+
+    }
+
+    .cityDistrictAddress {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    .cityDistrict {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%
+    }
+
+    .city {
+      width: 48%;
+      margin-right: 15px;
+    }
+
+    .district {
+      width: 48%;
+    }
+
+    .address {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+
+
+
+
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      height: 30px;
+      /* 將高度設置為 25px */
+    }
+
+
+    button[type="submit"] {
+      font-weight: 600;
+      width: 100%;
+      border: 1px solid #918989;
+      border-radius: 5px;
+      background-color: #ffffff;
+      color: #000000;
+      cursor: pointer;
+
+    }
+
+    button[type="submit"]:hover {
+      background-color: black;
+      color: white;
+    }
+
+
+
+    /* 調整出生年月日輸入框高度 */
+    #birthdate {
+      height: 30px;
+      /* 設置輸入框高度為 30px */
+    }
+
+    .form-control {
+      margin-top: 5px;
+      background-color: #f8f9fa;
+      /* 设置输入框背景颜色为浅灰色 */
+    }
+
+    .form-control:focus {
+      border-color: #EEA68D;
+      /* 获取焦点时的外边框颜色为浅橘色 */
+      box-shadow: 0 0 0 0.1rem #EEA68D;
+      /* 可选的获取焦点时阴影效果 */
+    }
+
+    /* 調整圖示高度 */
+    .input-group-text {
+      height: 30px;
+      /* 設置圖示高度為 30px */
+    }
+
+
+    @media screen and (min-width: 1440px) {
+
+      .container {
+        max-width: 800px !important;
+      }
+
+      .accountAndPassword {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .email {
+        width: 50%;
+        margin-right: 30px;
+      }
+
+      .password {
+        width: 50%;
+        margin-top: 0px;
+      }
+
+      .name {
+        width: 32%;
+        margin-right: 15px;
+      }
+
+      .gender {
+        width: 32%
+      }
+
+      .birthdate {
+        width: 32%;
+        margin-top: 15px;
+        margin-left: 15px;
+      }
+
+      .birthdate .input-group{
+        margin-bottom: 15px;
+      }
+
+      
+    .phone div {
+      width: 33%;
+
+    }
+
+    .cityDistrictAddress {
+      display: flex;
+      flex-wrap: nowrap;
+      margin-top: 15px;
+    }
+
+    .cityDistrict {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%
+    }
+
+    .city {
+      width: 50%;
+      margin-right: 15px;
+    }
+
+    .district {
+      width: 50%;
+      margin-right: 15px;
+    }
+
+    .address {
+      width: 50%;
+      margin-top: 0px;
+
+    }
+
+
+    }
   </style>
 </head>
 
@@ -109,51 +262,52 @@ button[type="submit"]:hover {
     </div>
 
     <form action="/register" method="post">
-      <div class="d-flex justify-content-between" style="margin-top: 15px;">
-        <div style="width: 45%;">
+      <div style=" margin-top: 15px;" class="accountAndPassword">
+        <div class="email">
           <label for="email">Email 帳號:</label><br>
           <input type="email" id="email" name="email" class="form-control" placeholder="請輸入帳號" style="height: 38px;"
             required>
         </div>
-        <div style="width:45%">
+        <div class="password">
           <label for="password">密碼:</label> <br>
           <input type="password" id="password" name="password" class="form-control" placeholder="請輸入密碼"
             style="height: 38px;" required>
         </div>
       </div>
 
-      <div class="d-flex justify-content-between" style="margin-top: 15px;">
-        <div class="d-flex justify-content-between" style="width: 45%;">
-          <div style="width:65%">
+      <div class="nameGenderBirthdate">
+        <div >
+          <div class="name">
             <label for="name">姓名:</label><br>
             <input type="text" id="name" name="name" class="form-control" placeholder="請輸入姓名" style="height: 38px;"
               required>
           </div>
-          <div style="width:20%">
+          <div class="gender">
             <label for="gender">生理性別:</label><br>
             <select id="gender" name="gender" class="form-control" required>
               <option value="male">男生</option>
               <option value="female">女生</option>
             </select>
           </div>
-        </div>
-        <div style="width:45%">
-          <label for="birthdate">出生年月日:</label>
-          <div class="input-group">
-            <input type="text" class="form-control" id="birthdate" name="birthdate" placeholder="年 / 月 / 日"
-              style="height: 38px;" required>
+          <div class="birthdate">
+            <label for="birthdate">出生年月日:</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="birthdate" name="birthdate" placeholder="年 / 月 / 日"
+                style="height: 38px;" required>
               <div class="input-group-prepend" style="margin-top: 5px;">
                 <span class="input-group-text" style="height: 38px;">
                   <i id="calendar-icon" class="fa fa-calendar" style="cursor: pointer;"></i>
                 </span>
               </div>
+            </div>
           </div>
         </div>
+
       </div>
 
 
-      <div class="d-flex justify-content-between" style="margin-top: 15px;">
-        <div style="width: 45%;">
+      <div class="phone">
+        <div>
           <label for="phone">手機:</label><br>
           <input type="tel" id="phone" name="phone" class="form-control" placeholder="請輸入手機號碼" style="height: 38px;"
             required>
@@ -161,9 +315,9 @@ button[type="submit"]:hover {
       </div>
 
 
-      <div class="d-flex justify-content-between" style="margin-top: 15px;">
-        <div class="d-flex justify-content-between" style="width:45%">
-          <div style="width:45%">
+      <div class="cityDistrictAddress">
+        <div class="cityDistrict">
+          <div class="city">
             <label for="city">居住縣市:</label><br>
             <select id="city" name="city" onchange="populateDistricts()" class="form-control" required>
               <option value="">請選擇居住縣市</option>
@@ -191,14 +345,14 @@ button[type="submit"]:hover {
               <option value="連江縣">連江縣</option>
             </select>
           </div>
-          <div style="width:45%">
+          <div class="district">
             <label for="district">鄉鎮區:</label><br>
             <select id="district" name="district" class="form-control" required>
               <option value="" class="form-control">請選擇鄉鎮區</option>
             </select>
           </div>
         </div>
-        <div style="width: 45%;">
+        <div class="address">
           <label for="address">居住地址:</label><br>
           <input type="text" id="address" name="address" placeholder="請輸入地址" style="height: 38px;" class="form-control"
             required>
@@ -283,19 +437,19 @@ button[type="submit"]:hover {
     }
 
 
- // Initialize datepicker with orientation option
-$(document).ready(function () {
-  $('#birthdate').datepicker({
-    format: 'yyyy-mm-dd', // Date format
-    autoclose: true, // Close the datepicker when date is selected
-    orientation: 'auto bottom' // Open the dropdown downwards
-  });
-});
+    // Initialize datepicker with orientation option
+    $(document).ready(function () {
+      $('#birthdate').datepicker({
+        format: 'yyyy-mm-dd', // Date format
+        autoclose: true, // Close the datepicker when date is selected
+        orientation: 'auto bottom' // Open the dropdown downwards
+      });
+    });
 
-  // Add event listener to calendar icon
-  $('#calendar-icon').click(function() {
-    $('#birthdate').datepicker('show');
-  });
+    // Add event listener to calendar icon
+    $('#calendar-icon').click(function () {
+      $('#birthdate').datepicker('show');
+    });
 
 
 

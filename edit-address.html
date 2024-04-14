@@ -59,6 +59,7 @@
 
 
 		button[type="submit"] {
+			font-size: 25px;
 			font-weight: 600;
 			width: 100%;
 			border: 1px solid #918989;
@@ -108,6 +109,57 @@
 			color:#000000;
 		}
 
+		@media screen and (max-width: 414px) {
+    /* 調整標題文字大小和間距 */
+    .container div div {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    /* 調整段落文字大小 */
+    .container div div div p {
+        font-size: 14px;
+    }
+
+		.container div div div p,
+    .container div div div p a {
+        white-space: nowrap;
+    }
+
+    /* 調整按鈕大小和間距 */
+    .container div div div button {
+        font-size: 20px !important;
+        margin-top: 20px;
+    }
+
+    /* 調整鄉鎮區選項樣式 */
+    #districtGroup select {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+		.editAddress {
+			margin-bottom: 0px !important;
+		}
+
+		.editAddress p{
+			margin-bottom: 3px;
+		}
+
+		button[type="submit"] {
+			font-size: 20px;
+			width: 100%;
+			padding: 5px;
+		}
+
+		div.title{
+			font-size: 20px !important;
+		}
+
+		div.title span{
+			font-size: 16px !important;
+		}
+}
 
 
 
@@ -134,7 +186,7 @@
 			</div>
 
 			<div style="margin-top: 30px;">
-				<div style="font-size: 16px; font-weight: 600;">匿名工程師 <span style="font-size: 12px;">當前配送地址</span></div>
+				<div style="font-size: 16px; font-weight: 600;" class="title">匿名工程師 <span style="font-size: 12px;">當前配送地址</span></div>
 				<div style="margin-top: 15px; border-bottom:1px solid rgb(199, 193, 193);width: 90%;">
 						<p>台北市信義區大安路康莊街12巷16號</p>
 						<p>09xxxxx001 </p>
@@ -147,7 +199,7 @@
 			</div>
 
 			<div style="margin-top: 30px;">
-				<div style="font-size: 16px; font-weight: 600;">匿名工程師 <span style="font-size: 12px;">當前配送地址</span></div>
+				<div style="font-size: 16px; font-weight: 600;" class="title">匿名工程師 <span style="font-size: 12px;">當前配送地址</span></div>
 				<div style="margin-top: 15px; border-bottom:1px solid rgb(199, 193, 193);width: 90%;">
 						<p>台北市信義區大安路康莊街12巷16號</p>
 						<p>09xxxxx001 </p>
@@ -162,7 +214,7 @@
 
 			<div class="d-flex " style="margin-top:35px;">
 				<div style="width: 50%;">
-					<button type="submit" style="font-size: 25px;background-color: #0a0a0a;
+					<button type="submit" style="background-color: #0a0a0a;
 					color: white;" id="save">新增收貨地址</button>
 				</div>
 			</div>

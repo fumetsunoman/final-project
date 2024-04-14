@@ -108,6 +108,39 @@
 		input::placeholder {
 			color: black;
 		}
+
+
+		.email{
+			width:35%;
+		}
+
+		.phone{
+			width:30%
+		}
+
+		@media screen and (max-width: 414px) {
+    /* 在此處添加要應用於較小螢幕時的樣式 */
+
+
+    input::placeholder {
+        font-size: 13px !important;
+        /* 將占位符文字大小設置為 10px */
+    }
+
+		select {
+        font-size: 13px; /* 您可以將此值更改為您想要的字體大小 */
+    }
+
+		.email{
+			width:60%;
+		}
+
+		.phone{
+			width: 40% ;
+			font-size: 13px;
+		}
+}
+
 	</style>
 
 
@@ -218,7 +251,7 @@
 				<div style="width:33% ; margin-right: 30px;">
 					<label for="district">鄉鎮區</label><br>
 					<select id="district" name="district" required>
-						<option value="" class="form-control">請選擇鄉鎮區</option>
+						<option value="" class="form-control" >請選擇鄉鎮區</option>
 					</select>
 				</div>
 				<div style="width: 33%;">
@@ -227,15 +260,15 @@
 				</div>
 			</div>
 
-			<div class="d-flex " style="margin-top: 20px;">
-				<div style="width: 40%; margin-right: 30px; ">
+			<div class="d-flex email" style="margin-top: 20px;">
+				<div style="margin-right: 30px; ">
 					<label for="email">電子郵件地址</label><br>
 					<input type="text" id="email" name="email" style="height: 20px;" required>
 				</div>
 			</div>
 
-			<div class="d-flex " style="margin-top: 20px;">
-				<div style="width: 12%; margin-right: 30px; ">
+			<div class="d-flex phone" style="margin-top: 20px;">
+				<div style="margin-right: 30px; ">
 					<label for="phone">手機號碼</label><br>
 					<input type="text" id="phone" name="phone" style="height: 30px; " value="09-XXXXX001" required>
 				</div>

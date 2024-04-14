@@ -23,13 +23,58 @@
 			font-family: Arial, sans-serif;
 		}
 
+		.personalData{
+			display: flex;
+			justify-content: center;
+		}
+
 		.container {
-			max-width: 1000px;
-			margin: 0 auto;
+			max-width: 450px;
 			padding: 30px;
 			border: 1px solid #ccc;
 			border-radius: 5px;
 		}
+
+
+		.writeName div{
+			flex-wrap: rap ;
+			width: 40% ;
+		}
+
+		.writeBirthday{
+			flex-wrap: wrap ;
+		}
+
+		.writeBirthday div{
+			width:40%;
+			margin-top: 10px ;
+		}
+
+
+		.writeAddress{
+			flex-wrap: wrap ;
+		}
+
+		.writeAddress div{
+			width:40% ;
+			margin-top: 15px ;
+		}
+
+		.writeAddress .liveAddress{
+			width: 50%;
+		}
+
+		.email{
+			width: 100%;
+		}
+
+		.button div{
+			width:40% ;
+		}
+
+
+
+
 
 
 		label {
@@ -42,6 +87,7 @@
 		input[type="password"],
 		input[type="tel"],
 		select {
+			font-size: 16px;
 			width: 100%;
 			border: none;
 			border-bottom: 1px solid black;
@@ -110,35 +156,73 @@
 		}
 
 
-		.email{
-			width:35%;
-		}
 
 		.phone{
-			width:30%
+			width:50%
 		}
 
-		@media screen and (max-width: 414px) {
+		form div div   button{
+			font-size: 18px;
+		}
+
+		@media screen and (min-width: 1440px) {
     /* 在此處添加要應用於較小螢幕時的樣式 */
 
+		.container{
+			max-width: 900px !important;
+		}
 
-    input::placeholder {
-        font-size: 13px !important;
-        /* 將占位符文字大小設置為 10px */
-    }
+		.writeName div{
+			width: 30% ;
+		}
+
+		.writeBirthday{
+			flex-wrap: nowrap ;
+		}
+
+		.writeBirthday div{
+			width:30% ;
+			margin-top: 0px ;
+		}
+
+		.writeAddress{
+			flex-wrap: nowrap ;
+		}
+
+
+
+		.writeAddress div{
+			width:30% ;
+			margin-top: 0px;
+		}
+
+		.writeAddress  .liveAddress {
+			width:30%;
+		}
+
 
 		select {
-        font-size: 13px; /* 您可以將此值更改為您想要的字體大小 */
+        font-size: 16px; /* 您可以將此值更改為您想要的字體大小 */
     }
 
 		.email{
-			width:60%;
+			width:80% ;
 		}
 
 		.phone{
-			width: 40% ;
-			font-size: 13px;
+			width: 20% ;
+			font-size: 16px;
 		}
+
+		.button div{
+			width:33% ;
+		}
+
+		form div div   button{
+			font-size: 25px;
+		}
+
+
 }
 
 	</style>
@@ -147,146 +231,150 @@
 </head>
 
 <body>
-	<div class="container mt-5">
-		<div style="margin-bottom: 20px;">
-			<div style="font-size: 28px; font-weight: 600; margin-bottom: 5px;">個人資料
-				<button
-					style="height: 20px; font-size: 12px; font-weight: 600; color:white; border-radius: 5px ; border:none ; background-color: #EEA68D;outline: none;">修改</button>
-			</div>
-
-			<div style="font-size: 18px; font-weight: 600; ">完成填寫個人資料可享有更多會員專屬權益</div>
-		</div>
-
-		<form action="/edit" method="post">
-			<div class="d-flex " style="margin-top: 15px;">
-				<div style="width: 30%; margin-right: 30px; ">
-					<label for="name">姓名</label><br>
-					<input type="text" id="firstName" name="name" placeholder="姓" style="height: 38px;" required>
+	<div class="personalData">
+		<div class="container mt-5">
+			<div style="margin-bottom: 20px;">
+				<div style="font-size: 28px; font-weight: 600; margin-bottom: 5px;">個人資料
+					<button
+						style="height: 20px; font-size: 12px; font-weight: 600; color:white; border-radius: 5px ; border:none ; background-color: #EEA68D;outline: none;">修改</button>
 				</div>
-				<div style="width:30% ;display: flex; align-items: flex-end;">
-					<input type="text" id="lastName" name="name" placeholder="名" style="height: 38px;" required>
-				</div>
+	
+				<div style="font-size: 18px; font-weight: 600; ">完成填寫個人資料可享有更多會員專屬權益</div>
 			</div>
-
-			<div class="d-flex justify-content-between" style="margin-top: 15px;">
-				<div style="width: 45%;">
-					<label for="email">生理性別</label>
-					<div style="margin-top: 10px;">
-						<input type="checkbox" id="male" name="gender" value="male" style="margin-right: 2px;">
-						<label for="male" style="margin-right: 10px;">男</label>
-						<input type="checkbox" id="female" name="gender" value="female" style="margin-right: 2px;">
-						<label for="female" style="margin-right: 10px;">女</label>
+	
+			<form action="/edit" method="post">
+				<div class="d-flex writeName" style="margin-top: 15px;">
+					<div style=" margin-right: 30px; ">
+						<label for="name">姓名</label><br>
+						<input type="text" id="firstName" name="name" placeholder="姓" style="height: 38px;" required>
+					</div>
+					<div style="display: flex; align-items: flex-end;">
+						<input type="text" id="lastName" name="name" placeholder="名" style="height: 38px;" required>
 					</div>
 				</div>
-			</div>
-
-
-			<div class="d-flex " style="margin-top: 15px;">
-				<div style="width: 33%; margin-right: 30px; ">
-					<label for="year">生日</label>
-					<select id="year" name="year">
-						<!-- 使用JavaScript生成年份选项 -->
-						<script>
-							var currentYear = new Date().getFullYear();
-							for (var year = currentYear; year >= 1900; year--) {
-								document.write('<option value="' + year + '">' + year + '</option>');
-							}
-						</script>
-					</select>
+	
+				<div class="d-flex justify-content-between" style="margin-top: 15px;">
+					<div style="width: 45%;">
+						<label for="email">生理性別</label>
+						<div style="margin-top: 10px;">
+							<input type="checkbox" id="male" name="gender" value="male" style="margin-right: 2px;">
+							<label for="male" style="margin-right: 10px;">男</label>
+							<input type="checkbox" id="female" name="gender" value="female" style="margin-right: 2px;">
+							<label for="female" style="margin-right: 10px;">女</label>
+						</div>
+					</div>
 				</div>
-				<div style="width:33% ; margin-right: 30px;">
-					<label for="month">月份</label>
-					<select id="month" name="month">
-						<option value="1">一月</option>
-						<option value="2">二月</option>
-						<option value="3">三月</option>
-						<option value="4">四月</option>
-						<option value="5">五月</option>
-						<option value="6">六月</option>
-						<option value="7">七月</option>
-						<option value="8">八月</option>
-						<option value="9">九月</option>
-						<option value="10">十月</option>
-						<option value="11">十一月</option>
-						<option value="12">十二月</option>
-					</select>
+	
+	
+				<div class="d-flex  writeBirthday" style="margin-top: 15px; display: flex;">
+					<div style="margin-right: 30px; ">
+						<label for="year">生日</label>
+						<select id="year" name="year">
+							<!-- 使用JavaScript生成年份选项 -->
+							<script>
+								var currentYear = new Date().getFullYear();
+								for (var year = currentYear; year >= 1900; year--) {
+									document.write('<option value="' + year + '">' + year + '</option>');
+								}
+							</script>
+						</select>
+					</div>
+					<div style="margin-right: 30px;">
+						<label for="month">月份</label>
+						<select id="month" name="month">
+							<option value="1">一月</option>
+							<option value="2">二月</option>
+							<option value="3">三月</option>
+							<option value="4">四月</option>
+							<option value="5">五月</option>
+							<option value="6">六月</option>
+							<option value="7">七月</option>
+							<option value="8">八月</option>
+							<option value="9">九月</option>
+							<option value="10">十月</option>
+							<option value="11">十一月</option>
+							<option value="12">十二月</option>
+						</select>
+					</div>
+	
+					<div>
+						<label for="day">日期</label>
+						<select id="day" name="day"></select>
+					</div>
 				</div>
+	
+	
+				<div class="d-flex writeAddress" style="margin-top: 20px; display:flex;">
+					<div style="margin-right: 30px;">
+						<label for="city">居住縣市:</label><br>
+						<select id="city" name="city" onchange="populateDistricts()" required>
+							<option value="">請選擇居住縣市</option>
+							<option value="基隆市">基隆市</option>
+							<option value="台北市">台北市</option>
+							<option value="新北市">新北市</option>
+							<option value="桃園市">桃園市</option>
+							<option value="新竹市">新竹市</option>
+							<option value="新竹縣">新竹縣</option>
+							<option value="苗栗縣">苗栗縣</option>
+							<option value="台中市">台中市</option>
+							<option value="彰化縣">彰化縣</option>
+							<option value="南投縣">南投縣</option>
+							<option value="雲林縣">雲林縣</option>
+							<option value="嘉義市">嘉義市</option>
+							<option value="嘉義縣">嘉義縣</option>
+							<option value="台南市">台南市</option>
+							<option value="高雄市">高雄市</option>
+							<option value="屏東縣">屏東縣</option>
+							<option value="台東縣">台東縣</option>
+							<option value="花蓮縣">花蓮縣</option>
+							<option value="宜蘭縣">宜蘭縣</option>
+							<option value="澎湖縣">澎湖縣</option>
+							<option value="金門縣">金門縣</option>
+							<option value="連江縣">連江縣</option>
+						</select>
+					</div>
+					<div style="margin-right: 30px;">
+						<label for="district">鄉鎮區</label><br>
+						<select id="district" name="district" required>
+							<option value="" class="form-control" >請選擇鄉鎮區</option>
+						</select>
+					</div>
+					<div  class="liveAddress" >
+						<label for="address">居住地址</label><br>
+						<input type="text" id="address" name="address" placeholder="請輸入地址" required>
+					</div>
+				</div>
+	
+				<div class="d-flex " style="margin-top: 20px; width:50%">
+					<div  class="email">
+						<label for="email">電子郵件地址</label><br>
+						<input type="text" id="email" name="email" style="height: 20px;" placeholder="請輸電子郵件">
+					</div>
+				</div>
+	
+				<div class="d-flex" style="margin-top: 20px;">
+					<div style="margin-right: 30px; " class="phone">
+						<label for="phone">手機號碼</label><br>
+						<input type="text" id="phone" name="phone" style="height: 30px; " value="09-XXXXX001" required>
+					</div>
+				</div>
+	
+	
+				<div class="d-flex button" style="margin-top:20px;">
+					<div style="margin-right: 30px;">
+						<button type="submit" >取消</button>
+					</div>
+					<div>
+						<button type="submit" style="background-color: #0a0a0a;
+						color: #fcf4f4;" id="save">儲存</button>
+					</div>
+				</div>
+	
+			</form>
+		</div>
 
-				<div style="width: 33%;">
-					<label for="day">日期</label>
-					<select id="day" name="day"></select>
-				</div>
-			</div>
-
-
-			<div class="d-flex" style="margin-top: 20px;">
-				<div style="width:33% ; margin-right: 30px;">
-					<label for="city">居住縣市:</label><br>
-					<select id="city" name="city" onchange="populateDistricts()" required>
-						<option value="">請選擇居住縣市</option>
-						<option value="基隆市">基隆市</option>
-						<option value="台北市">台北市</option>
-						<option value="新北市">新北市</option>
-						<option value="桃園市">桃園市</option>
-						<option value="新竹市">新竹市</option>
-						<option value="新竹縣">新竹縣</option>
-						<option value="苗栗縣">苗栗縣</option>
-						<option value="台中市">台中市</option>
-						<option value="彰化縣">彰化縣</option>
-						<option value="南投縣">南投縣</option>
-						<option value="雲林縣">雲林縣</option>
-						<option value="嘉義市">嘉義市</option>
-						<option value="嘉義縣">嘉義縣</option>
-						<option value="台南市">台南市</option>
-						<option value="高雄市">高雄市</option>
-						<option value="屏東縣">屏東縣</option>
-						<option value="台東縣">台東縣</option>
-						<option value="花蓮縣">花蓮縣</option>
-						<option value="宜蘭縣">宜蘭縣</option>
-						<option value="澎湖縣">澎湖縣</option>
-						<option value="金門縣">金門縣</option>
-						<option value="連江縣">連江縣</option>
-					</select>
-				</div>
-				<div style="width:33% ; margin-right: 30px;">
-					<label for="district">鄉鎮區</label><br>
-					<select id="district" name="district" required>
-						<option value="" class="form-control" >請選擇鄉鎮區</option>
-					</select>
-				</div>
-				<div style="width: 33%;">
-					<label for="address">居住地址</label><br>
-					<input type="text" id="address" name="address" placeholder="請輸入地址" required>
-				</div>
-			</div>
-
-			<div class="d-flex email" style="margin-top: 20px;">
-				<div style="margin-right: 30px; ">
-					<label for="email">電子郵件地址</label><br>
-					<input type="text" id="email" name="email" style="height: 20px;" required>
-				</div>
-			</div>
-
-			<div class="d-flex phone" style="margin-top: 20px;">
-				<div style="margin-right: 30px; ">
-					<label for="phone">手機號碼</label><br>
-					<input type="text" id="phone" name="phone" style="height: 30px; " value="09-XXXXX001" required>
-				</div>
-			</div>
-
-
-			<div class="d-flex justify-content-between" style="margin-top:20px;">
-				<div style="width: 40%;">
-					<button type="submit" style="font-size: 25px;">取消</button>
-				</div>
-				<div style="width: 40%;">
-					<button type="submit" style="font-size: 25px;background-color: #0a0a0a;
-					color: #fcf4f4;" id="save">儲存</button>
-				</div>
-			</div>
-
-		</form>
 	</div>
+
 
 	<!-- 引入 Bootstrap JS -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

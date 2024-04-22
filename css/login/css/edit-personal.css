@@ -1,0 +1,201 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+.personalData{
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	max-width: 450px;
+	padding: 30px;
+	border: 1px solid rgb(157, 145, 145);
+	border-radius: 5px;
+}
+
+
+.writeName div{
+	flex-wrap: rap ;
+	width: 40% ;
+}
+
+.writeBirthday{
+	flex-wrap: wrap ;
+}
+
+.writeBirthday div{
+	width:40%;
+	margin-top: 10px ;
+}
+
+
+.writeAddress{
+	flex-wrap: wrap ;
+}
+
+.writeAddress div{
+	width:40% ;
+	margin-top: 15px ;
+}
+
+.writeAddress .liveAddress{
+	width: 50%;
+}
+
+.email{
+	width: 100%;
+}
+
+.button div{
+	width:40% ;
+}
+
+label {
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+	font-size: 16px;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid rgb(157, 145, 145);
+	/* 下划线颜色和样式可以根据需求进行调整 */
+	outline: none;
+	/* 去除默认的输入框轮廓样式 */
+	border-radius: 0px;
+	height: 30px;
+	/* 將高度設置為 25px */
+	background-color:rgba(var(--bs-bgColor-rgb), var(--bs-bg-opacity)) ;
+}
+
+
+button[type="submit"] {
+	font-weight: 600;
+	width: 100%;
+	border: 1px solid #918989;
+	border-radius: 5px;
+	background-color: #ffffff;
+	color: #000000;
+	cursor: pointer;
+
+}
+
+/* button[type="submit"]:hover {
+	background-color: black;
+	color: white;
+} */
+
+/* button[type="submit"] #cancel :hover {
+	background-color: white;
+	color: black;
+} */
+
+/* 当按钮被悬停时 */
+button:hover {
+	transform: translateY(-5px);
+	transition: transform 0.3s ease;
+}
+
+
+
+
+/* 調整出生年月日輸入框高度 */
+#birthdate {
+	height: 20px;
+	/* 設置輸入框高度為 30px */
+}
+
+.form-control {
+	margin-top: 5px;
+	background-color: #f8f9fa;
+	/* 设置输入框背景颜色为浅灰色 */
+}
+
+.form-control:focus {
+	border-color: #EEA68D;
+	/* 获取焦点时的外边框颜色为浅橘色 */
+	box-shadow: 0 0 0 0.1rem #EEA68D;
+	/* 可选的获取焦点时阴影效果 */
+}
+
+
+/* 将占位符颜色设置为黑色 */
+input::placeholder {
+	color: black;
+}
+
+
+
+.phone{
+	width:40%
+}
+
+form div div   button{
+	font-size: 22px;
+}
+
+@media screen and (min-width: 1440px) {
+/* 在此處添加要應用於較小螢幕時的樣式 */
+
+.container{
+	max-width: 800px !important;
+}
+
+.writeName div{
+	width: 30% ;
+}
+
+.writeBirthday{
+	flex-wrap: nowrap ;
+}
+
+.writeBirthday div{
+	width:30% ;
+	margin-top: 0px ;
+}
+
+.writeAddress{
+	flex-wrap: nowrap ;
+}
+
+
+
+.writeAddress div{
+	width:30% ;
+	margin-top: 0px;
+}
+
+.writeAddress  .liveAddress {
+	width:30%;
+}
+
+
+select {
+		font-size: 16px; /* 您可以將此值更改為您想要的字體大小 */
+}
+
+.email{
+	width:80% ;
+}
+
+.phone{
+	width: 20% ;
+	font-size: 16px;
+}
+
+.button div{
+	width:33% ;
+}
+
+form div div   button{
+	font-size: 25px;
+}
+
+
+}

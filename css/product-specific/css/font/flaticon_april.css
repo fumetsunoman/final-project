@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "flaticon_april";
+  src: url("./flaticon_april.woff2?cb696d03722fe6d0b7430e24b7f81e68") format("woff2"), url("./flaticon_april.woff?cb696d03722fe6d0b7430e24b7f81e68") format("woff"), url("./flaticon_april.eot?cb696d03722fe6d0b7430e24b7f81e68#iefix") format("embedded-opentype"), url("./flaticon_april.ttf?cb696d03722fe6d0b7430e24b7f81e68") format("truetype"), url("./flaticon_april.svg?cb696d03722fe6d0b7430e24b7f81e68#flaticon_april") format("svg");
+}
+i[class^=flaticon-]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon_april !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-star-nofill:before {
+  content: "\f101";
+}
+
+.flaticon-star-half-filled:before {
+  content: "\f102";
+}
+
+.flaticon-star-fill:before {
+  content: "\f103";
+}
+
+.flaticon-sort-asn:before {
+  content: "\f104";
+}
+
+.flaticon-sort:before {
+  content: "\f105";
+}
+
+.flaticon-right:before {
+  content: "\f106";
+}
+
+.flaticon-loud-speaker:before {
+  content: "\f107";
+}
+
+.flaticon-previous:before {
+  content: "\f108";
+}
+
+.flaticon-sale-label:before {
+  content: "\f109";
+}
+
+.flaticon-left:before {
+  content: "\f10a";
+}
+
+.flaticon-next:before {
+  content: "\f10b";
+}
+
+.flaticon-thumbs-up:before {
+  content: "\f10c";
+}
+
+.flaticon-images:before {
+  content: "\f10d";
+}
+
+.flaticon-upload:before {
+  content: "\f10e";
+}
+
+.flaticon-heart:before {
+  content: "\f10f";
+}
+
+.flaticon-plus:before {
+  content: "\f110";
+}
+
+.flaticon-down-arrow:before {
+  content: "\f111";
+}
+
+.flaticon-delivery-truck:before {
+  content: "\f112";
+}/*# sourceMappingURL=flaticon_april.css.map */

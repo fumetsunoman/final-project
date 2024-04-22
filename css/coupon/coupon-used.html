@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>優惠劵-已使用</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../scss/custom.css" />
+
+    <!-- header&footer css樣式 -->
+    <link rel="stylesheet" href="../css/header&footercssStyle.css" />
+
+    <!-- sidebar -->
+    <link rel="stylesheet" href="../css/sidebar.css" />
+
+    <link rel="stylesheet" href="./css/coupon-used.css" />
+  </head>
+  <body class="bg-bgColor">
+    <header>
+      <div class="header_background bg-headerColor">
+        <div class="LOGO">
+          <a href="#"><img src="../images/logo.svg" alt="" /></a>
+        </div>
+        <nav class="header_nav text-ddsecondary">
+          <ul class="header_font link-ddsecondary">
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KID</a></li>
+            <li><a href="#">HOT</a></li>
+          </ul>
+        </nav>
+        <ul class="header_icons link-ddsecondary">
+          <li>
+            <a href="#"><i class="ri-user-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-heart-3-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-shopping-cart-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-gamepad-line"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container d-flex flex-wrap">
+      <aside>
+        <div class="secondarySidebar">
+          <div><a href="#">首頁&nbsp; /</a></div>
+          <div>&nbsp; 我的帳戶&nbsp; /</div>
+          <div>&nbsp; 個人資料</div>
+        </div>
+        <!-- sidebar -->
+        <div class="leftSidebar">
+          <div class="sidebar">
+            <p class="member" style="font-size: 24px">會員中心</p>
+            <div><img id="bigHead" src="../images/boy.jpeg" alt="" /></div>
+            <ul class="myAccount">
+              <p style="margin-top: 10px">我的帳戶</p>
+              <li><a href="#">個人資料</a></li>
+              <li><a href="#">推薦尺寸</a></li>
+              <li><a href="#">收件地址</a></li>
+            </ul>
+            <ul class="myOrder">
+              <p>訂單中心</p>
+              <li><a href="#">購買紀錄</a></li>
+              <li><a href="#">購物車</a></li>
+            </ul>
+            <ul class="onlyForMember">
+              <p>會員專屬</p>
+              <li><a href="#">優惠券</a></li>
+              <li><a href="../tarot/tarot.html">塔羅牌</a></li>
+              <li><a href="../chromatics/chromatics.html">色彩學</a></li>
+              <li><a href="#">我的客製紀錄</a></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <main class="d-flex justify-content-center">
+        <div class="outerFrame w-100 d-flex border-ddprimary">
+          <div class="use bg-ddprimary">
+            <a href="./coupon-unused.html">
+              <h2 class="unused bg-ddprimary">未使用</h2>
+            </a>
+            <div class="dottedLine"></div>
+            <a href="./coupon-used.html">
+              <h2 class="used bg-ddprimary">已使用</h2>
+            </a>
+          </div>
+
+          <select class="menu form-select bg-bgColor" name="選擇">
+            <option value="全部優惠劵" selected>全部優惠劵</option>
+            <option value="色彩學優惠劵">色彩學優惠劵</option>
+            <option value="塔羅牌優惠劵">塔羅牌優惠劵</option>
+            <option value="論壇優惠劵">論壇優惠劵</option>
+            <option value="生日禮">生日禮</option>
+          </select>
+
+          <div class="coupons">
+            <div class="couponCard">
+              <div class="hangingWire"></div>
+              <div class="coverLine"></div>
+              <div class="round bg-bgColor"></div>
+              <div class="shadow">
+                <div class="couponContent">
+                  <div class="textContent">
+                    <p>2025年04月色彩學優惠劵</p>
+                    <p style="font-size: 26px">NT$100</p>
+                    <div class="date">
+                      開始日期 :
+                      <p class="ms-1 my-0">2024-04-01</p>
+                    </div>
+                    <div class="date">
+                      結束日期 :
+                      <p class="ms-1 my-0">2024-04-30</p>
+                    </div>
+                  </div>
+                  <div class="dottedLine"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="couponCard">
+              <div class="hangingWire"></div>
+              <div class="coverLine"></div>
+              <div class="round bg-bgColor"></div>
+              <div class="shadow">
+                <div class="couponContent">
+                  <div class="textContent">
+                    <p>2025年04月色彩學優惠劵</p>
+                    <p style="font-size: 26px">NT$100</p>
+                    <div class="date">
+                      開始日期 :
+                      <p class="ms-1 my-0">2024-04-01</p>
+                    </div>
+                    <div class="date">
+                      結束日期 :
+                      <p class="ms-1 my-0">2024-04-30</p>
+                    </div>
+                  </div>
+                  <div class="dottedLine"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="couponCard">
+              <div class="hangingWire"></div>
+              <div class="coverLine"></div>
+              <div class="round bg-bgColor"></div>
+              <div class="shadow">
+                <div class="couponContent">
+                  <div class="textContent">
+                    <p>2025年04月色彩學優惠劵</p>
+                    <p style="font-size: 26px">NT$100</p>
+                    <div class="date">
+                      開始日期 :
+                      <p class="ms-1 my-0">2024-04-01</p>
+                    </div>
+                    <div class="date">
+                      結束日期 :
+                      <p class="ms-1 my-0">2024-04-30</p>
+                    </div>
+                  </div>
+                  <div class="dottedLine"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="couponCard">
+              <div class="hangingWire"></div>
+              <div class="coverLine"></div>
+              <div class="round bg-bgColor"></div>
+              <div class="shadow">
+                <div class="couponContent">
+                  <div class="textContent">
+                    <p>2025年04月色彩學優惠劵</p>
+                    <p style="font-size: 26px">NT$100</p>
+                    <div class="date">
+                      開始日期 :
+                      <p class="ms-1 my-0">2024-04-01</p>
+                    </div>
+                    <div class="date">
+                      結束日期 :
+                      <p class="ms-1 my-0">2024-04-30</p>
+                    </div>
+                  </div>
+                  <div class="dottedLine"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="couponCard">
+              <div class="hangingWire"></div>
+              <div class="coverLine"></div>
+              <div class="round bg-bgColor"></div>
+              <div class="shadow">
+                <div class="couponContent">
+                  <div class="textContent">
+                    <p>2025年04月色彩學優惠劵</p>
+                    <p style="font-size: 26px">NT$100</p>
+                    <div class="date">
+                      開始日期 :
+                      <p class="ms-1 my-0">2024-04-01</p>
+                    </div>
+                    <div class="date">
+                      結束日期 :
+                      <p class="ms-1 my-0">2024-04-30</p>
+                    </div>
+                  </div>
+                  <div class="dottedLine"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="couponCard">
+              <div class="hangingWire"></div>
+              <div class="coverLine"></div>
+              <div class="round bg-bgColor"></div>
+              <div class="shadow">
+                <div class="couponContent">
+                  <div class="textContent">
+                    <p>2025年04月色彩學優惠劵</p>
+                    <p style="font-size: 26px">NT$100</p>
+                    <div class="date">
+                      開始日期 :
+                      <p class="ms-1 my-0">2024-04-01</p>
+                    </div>
+                    <div class="date">
+                      結束日期 :
+                      <p class="ms-1 my-0">2024-04-30</p>
+                    </div>
+                  </div>
+                  <div class="dottedLine"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="couponCard">
+              <div class="hangingWire"></div>
+              <div class="coverLine"></div>
+              <div class="round bg-bgColor"></div>
+              <div class="shadow">
+                <div class="couponContent">
+                  <div class="textContent">
+                    <p>2025年04月色彩學優惠劵</p>
+                    <p style="font-size: 26px">NT$100</p>
+                    <div class="date">
+                      開始日期 :
+                      <p class="ms-1 my-0">2024-04-01</p>
+                    </div>
+                    <div class="date">
+                      結束日期 :
+                      <p class="ms-1 my-0">2024-04-30</p>
+                    </div>
+                  </div>
+                  <div class="dottedLine"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="bg-ddprimary">
+      <nav class="footer_navs">
+        <ul class="footer_nav1 text-white">
+          <li><a href="#">MEN</a></li>
+          <li><a href="#">WOMEN</a></li>
+          <li><a href="#">KID</a></li>
+          <li><a href="#">COUPLE</a></li>
+          <li><a href="#">HOT</a></li>
+        </ul>
+        <ul class="footer_nav2 text-black">
+          <li><a href="#">加入會員</a></li>
+          <li><a href="#">登出</a></li>
+          <li><a href="#">會員中心</a></li>
+          <li><a href="#">關於我們</a></li>
+          <li><a href="#">客服中心</a></li>
+          <li><a href="#">回到主頁</a></li>
+          <li><a href="#">色彩學</a></li>
+        </ul>
+      </nav>
+      <div class="footer_follow">
+        <div class="follow_me">
+          <p class="follow_font">FOLLOW ME</p>
+          <ul class="footer_icons">
+            <li>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-line-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <small class="footer_small"
+        >Copyright © 2023 DD SHOP All Rights Reserved.</small
+      >
+    </footer>
+
+    <!-- Bootstrap core JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- sidebar -->
+    <script src="../javaScript/sidebar.js"></script>
+  </body>
+</html>

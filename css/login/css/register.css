@@ -1,0 +1,231 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid rgb(157, 145, 145);
+	border-radius: 5px;
+}
+
+
+.accountAndPassword {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.email {
+	width: 100%;
+}
+
+.password {
+	width: 100%;
+	margin-top: 15px;
+}
+
+
+
+.nameGenderBirthdate div {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 15px;
+}
+
+
+
+.name {
+	width: 35%;
+	margin-right: 15px;
+}
+
+.gender {
+	width: 19%
+}
+
+.birthdate {
+	width: 60%;
+	margin-top: 15px;
+}
+
+.phone {
+	margin-top: 15px;
+}
+
+.phone div {
+	width: 45%;
+
+}
+
+.cityDistrictAddress {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 15px;
+}
+
+.cityDistrict {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%
+}
+
+.city {
+	width: 48%;
+	margin-right: 15px;
+}
+
+.district {
+	width: 48%;
+}
+
+.address {
+	width: 100%;
+	margin-top: 15px;
+}
+
+
+
+label {
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+	width: 100%;
+	border: 1px solid rgb(157, 145, 145);
+	border-radius: 5px;
+	height: 30px;
+	/* 將高度設置為 25px */
+	background-color:rgba(var(--bs-bgColor-rgb), var(--bs-bg-opacity)) ;
+}
+
+
+
+button[type="submit"] {
+	font-weight: 600;
+	width: 100%;
+	border: 1px solid rgb(157, 145, 145);
+	border-radius: 5px;
+	background-color:rgba(var(--bs-bgColor-rgb), var(--bs-bg-opacity)) ;
+	color: #000000;
+	cursor: pointer;
+
+}
+
+button[type="submit"]:hover {
+	border:1px solid rgb(157, 145, 145);
+	background-color: black;
+	color: white;
+}
+
+
+
+/* 調整出生年月日輸入框高度 */
+#birthdate {
+	height: 30px;
+	/* 設置輸入框高度為 30px */
+}
+
+.form-control {
+	border:1px solid rgb(157, 145, 145);
+	margin-top: 5px;
+	background-color:rgba(var(--bs-bgColor-rgb), var(--bs-bg-opacity)) ;
+}
+
+.form-control:focus {
+	border-color: #EEA68D;
+	/* 获取焦点时的外边框颜色为浅橘色 */
+	box-shadow: 0 0 0 0.1rem #EEA68D;
+	/* 可选的获取焦点时阴影效果 */
+}
+
+/* 調整圖示高度 */
+.input-group-text {
+	border:1px solid rgb(157, 145, 145) ;
+	background-color:rgba(var(--bs-bgColor-rgb), var(--bs-bg-opacity)) ;
+	height: 30px;
+	/* 設置圖示高度為 30px */
+}
+
+
+@media screen and (min-width: 1440px) {
+
+	.container {
+		max-width: 800px !important;
+	}
+
+	.accountAndPassword {
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.email {
+		width: 50%;
+		margin-right: 30px;
+	}
+
+	.password {
+		width: 50%;
+		margin-top: 0px;
+	}
+
+	.name {
+		width: 32%;
+		margin-right: 15px;
+	}
+
+	.gender {
+		width: 32%
+	}
+
+	.birthdate {
+		width: 32%;
+		margin-top: 15px;
+		margin-left: 15px;
+	}
+
+	.birthdate .input-group{
+		margin-bottom: 15px;
+	}
+
+	
+.phone div {
+	width: 33%;
+
+}
+
+.cityDistrictAddress {
+	display: flex;
+	flex-wrap: nowrap;
+	margin-top: 15px;
+}
+
+.cityDistrict {
+	display: flex;
+	flex-wrap: nowrap;
+	width: 100%
+}
+
+.city {
+	width: 50%;
+	margin-right: 15px;
+}
+
+.district {
+	width: 50%;
+	margin-right: 15px;
+}
+
+.address {
+	width: 50%;
+	margin-top: 0px;
+
+}
+
+
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>購物車頁面</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../scss/custom.css" />
+    <link rel="stylesheet" href="../css/header&footercssStyle.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
+  </head>
+
+  <body class="bg-bgColor">
+    <header>
+      <div class="header_background bg-headerColor">
+        <div class="LOGO">
+          <a href="#"><img src="../LOGO.png" alt="" /></a>
+        </div>
+        <nav class="header_nav text-ddsecondary">
+          <ul class="header_font">
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KID</a></li>
+            <li><a href="#">HOT</a></li>
+          </ul>
+        </nav>
+        <ul class="header_icons">
+          <li>
+            <a href="#"><i class="ri-user-line link-ddsecondary"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-heart-3-line link-ddsecondary"></i></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="ri-shopping-cart-line link-ddsecondary"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-gamepad-line link-ddsecondary"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="container">
+      <div class="title">
+        <p>購物車</p>
+      </div>
+
+      <section class="cart_session1">
+        <div class="part_left border-ddsecondary">
+          <table class="table table-bordered cart_table border-ddsecondary">
+            <thead class="table-ddprimary">
+              <tr class="mx-auto">
+                <th scope="col" class="col-4 fw-bold fs-6 text-white">
+                  商品名稱
+                </th>
+                <th scope="col" class="col-2 fw-bold fs-6 text-white">數量</th>
+                <th scope="col" class="col-1 fw-bold fs-6 text-white">單價</th>
+                <th scope="col" class="col-1 fw-bold fs-6 text-white">總價</th>
+                <th scope="col" class="col-2 fw-bold fs-6 text-white"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="product_info">
+                  <img src="imgs/000000000311-05-xs.jpg" alt="商品圖" />
+                  <div class="product_name">
+                    <p>背包</p>
+                    <p style="font-size: 12px; color: #a2a2a2">(黑色的)</p>
+                    <p>$4000</p>
+                  </div>
+                </th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control fw-bold border-ddsecondary"
+                    id="Product_count"
+                  />
+                </td>
+                <td>$4000</td>
+                <td>$4000</td>
+                <td style="font-size: 14px" class="text-ddsecondary">
+                  <button class="productRow_button">刪除</button>
+                  <hr class="text-dark" />
+                  <button class="productRow_button">稍後購買</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="product_info">
+                  <img src="imgs/000000000310-07-xs.jpg" alt="商品圖" />
+                  <div class="product_name">
+                    <p>帆布手提包</p>
+                    <p style="font-size: 12px; color: #a2a2a2">(棕色的)</p>
+                    <p>$7200</p>
+                  </div>
+                </th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control border-ddsecondary"
+                    id="Product_count"
+                  />
+                </td>
+                <td>$4000</td>
+                <td>$4000</td>
+                <td style="font-size: 14px" class="text-ddsecondary">
+                  <button class="productRow_button">刪除</button>
+                  <hr class="text-dark" />
+                  <button class="productRow_button">稍後購買</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row" class="product_info">
+                  <img src="imgs/000000000354-08-xs.jpg" alt="商品圖" />
+                  <div class="product_name">
+                    <p>手提包</p>
+                    <p style="font-size: 12px; color: #a2a2a2">(黑色的)</p>
+                    <p>$3500</p>
+                  </div>
+                </th>
+                <td>
+                  <input
+                    type="number"
+                    class="form-control border-ddsecondary"
+                    id="Product_count"
+                  />
+                </td>
+                <td>$4000</td>
+                <td>$4000</td>
+                <td style="font-size: 14px" class="text-ddsecondary">
+                  <button class="productRow_button">刪除</button>
+                  <hr class="text-dark" />
+                  <button class="productRow_button">稍後購買</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="part_right border-ddsecondary">
+          <ul class="part_right_count border-ddsecondary">
+            <li>數量</li>
+            <li>3</li>
+          </ul>
+          <ul class="part_right_count border-ddsecondary">
+            <li>商品總計</li>
+            <li style="font-weight: bold">$14700</li>
+          </ul>
+          <p style="font-size: 12px; margin: 30px 0 10px 20px">繼續訂購流程</p>
+          <button type="button" class="btn btn-ddprimary payment_btn">
+            <a class="text-white" href="./order.html">前往付款頁面</a>
+          </button>
+        </div>
+      </section>
+      <section class="cart_session2">
+        <h3>運費規則</h3>
+        <div>
+          <p>
+            <i class="ri-star-fill"></i>滿<span class="fw-bold text-price"
+              >5000</span
+            >折抵運費
+          </p>
+          <p><i class="ri-star-fill"></i>根據運送方式運費有所不同</p>
+        </div>
+      </section>
+      <section class="cart_session3">
+        <h3>如何使用購物車</h3>
+        <p>不保證您購物車中的商品有貨。</p>
+        <p>
+          購物車資訊會儲存一段時間。<br />當您以會員身分登入時，您可以在PC、平板電腦、智慧型手機等裝置上分享購物車中的商品。
+        </p>
+        <p>
+          您可以使用「稍後購買」連結將購物車中的商品加入您的收藏清單。<br />您可以將收藏清單中的商品直接加入購物車（不包括缺貨/停產商品和部分商品）。
+        </p>
+      </section>
+      <a class="btn keep_buying btn-outline-dark" href="#" role="button"
+        >繼續購物</a
+      >
+
+      <section class="cart_session4">
+        <div>
+          <h3>您「喜愛清單」中的商品</h3>
+          <hr />
+        </div>
+
+        <ul class="fav_products bg-white">
+          <li style="position: relative">
+            <a href="#"
+              ><img
+                style="width: 250px"
+                src="imgs/000000000379-05-l.jpg"
+                alt="最愛商品"
+              />
+              <h4 style="text-align: center" class="text-dark">手提包</h4>
+            </a>
+            <h5 style="position: absolute; top: 10px" class="text-price">
+              $4000
+            </h5>
+          </li>
+          <li style="position: relative">
+            <a href="#"
+              ><img
+                style="width: 250px"
+                src="imgs/000000000379-05-l.jpg"
+                alt="最愛商品"
+              />
+              <h4 style="text-align: center" class="text-dark">手提包</h4>
+            </a>
+            <h5 style="position: absolute; top: 10px" class="text-price">
+              $4000
+            </h5>
+          </li>
+          <li style="position: relative">
+            <a href="#"
+              ><img
+                style="width: 250px"
+                src="imgs/000000000379-05-l.jpg"
+                alt="最愛商品"
+              />
+              <h4 style="text-align: center" class="text-dark">手提包</h4>
+            </a>
+            <h5 style="position: absolute; top: 10px" class="text-price">
+              $4000
+            </h5>
+          </li>
+        </ul>
+        <div class="favlist_footer">
+          <a class="link-underline-primary text-dark fw-bolder" href="#"
+            ><span>到喜愛清單>></span></a
+          >
+        </div>
+      </section>
+    </div>
+    <footer class="bg-ddprimary">
+      <nav class="footer_navs">
+        <ul class="footer_nav1 text-white">
+          <li><a href="#">MEN</a></li>
+          <li><a href="#">WOMEN</a></li>
+          <li><a href="#">KID</a></li>
+          <li><a href="#">COUPLE</a></li>
+          <li><a href="#">HOT</a></li>
+        </ul>
+        <ul class="footer_nav2 text-black">
+          <li><a href="#">加入會員</a></li>
+          <li><a href="#">登出</a></li>
+          <li><a href="#">會員中心</a></li>
+          <li><a href="#">關於我們</a></li>
+          <li><a href="#">客服中心</a></li>
+          <li><a href="#">回到主頁</a></li>
+          <li><a href="#">色彩學</a></li>
+        </ul>
+      </nav>
+      <div class="footer_follow">
+        <div class="follow_me">
+          <p class="follow_font">FOLLOW ME</p>
+          <ul class="footer_icons">
+            <li>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-line-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <small class="footer_small"
+        >Copyright © 2023 DD SHOP All Rights Reserved.</small
+      >
+    </footer>
+    <script src="./javaScript/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

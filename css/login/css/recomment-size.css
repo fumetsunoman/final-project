@@ -1,0 +1,78 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+
+/* 隐藏滚动条 */
+select::-webkit-scrollbar {
+	display: none;
+	/* WebKit 内核浏览器（如Chrome、Safari） */
+}
+
+select {
+	scrollbar-width: none;
+	/* Firefox */
+	-ms-overflow-style: none;
+	/* Internet Explorer、Edge */
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+select {
+	border: solid 1px #000;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background: url("./images/下拉icon.svg") no-repeat calc(100% - 70px) center transparent;
+	background-size: 15px 15px;
+	overflow: hidden;
+	/* 移除滚动条 */
+}
+
+
+label {
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	height: 30px;
+	/* 將高度設置為 25px */
+}
+
+
+button[type="submit"] {
+	font-weight: 600;
+	width: 100%;
+	border: 1px solid #918989;
+	border-radius: 5px;
+	background-color: #ffffff;
+	color: #000000;
+	cursor: pointer;
+
+}
+
+button[type="submit"]:hover {
+	background-color: black;
+	color: white;
+}
+
+.axd_selection_overlay:hover{
+	border:solid 1px grey;
+}
+
+
+

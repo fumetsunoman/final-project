@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>色彩學</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../scss/custom.css" />
+
+    <!-- header&footer css樣式 -->
+    <link rel="stylesheet" href="../css/header&footercssStyle.css" />
+
+    <link rel="stylesheet" href="./css/chromatics.css" />
+  </head>
+  <body>
+    <!-- 背景動畫 -->
+    <div class="waveWrapper waveAnimation">
+      <div class="waveWrapperInner bgTop">
+        <div
+          class="wave waveTop"
+          style="
+            background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png');
+          "
+        ></div>
+      </div>
+      <div class="waveWrapperInner bgMiddle">
+        <div
+          class="wave waveMiddle"
+          style="
+            background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');
+          "
+        ></div>
+      </div>
+      <div class="waveWrapperInner bgBottom">
+        <div
+          class="wave waveBottom"
+          style="
+            background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png');
+          "
+        ></div>
+      </div>
+    </div>
+
+    <header>
+      <div class="header_background bg-headerColor">
+        <div class="LOGO">
+          <a href="#"><img src="../images/logo.svg" alt="" /></a>
+        </div>
+        <nav class="header_nav text-ddsecondary">
+          <ul class="header_font link-ddsecondary">
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KID</a></li>
+            <li><a href="#">HOT</a></li>
+          </ul>
+        </nav>
+        <ul class="header_icons link-ddsecondary">
+          <li>
+            <a href="#"><i class="ri-user-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-heart-3-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-shopping-cart-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-gamepad-line"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container d-flex flex-wrap justify-content-center">
+      <main class="d-flex flex-column">
+        <h1 class="text-center text-white">色 彩 學</h1>
+        <div class="popup">
+          <!-- Question 1-->
+          <div class="popup__content question-visible buttonRendering">
+            <div class="popup__progress">
+              <div class="popup__progress-item popup__progress-item_active">
+                1
+              </div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">2</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">3</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">4</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">5</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">6</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">7</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">8</div>
+            </div>
+            <div class="quiz">
+              <h3 class="quiz__question mb-4">Q1.眼睛瞳孔的顏色是？</h3>
+              <div class="quiz__answers">
+                <div class="options">
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option1_1"
+                      class="option me-1 form-check-input"
+                      name="Q1"
+                      value="option1"
+                    />
+                    <label class="" for="option1_1">明亮的茶色。</label><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option1_2"
+                      class="option me-1 form-check-input"
+                      name="Q1"
+                      value="option2"
+                    />
+                    <label for="option1_2">紅棕色或焦茶色。</label><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option1_3"
+                      class="option me-1 form-check-input"
+                      name="Q1"
+                      value="option3"
+                    />
+                    <label for="option1_3">深棕色。</label><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline">
+                    <input
+                      type="radio"
+                      id="option1_4"
+                      class="option me-1 form-check-input"
+                      name="Q1"
+                      value="option4"
+                    />
+                    <label label for="option1_4">黑色或帶紅的深棕色。</label
+                    ><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="popup__button" id="popupButton1" disabled="true">
+              下一題
+            </button>
+          </div>
+
+          <!-- Question 2-->
+          <div class="popup__content buttonRendering">
+            <div class="popup__progress">
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item popup__progress-item_active">
+                2
+              </div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">3</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">4</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">5</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">6</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">7</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">8</div>
+            </div>
+            <div class="quiz">
+              <h3 class="quiz__question mb-4">
+                Q2.常被周圍的人提及的第一印象是？
+              </h3>
+              <div class="quiz__answers">
+                <div class="options">
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option2_1"
+                      class="option me-1 form-check-input"
+                      name="Q2"
+                      value="option1"
+                    />
+                    <label for="option2_1"
+                      >看起來比年齡年輕、可愛、好親近。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option2_2"
+                      class="option me-1 form-check-input"
+                      name="Q2"
+                      value="option2"
+                    />
+                    <label for="option2_2">溫柔、清新、優雅。</label><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option2_3"
+                      class="option me-1 form-check-input"
+                      name="Q2"
+                      value="option3"
+                    />
+                    <label for="option2_3">沉穩、成熟、絢爛、自然。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option2_4"
+                      class="option me-1 form-check-input"
+                      name="Q2"
+                      value="option4"
+                    />
+                    <label for="option2_4">銳利、酷、華麗、印象深刻。 </label
+                    ><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="popup__button" id="popupButton2" disabled="true">
+              下一題
+            </button>
+          </div>
+
+          <!-- Question 3-->
+          <div class="popup__content buttonRendering">
+            <div class="popup__progress">
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item popup__progress-item_active">
+                3
+              </div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">4</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">5</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">6</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">7</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">8</div>
+            </div>
+            <div class="quiz">
+              <h3 class="quiz__question mb-4">Q3.臉頰的膚色和膚質是？</h3>
+              <div class="quiz__answers">
+                <div class="options">
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option3_1"
+                      class="option me-1 form-check-input"
+                      name="Q3"
+                      value="option1"
+                    />
+                    <label for="option3_1">偏亮黃的蜜桃色，光澤肌。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option3_2"
+                      class="option me-1 form-check-input"
+                      name="Q3"
+                      value="option2"
+                    />
+                    <label for="option3_2">柔和偏亮的粉色系，微微霧面肌。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option3_3"
+                      class="option me-1 form-check-input"
+                      name="Q3"
+                      value="option3"
+                    />
+                    <label for="option3_3">偏暗黃的蜜桃色，霧面肌。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option3_4"
+                      class="option me-1 form-check-input"
+                      name="Q3"
+                      value="option4"
+                    />
+                    <label for="option3_4"
+                      >紅紫色或無色調，不容易有血色，光澤肌。</label
+                    ><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="popup__button" id="popupButton3" disabled="true">
+              下一題
+            </button>
+          </div>
+
+          <!-- Question 4-->
+          <div class="popup__content buttonRendering">
+            <div class="popup__progress">
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item popup__progress-item_active">
+                4
+              </div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">5</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">6</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">7</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">8</div>
+            </div>
+            <div class="quiz">
+              <h3 class="quiz__question mb-4">Q4.適合你的口紅顏色是？</h3>
+              <div class="quiz__answers">
+                <div class="options">
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option4_1"
+                      class="option me-1 form-check-input"
+                      name="Q4"
+                      value="option1"
+                    />
+                    <label for="option4_1">明亮的蜜桃色、珊瑚橘色系。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option4_2"
+                      class="option me-1 form-check-input"
+                      name="Q4"
+                      value="option2"
+                    />
+                    <label for="option4_2"
+                      >粉紅色、玫瑰色系，明亮柔和的淺色。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option4_3"
+                      class="option me-1 form-check-input"
+                      name="Q4"
+                      value="option3"
+                    />
+                    <label for="option4_3">暗橙色、棕色系，沉穩的顏色。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option4_4"
+                      class="option me-1 form-check-input"
+                      name="Q4"
+                      value="option4"
+                    />
+                    <label for="option4_4"
+                      >洋紫紅、玫瑰酒紅色系，鮮豔清晰的顏色。</label
+                    ><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="popup__button" id="popupButton4" disabled="true">
+              下一題
+            </button>
+          </div>
+
+          <!-- Question 5-->
+          <div class="popup__content buttonRendering">
+            <div class="popup__progress">
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item popup__progress-item_active">
+                5
+              </div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">6</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">7</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">8</div>
+            </div>
+            <div class="quiz">
+              <h3 class="quiz__question mb-4">Q5.原來的唇色是？</h3>
+              <div class="quiz__answers">
+                <div class="options">
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option5_1"
+                      class="option me-1 form-check-input"
+                      name="Q5"
+                      value="option1"
+                    />
+                    <label for="option5_1">明亮偏淡的鮭魚粉，有透明感。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option5_2"
+                      class="option me-1 form-check-input"
+                      name="Q5"
+                      value="option2"
+                    />
+                    <label for="option5_2">粉紅色、玫瑰色系，顏色較模糊。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option5_3"
+                      class="option me-1 form-check-input"
+                      name="Q5"
+                      value="option3"
+                    />
+                    <label for="option5_3">沉穩的橘色或米色，較少有血色。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option5_4"
+                      class="option me-1 form-check-input"
+                      name="Q5"
+                      value="option4"
+                    />
+                    <label for="option5_4"
+                      >玫瑰色系，無血色，有時看起來蒼白。</label
+                    ><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="popup__button" id="popupButton5" disabled="true">
+              下一題
+            </button>
+          </div>
+
+          <!-- Question 6-->
+          <div class="popup__content buttonRendering">
+            <div class="popup__progress">
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item popup__progress-item_active">
+                6
+              </div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">7</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">8</div>
+            </div>
+            <div class="quiz">
+              <h3 class="quiz__question mb-4">Q6.曬太陽的話會如何？</h3>
+              <div class="quiz__answers">
+                <div class="options">
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option6_1"
+                      class="option me-1 form-check-input"
+                      name="Q6"
+                      value="option1"
+                    />
+                    <label for="option6_1"
+                      >容易曬成小麥色，但顏色恢復得也很快。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option6_2"
+                      class="option me-1 form-check-input"
+                      name="Q6"
+                      value="option2"
+                    />
+                    <label for="option6_2">不容易曬黑，但很容易泛紅。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option6_3"
+                      class="option me-1 form-check-input"
+                      name="Q6"
+                      value="option3"
+                    />
+                    <label for="option6_3"
+                      >容易曬成小麥色或曬黑，曬後顏色不容易恢復。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option6_4"
+                      class="option me-1 form-check-input"
+                      name="Q6"
+                      value="option4"
+                    />
+                    <label for="option6_4">曬紅之後變黑，顏色會慢慢恢復。</label
+                    ><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="popup__button" id="popupButton6" disabled="true">
+              下一題
+            </button>
+          </div>
+
+          <!-- Question 7-->
+          <div class="popup__content buttonRendering">
+            <div class="popup__progress">
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item popup__progress-item_active">
+                7
+              </div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">8</div>
+            </div>
+            <div class="quiz">
+              <h3 class="quiz__question mb-4">Q7.適合你的飾品是哪一種？</h3>
+              <div class="quiz__answers">
+                <div class="options">
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option7_1"
+                      class="option me-1 form-check-input"
+                      name="Q7"
+                      value="option1"
+                    />
+                    <label for="option7_1">有光澤的明亮金色。</label><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option7_2"
+                      class="option me-1 form-check-input"
+                      name="Q7"
+                      value="option2"
+                    />
+                    <label for="option7_2">光澤感較少的霧銀色。</label><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option7_3"
+                      class="option me-1 form-check-input"
+                      name="Q7"
+                      value="option3"
+                    />
+                    <label for="option7_3"
+                      >無光澤感、黃色調較強烈的霧面金色。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option7_4"
+                      class="option me-1 form-check-input"
+                      name="Q7"
+                      value="option4"
+                    />
+                    <label for="option7_4">有光澤的亮銀色。</label><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="popup__button" id="popupButton7" disabled="true">
+              下一題
+            </button>
+          </div>
+
+          <!-- Question 8-->
+          <div class="popup__content buttonRendering">
+            <div class="popup__progress">
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item">&#x1F5F8;</div>
+              <div class="popup__progress-line"></div>
+              <div class="popup__progress-item popup__progress-item_active">
+                8
+              </div>
+            </div>
+            <div class="quiz">
+              <h3 class="quiz__question mb-4">Q8.頭髮天生的顏色和髮質是？</h3>
+              <div class="quiz__answers">
+                <div class="options">
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option8_1"
+                      class="option me-1 form-check-input"
+                      name="Q8"
+                      value="option1"
+                    />
+                    <label for="option8_1"
+                      >髮色偏明亮的棕色，髮質偏細而柔軟。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option8_2"
+                      class="option me-1 form-check-input"
+                      name="Q8"
+                      value="option2"
+                    />
+                    <label for="option8_2"
+                      >髮色偏紅棕或灰黑，髮質偏細而柔順。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option8_3"
+                      class="option me-1 form-check-input"
+                      name="Q8"
+                      value="option3"
+                    />
+                    <label for="option8_3">髮色偏焦茶色，有重量感。</label
+                    ><br />
+                  </div>
+
+                  <div class="d-flex align-items-baseline mb-2">
+                    <input
+                      type="radio"
+                      id="option8_4"
+                      class="option me-1 form-check-input"
+                      name="Q8"
+                      value="option4"
+                    />
+                    <label for="option8_4"
+                      >髮色偏純黑色，髮質偏粗且髮量較多。</label
+                    ><br />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="popup__button btn-secondary"
+              disabled="true"
+              onclick="openModal();"
+            >
+              送出
+            </button>
+          </div>
+        </div>
+
+        <!-- 模擬框 -->
+        <div id="myModal" class="modal text-center">
+          <div class="modalContent">
+            <h2>恭喜獲得</h2>
+            <h5>2024年04月色彩學優惠劵</h5>
+            <h2>NT$100</h2>
+            <button onclick="redirectToPage()" class="btn btn-success mb-2">
+              領 取
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Bootstrap core JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // 獲取彈出框元素
+      const popup = document.querySelector(".popup");
+
+      // 打開彈出框函數
+      function openPopup() {
+        popup.classList.add("popup_visible");
+      }
+
+      // 打開彈出框
+      openPopup();
+
+      // 獲取所有按鈕渲染元素和所有問題元素
+      const buttonRenderings = document.querySelectorAll(".buttonRendering");
+      const questions = document.querySelectorAll(".popup__content");
+
+      // 遍歷所有按鈕渲染元素
+      buttonRenderings.forEach((quiz) => {
+        // 獲取每個按鈕渲染元素中的選項元素和下一步按鈕
+        const options = quiz.querySelectorAll(".option");
+        const nextButton = quiz.querySelector(".popup__button");
+        // 監聽每個選項元素的點擊事件
+        options.forEach((option) => {
+          option.addEventListener("click", () => {
+            // 當選項被點擊時，啟用下一步按鈕
+            nextButton.disabled = false;
+          });
+        });
+      });
+
+      // 遍歷所有問題元素
+      questions.forEach((question, i) => {
+        // 獲取每個問題對應的按鈕
+        const button = document.getElementById(`popupButton${i + 1}`);
+        // 監聽每個按鈕的點擊事件
+        button.addEventListener("click", () => {
+          // 隱藏當前問題
+          question.classList.remove("question-visible");
+          // 如果有下一個問題，則顯示下一個問題
+          if (questions[i + 1]) {
+            questions[i + 1].classList.add("question-visible");
+          }
+        });
+      });
+
+      // 打開模擬框
+      function openModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+      }
+      // 跳轉到另一個頁面
+      function redirectToPage() {
+        window.location.href = "chromatics-result.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+// 直接放在theme-colors裡面，所以元件也都會有這個變數的顏色
+// 例如:text-price,bg-bgColor 直接打在行內就可以用了
+// 第一版
+$bgColor:#FBF3E8;
+$price: #E16949;
+$headerColor:#FFFFFF;
+$ddprimary:#ABC8BC;
+$ddsecondary:#AABEC3;
+
+
+
+// 第二版
+
+// $bgColor:#F7F4EF;
+// $price: #C1886F;
+// $headerColor:#FDFCFB;
+// $ddprimary:#B6B7A9;
+// $ddsecondary:#857367;
+
+
+$table-variants: (
+  'ddprimary' :$ddprimary
+);
+
+$input-group-addon-border-color: $price;
+// 引入 Bootstrap 的 SCSS 文件
+@import "../bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+// 這邊可自訂class，可在custom.css檔案裡最下面看到自己自訂的
+// .ddbgColor{
+//     background-color: $bgColor;
+// }

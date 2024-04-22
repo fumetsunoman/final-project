@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>新增收件地址</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+		<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+	/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../scss/custom.css" />
+    <link rel="stylesheet" href="../css/header&footercssStyle.css" />
+
+		<!-- 新增地址 -->
+		<link rel="stylesheet" href="./css/add_address.css" />
+    <!-- 側欄 -->
+    <link rel="stylesheet" href="./css/sidebar.css" />
+
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style></style>
+  </head>
+
+  <body class="bg-bgColor">
+    <header class="w-100">
+      <div class="header_background bg-headerColor">
+        <div class="LOGO">
+          <a href="#"><img src="../images/logo.svg" alt="" /></a>
+        </div>
+        <nav class="header_nav text-ddsecondary">
+          <ul class="header_font link-ddsecondary">
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KID</a></li>
+            <li><a href="#">HOT</a></li>
+          </ul>
+        </nav>
+        <ul class="header_icons link-ddsecondary">
+          <li>
+            <a href="#"><i class="ri-user-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-heart-3-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-shopping-cart-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-gamepad-line"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div style="display: flex;justify-content: center;">
+
+				<aside style="width:20%;margin-top:90px">
+					<div class="secondarySidebar">
+						<div><a href="#">首頁&nbsp; /</a></div>
+						<div>&nbsp; 我的帳戶&nbsp; /</div>
+						<div>&nbsp; 個人資料</div>
+					</div>
+					<!-- sidebar -->
+					<div class="leftSidebar">
+						<div class="sidebar">
+							<p class="member" style="font-size: 24px">會員中心</p>
+							<div><img id="bigHead" src="./images/boy.jpeg" alt="" /></div>
+							<ul class="myAccount">
+								<p style="margin-top: 10px">我的帳戶</p>
+								<li><a href="#">個人資料</a></li>
+								<li><a href="#">推薦尺寸</a></li>
+								<li><a href="#">收件地址</a></li>
+							</ul>
+							<ul class="myOrder">
+								<p>訂單中心</p>
+								<li><a href="#">購物紀錄</a></li>
+								<li><a href="#">購物車</a></li>
+							</ul>
+							<ul class="onlyForMember">
+								<p>會員專屬</p>
+								<li><a href="#">優惠券</a></li>
+								<li><a href="#">塔羅牌</a></li>
+								<li><a href="#">色彩學</a></li>
+								<li><a href="#">我的客製紀錄</a></li>
+							</ul>
+						</div>
+					</div>
+				</aside>				
+
+				<main style="width:60%;margin-top: 90px;">
+					<div class="container">
+						<div style="margin-bottom: 40px">
+							<div
+								style="font-size: 28px; font-weight: 600; margin-bottom: 5px"
+								class="recipient-address"
+							>
+								收件地址一覽
+							</div>
+							<div style="font-size: 16px; font-weight: 600">
+								可更新您的宅配配送地址
+							</div>
+						</div>
+	
+						<form action="./edit" method="post">
+							<div style="font-size: 24px; font-weight: 600">地址</div>
+							<div class="d-flex" style="margin-top: 15px">
+								<div style="width: 30%; margin-right: 30px">
+									<label for="name" style="font-weight: 600">收件人</label><br />
+									<input
+										type="text"
+										id="firstName"
+										name="name"
+										placeholder="姓名"
+										style="height: 38px"
+										required
+									/>
+								</div>
+							</div>
+	
+							<div class="addAddress" style="margin-top: 30px">
+								<div style="margin-right: 30px">
+									<label for="city">收件地址</label><br />
+									<select
+										id="city"
+										name="city"
+										onchange="populateDistricts()"
+										required
+									>
+										<option value="">請選擇縣市</option>
+										<option value="基隆市">基隆市</option>
+										<option value="台北市">台北市</option>
+										<option value="新北市">新北市</option>
+										<option value="桃園市">桃園市</option>
+										<option value="新竹市">新竹市</option>
+										<option value="新竹縣">新竹縣</option>
+										<option value="苗栗縣">苗栗縣</option>
+										<option value="台中市">台中市</option>
+										<option value="彰化縣">彰化縣</option>
+										<option value="南投縣">南投縣</option>
+										<option value="雲林縣">雲林縣</option>
+										<option value="嘉義市">嘉義市</option>
+										<option value="嘉義縣">嘉義縣</option>
+										<option value="台南市">台南市</option>
+										<option value="高雄市">高雄市</option>
+										<option value="屏東縣">屏東縣</option>
+										<option value="台東縣">台東縣</option>
+										<option value="花蓮縣">花蓮縣</option>
+										<option value="宜蘭縣">宜蘭縣</option>
+										<option value="澎湖縣">澎湖縣</option>
+										<option value="金門縣">金門縣</option>
+										<option value="連江縣">連江縣</option>
+									</select>
+								</div>
+								<div style="margin-right: 30px">
+									<label for="district">鄉鎮區</label><br />
+									<select id="district" name="district" required>
+										<option value="" class="form-control">請選擇鄉鎮區</option>
+									</select>
+								</div>
+								<div class="liveAddress">
+									<label for="address" class="address">地址</label><br />
+									<input
+										type="text"
+										id="address"
+										name="address"
+										placeholder="請詳填地址"
+										required
+									/>
+								</div>
+							</div>
+	
+							<div class="d-flex" style="margin-top: 30px">
+								<div style="margin-right: 30px" class="phone">
+									<label for="phone">手機號碼</label><br />
+									<input
+										type="text"
+										id="phone"
+										name="phone"
+										style="height: 30px"
+										value="09-XXXXX001"
+										required
+									/>
+								</div>
+							</div>
+	
+							<div class="d-flex" style="margin-top: 35px">
+								<div style="width: 25%; margin-right: 50px">
+									<button type="submit">取消</button>
+								</div>
+								<div style="width: 25%">
+									<button
+										type="submit"
+										style="background-color: #0a0a0a; color: white"
+										id="save"
+									>
+										儲存
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</main>
+    </div>
+
+		<footer class="bg-ddprimary" style="margin-top:150px">
+			<nav class="footer_navs">
+				<ul class="footer_nav1 text-white">
+					<li><a href="#">MEN</a></li>
+					<li><a href="#">WOMEN</a></li>
+					<li><a href="#">KID</a></li>
+					<li><a href="#">COUPLE</a></li>
+					<li><a href="#">HOT</a></li>
+				</ul>
+				<ul class="footer_nav2 text-black">
+					<li><a href="#">加入會員</a></li>
+					<li><a href="#">登出</a></li>
+					<li><a href="#">會員中心</a></li>
+					<li><a href="#">關於我們</a></li>
+					<li><a href="#">客服中心</a></li>
+					<li><a href="#">回到主頁</a></li>
+					<li><a href="#">色彩學</a></li>
+				</ul>
+			</nav>
+			<div class="footer_follow">
+				<div class="follow_me">
+					<p class="follow_font">FOLLOW ME</p>
+					<ul class="footer_icons">
+						<li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+						<li><a href="#"><i class="ri-line-fill"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<small class="footer_small">Copyright © 2023 DD SHOP All Rights Reserved.</small>
+		</footer>
+
+
+
+    <!-- 引入 Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- 引入 Bootstrap Datepicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="./javaScript/add-address.js"></script>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+$flaticon_april-font: "flaticon_april";
+
+@font-face {
+    font-family: $flaticon_april-font;
+    src: url("./flaticon_april.woff2?cb696d03722fe6d0b7430e24b7f81e68") format("woff2"),
+url("./flaticon_april.woff?cb696d03722fe6d0b7430e24b7f81e68") format("woff"),
+url("./flaticon_april.eot?cb696d03722fe6d0b7430e24b7f81e68#iefix") format("embedded-opentype"),
+url("./flaticon_april.ttf?cb696d03722fe6d0b7430e24b7f81e68") format("truetype"),
+url("./flaticon_april.svg?cb696d03722fe6d0b7430e24b7f81e68#flaticon_april") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_april !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon_april-map: (
+    "star-nofill": "\f101",
+    "star-half-filled": "\f102",
+    "star-fill": "\f103",
+    "sort-asn": "\f104",
+    "sort": "\f105",
+    "right": "\f106",
+    "loud-speaker": "\f107",
+    "previous": "\f108",
+    "sale-label": "\f109",
+    "left": "\f10a",
+    "next": "\f10b",
+    "thumbs-up": "\f10c",
+    "images": "\f10d",
+    "upload": "\f10e",
+    "heart": "\f10f",
+    "plus": "\f110",
+    "down-arrow": "\f111",
+    "delivery-truck": "\f112",
+);
+
+.flaticon-star-nofill:before {
+    content: map-get($flaticon_april-map, "star-nofill");
+}
+.flaticon-star-half-filled:before {
+    content: map-get($flaticon_april-map, "star-half-filled");
+}
+.flaticon-star-fill:before {
+    content: map-get($flaticon_april-map, "star-fill");
+}
+.flaticon-sort-asn:before {
+    content: map-get($flaticon_april-map, "sort-asn");
+}
+.flaticon-sort:before {
+    content: map-get($flaticon_april-map, "sort");
+}
+.flaticon-right:before {
+    content: map-get($flaticon_april-map, "right");
+}
+.flaticon-loud-speaker:before {
+    content: map-get($flaticon_april-map, "loud-speaker");
+}
+.flaticon-previous:before {
+    content: map-get($flaticon_april-map, "previous");
+}
+.flaticon-sale-label:before {
+    content: map-get($flaticon_april-map, "sale-label");
+}
+.flaticon-left:before {
+    content: map-get($flaticon_april-map, "left");
+}
+.flaticon-next:before {
+    content: map-get($flaticon_april-map, "next");
+}
+.flaticon-thumbs-up:before {
+    content: map-get($flaticon_april-map, "thumbs-up");
+}
+.flaticon-images:before {
+    content: map-get($flaticon_april-map, "images");
+}
+.flaticon-upload:before {
+    content: map-get($flaticon_april-map, "upload");
+}
+.flaticon-heart:before {
+    content: map-get($flaticon_april-map, "heart");
+}
+.flaticon-plus:before {
+    content: map-get($flaticon_april-map, "plus");
+}
+.flaticon-down-arrow:before {
+    content: map-get($flaticon_april-map, "down-arrow");
+}
+.flaticon-delivery-truck:before {
+    content: map-get($flaticon_april-map, "delivery-truck");
+}

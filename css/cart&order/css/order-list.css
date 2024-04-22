@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.title {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 100px;
+  border-bottom: 3px solid black;
+  width: 120px;
+  margin: auto;
+  padding-bottom: 15px;
+}
+
+.orderList_session {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+  height: auto;
+}
+
+.part_right {
+  width: 80%;
+}
+
+.part_right_count {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding: 15px 10px;
+}
+
+.part_right_count:nth-of-type(4) {
+  border-bottom: 1px solid black;
+}
+ .buyingRecord_table{
+  padding: 20px 10px 5px 10px;
+    border: 2px solid;
+  
+}   
+.payment_btn {
+  font-size: 14px;
+  border-radius: 0%;
+  margin: 10px auto;
+  display: block;
+  width: 95%;
+}
+
+.product_info {
+  display: flex;
+  gap: 22px;
+}
+
+.product_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+th,td {
+  text-align: center;
+  /*垂直居中 */
+  vertical-align: middle;
+}
+td{height: 80px;}
+
+#Product_count {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.productRow_button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.cart_session4 {
+  margin-bottom: 150px;
+}
+
+.fav_products {
+  display: flex;
+  gap: 20px;
+}
+
+.favlist_footer {
+  display: flex;
+  justify-content: end;
+}
+
+/* order */
+.part_left {
+  width: 20%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.order_products {
+  width: 100%;
+  border: 2px solid #858483;
+  padding: 30px 10px 20px 10px;
+}
+
+.changeBtn {
+  text-align: right;
+}
+
+.keep_buying {
+  border-radius: 0;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 2px solid black;
+}
+
+.user,
+.payment_method,
+.receive_method,
+.coupon,
+.receiver {
+  width: 100%;
+  border: 2px solid #858483;
+  padding: 30px 10px;
+}
+
+.user_title {
+  border-bottom: 1px solid black;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.user_info,
+.receiver_info {
+  margin-top: 10px;
+}
+
+.user_info li,
+.receiver_info li {
+  margin-bottom: 10px;
+}
+
+.receiver_title,
+.coupon_title,
+.receive_title,
+.payment_title {
+  border-bottom: 1px solid black;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.select_coupon {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 10px 10px;
+  height: 65px;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+#Select_coupon {
+  width: 80%;
+  height: 100%;
+}
+
+.goOrds{
+  font-size: 12px;
+}
+.goOrds a{
+  color: #858483;
+}
+
+.btn-ords{
+  font-size: 12px;
+  color: #858483;
+}
+
+
+.form-control:focus {
+  border-color: #fff;
+  box-shadow: 1px 1px 5px #AABEC3;
+}
+
+.input-group i {
+ text-align: center;
+
+}
+
+.ords_list_select{
+  margin: 0 0 16px 0;
+  height: 50px;
+}
+
+
+.ords_list_select a{
+color: inherit;
+padding: 0;
+margin: 0;
+}

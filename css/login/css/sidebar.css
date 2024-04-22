@@ -1,0 +1,189 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+ul,
+li,
+a{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	text-decoration: none;
+}
+
+
+p {
+	list-style-type: none;
+	padding: 0px;
+	text-decoration: none;
+}
+
+
+
+
+.secondarySidebar {
+	display: none;
+}
+
+.leftSidebar{
+display:flex;
+justify-content:center;
+}
+
+.sidebar {
+	width: 100px;
+}
+
+.sidebar a {
+	display: block;
+	color: black;
+	text-decoration: none;
+}
+
+.sidebar p {
+	font-size: 20px;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+
+.sidebar div {
+	display: flex;
+	height: 80px;
+}
+
+#bigHead {
+	display: block;
+	background-color: rgb(217, 238, 79);
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+
+.myOrder p:hover,
+.myAccount p:hover,
+.onlyForMember p:hover {
+	width: 100%;
+}
+
+
+
+.myAccount li {
+	width: 100%;
+	display: none;
+}
+
+.myOrder li {
+	display: none;
+}
+
+.onlyForMember li {
+	display: none;
+}
+
+.sidebar a:hover {
+	font-weight: 600;
+
+}
+
+
+
+
+
+@media screen and (min-width: 1440px) {
+
+	.leftSidebar{
+		display:flex;
+		justify-content:flex-start;		
+}
+
+
+	.sidebar {
+		width: 100px;
+
+	}
+
+	.sidebar p {
+		font-size: 20px;
+		margin-bottom: 5px;
+		font-weight: 600;
+	}
+
+	.sidebar a {
+		color: black;
+	}
+
+	.sidebar a:hover {
+		font-weight: 600;
+
+	}
+
+	.sidebar li {
+		color: black;
+		margin-bottom: 5px;
+	}
+
+	.sidebar div {
+		height: 80px;
+		/* background-color: aqua; */
+		margin-left: 5px
+	}
+
+
+	.sidebar img {
+		display: block;
+		background-color: rgb(205, 233, 23);
+
+		height: 80px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	.myOrder p:hover,
+	.myAccount p:hover,
+	.onlyForMember p:hover {
+		width: auto;
+		/* 或者你想要的宽度 */
+		background-color: transparent;
+		/* 或者其他你想要的背景色 */
+	}
+
+
+	.myAccount li {
+		width: 100%;
+		display: block;
+	}
+
+	.myOrder li {
+		display: block ;
+	}
+
+	.onlyForMember li {
+		display: block ;
+	}
+
+
+	/* sub-secondary */
+
+	.secondarySidebar {
+		display: flex;
+		font-size: 14px;
+	}
+
+	.secondarySidebar div:nth-child(1) {
+		font-weight: 600;
+	}
+
+	.secondarySidebar a:nth-child(1) {
+		text-decoration: none;
+		color: black;
+	}
+
+	.secondarySidebar div:nth-child(2) {
+		font-weight: 600;
+	}
+
+	.secondarySidebar div:nth-child(3) {
+		color: rgb(131, 128, 128)
+	}
+}

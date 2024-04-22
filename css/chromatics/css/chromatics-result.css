@@ -1,0 +1,340 @@
+:root {
+  --font-size: 16px;
+  --bg-color: #fbf3e8;
+  --primary: #abc8bc;
+  --primary-light: #00917c;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 背景動畫 */
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+.waveWrapper {
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+  background-image: linear-gradient(to top, #fbf3e8 20%, #4b6a70 80%);
+}
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+.bgBottom {
+  z-index: 5;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+
+main{
+  margin-top: 90px;
+  margin-bottom: 50px;
+}
+main h1{
+  margin-bottom: 25px;
+}
+main ul,
+main ol {
+  list-style: none;
+  padding: 0;
+}
+main a {
+  text-decoration: none;
+  color: white;
+}
+.chromaticOutline {
+  /* 網站暖色 */
+  background-color: #fff9f2;
+  /* 我的暖色 */
+  /* background-color:		#FFF0AC	; */
+
+  /* 網站冷色 */
+  /* background-color:#f2f6ff; */
+  /* 我的冷色 */
+  /* background-color:#D2E9FF; */
+
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 5px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 30px;
+}
+.diagnosticResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+main p {
+  border-radius: 5px;
+}
+.mobileModeColorGroups {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.brightColorText {
+  margin-top: 20px;
+}
+.color1 {
+  width: 35px;
+  height: 35px;
+  background-color: #fef6e1;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.color2 {
+  width: 35px;
+  height: 35px;
+  background-color: #c0c2c1;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.color3 {
+  width: 35px;
+  height: 35px;
+  background-color: #033b74;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.color4 {
+  width: 35px;
+  height: 35px;
+  background-color: #fac9bb;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.color5 {
+  width: 35px;
+  height: 35px;
+  background-color: #ee1b2c;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.lowerBody {
+  margin-top: 40px;
+}
+.color6 {
+  width: 35px;
+  height: 35px;
+  background-color: #033b74;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.color7 {
+  width: 35px;
+  height: 35px;
+  background-color: #fef6e1;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.color8 {
+  width: 35px;
+  height: 35px;
+  background-color: #98542d;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.color9 {
+  width: 35px;
+  height: 35px;
+  background-color: #fec311;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.color10 {
+  width: 35px;
+  height: 35px;
+  background-color: #96d5cd;
+  border-radius: 50px;
+  border: 1px solid black;
+}
+.otherModeColorGroups {
+  display: none;
+}
+.illustrate {
+  border-radius: 10px;
+  margin: 10px;
+  border: 2px solid var(--primary-light);
+}
+.illustrate p {
+  margin-bottom: 0px;
+}
+.illustrate li::before {
+  content: "\2713"; /* 打勾符號 */
+  margin-right: 5px;
+}
+.btn {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+/* 滑鼠懸停時保持紫色 */
+.btn:hover {
+  background-color: var(--primary-light);
+  color: white;
+}
+/* 點擊時保持紫色 */
+.btn:active,
+.btn:focus {
+  background-color: var(--primary-light) !important;
+  color: white;
+}
+/* 平板模式 */
+@media (min-width: 768px) {
+  .diagnosticResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobileModeColorGroups {
+    display: none;
+  }
+  .otherModeColorGroups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .basicColorText {
+    width: 135px;
+    margin-top: 20px;
+    margin-left: 65px;
+  }
+  .brightColorText {
+    width: 85px;
+    margin-left: 18px;
+  }
+  .bodyText {
+    width: 50px;
+  }
+  .color1 {
+    width: 35px;
+    height: 35px;
+    background-color: #fef6e1;
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  .color2 {
+    width: 35px;
+    height: 35px;
+    background-color: #c0c2c1;
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  .color3 {
+    width: 35px;
+    height: 35px;
+    background-color: #033b74;
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  .color4 {
+    width: 35px;
+    height: 35px;
+    background-color: #fac9bb;
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  .color5 {
+    width: 35px;
+    height: 35px;
+    background-color: #ee1b2c;
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  .color6 {
+    width: 35px;
+    height: 35px;
+    background-color: #033b74;
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  .color7 {
+    width: 35px;
+    height: 35px;
+    background-color: #fef6e1;
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  .color8 {
+    width: 35px;
+    height: 35px;
+    background-color: #98542d;
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  .color9 {
+    width: 35px;
+    height: 35px;
+    background-color: #fec311;
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  .color10 {
+    width: 35px;
+    height: 35px;
+    background-color: #96d5cd;
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  .illustrate {
+    width: 80%;
+  }
+}
+
+/* 電腦模式 */
+@media screen and (min-width: 1024px) {
+}

@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+ul,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.title {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 100px;
+  border-bottom: 3px solid black;
+  width: 120px;
+  margin: auto;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+}
+
+.ods_session1 {
+  display: flex;
+  justify-content: center;
+  margin: 0px 0 100px 0;
+  border: 2px solid;
+padding: 30px 10px 20px 10px;
+}
+
+.ods_session2 {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+  gap: 15px;
+  position: relative;
+}
+
+.back_orderlist_link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  font-weight: 600;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.keep_buying {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 0;
+  font-weight: 600;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.part_left {
+  width: 60%;
+  margin-right: 20px;
+}
+
+.part_right {
+  width: 40%;
+  height: 350px;
+  border: 2px solid;
+  padding: 15px 10px;
+}
+
+.ords {
+  width: 100%;
+  border: 2px solid;
+  padding: 15px 10px 30px 10px;
+}
+
+.ords_title {
+  border-bottom: 1px solid black;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.part_right_count {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid;
+  padding: 15px 10px;
+}
+
+.product_info {
+  display: flex;
+  gap: 22px;
+}
+
+.ords_info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.product_name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+th,
+td {
+  text-align: center;
+  /*垂直居中 */
+  vertical-align: middle;
+}
+
+#Product_count {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.productRow_button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.back_orderlist {
+  margin: 0px 0 30px;
+  padding: 10px;
+  position: relative;
+}

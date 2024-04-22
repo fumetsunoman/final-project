@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>收件地址一覽</title>
+	<!-- 引入 Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+	<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+/>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap"
+		rel="stylesheet"
+	/>
+
+
+	
+	<link rel="stylesheet" href="../scss/custom.css" />
+	<link rel="stylesheet" href="../css/header&footercssStyle.css" />
+	<!-- 側欄 -->
+	<link rel="stylesheet" href="./css/sidebar.css" />
+	<!-- 編輯地址 -->
+	<link rel="stylesheet" href="./css/edit-address.css">
+	<!-- 引入 jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<style>
+	</style>
+
+
+</head>
+
+<body class="bg-bgColor">
+	<header class="w-100">
+		<div class="header_background bg-headerColor">
+			<div class="LOGO">
+				<a href="#"><img src="../images/logo.svg" alt="" /></a>
+			</div>
+			<nav class="header_nav text-ddsecondary">
+				<ul class="header_font link-ddsecondary">
+					<li><a href="#">MEN</a></li>
+					<li><a href="#">WOMEN</a></li>
+					<li><a href="#">KID</a></li>
+					<li><a href="#">HOT</a></li>
+				</ul>
+			</nav>
+			<ul class="header_icons link-ddsecondary">
+				<li>
+					<a href="#"><i class="ri-user-line"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="ri-heart-3-line"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="ri-shopping-cart-line"></i></a>
+				</li>
+				<li>
+					<a href="#"><i class="ri-gamepad-line"></i></a>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+
+
+	<div style="display: flex;justify-content: center;">
+
+		<aside style="width:20%;margin-top:90px">
+			<div class="secondarySidebar">
+				<div><a href="#">首頁&nbsp; /</a></div>
+				<div>&nbsp; 我的帳戶&nbsp; /</div>
+				<div>&nbsp; 個人資料</div>
+			</div>
+			<!-- sidebar -->
+			<div class="leftSidebar">
+				<div class="sidebar">
+					<p class="member" style="font-size: 24px">會員中心</p>
+					<div><img id="bigHead" src="./images/boy.jpeg" alt="" /></div>
+					<ul class="myAccount">
+						<p style="margin-top: 10px">我的帳戶</p>
+						<li><a href="#">個人資料</a></li>
+						<li><a href="#">推薦尺寸</a></li>
+						<li><a href="#">收件地址</a></li>
+					</ul>
+					<ul class="myOrder">
+						<p>訂單中心</p>
+						<li><a href="#">購物紀錄</a></li>
+						<li><a href="#">購物車</a></li>
+					</ul>
+					<ul class="onlyForMember">
+						<p>會員專屬</p>
+						<li><a href="#">優惠券</a></li>
+						<li><a href="#">塔羅牌</a></li>
+						<li><a href="#">色彩學</a></li>
+						<li><a href="#">我的客製紀錄</a></li>
+					</ul>
+				</div>
+			</div>
+		</aside>				
+	
+	
+		<main class="container " style="margin-top:90px;margin-left: 0;margin-right: 0;">
+			<div style="margin-bottom: 40px;">
+				<div style="font-size: 28px; font-weight: 600; margin-bottom: 5px;">收件地址一覽
+				</div>
+				<div style="font-size: 16px; font-weight: 600; ">可更新您的宅配配送地址</div>
+			</div>
+	
+			<form action="/edit" method="post">
+				<div>
+					<div style="font-weight: 600; " class="title">配送地址</div>
+					<div class="d-flex " style="margin-top: 15px;padding-bottom: 5px; border-bottom:1px solid rgb(199, 193, 193);">
+							<p style="border-right:1px solid black ; display: inline-block;">2個地址&emsp; </p>
+							<p style="display: inline-block;">&emsp;還可以創建18個收貨地址 </p>
+					</div>
+				</div>
+	
+				<div style="margin-top: 30px;">
+					<div style=" font-weight: 600;" class="title">匿名工程師 <span class="subTitle" >當前配送地址</span></div>
+					<div style="margin-top: 15px; border-bottom:1px solid rgb(199, 193, 193);">
+							<p>台北市信義區大安路康莊街12巷16號</p>
+							<p>09xxxxx001 </p>
+							<div class="d-flex editAddress">
+								<p><a href="#">編輯通訊錄</a></p>
+								<p><a href="#">刪除通訊錄</a></p>
+								<p>當前配送地址</p>
+							</div>
+					</div>				
+				</div>
+	
+				<div style="margin-top: 30px;">
+					<div style="font-weight: 600;" class="title">匿名工程師 <span class="subTitle">當前配送地址</span></div>
+					<div style="margin-top: 15px; border-bottom:1px solid rgb(199, 193, 193);;">
+							<p>台北市信義區大安路康莊街12巷16號</p>
+							<p>09xxxxx001 </p>
+							<div class="d-flex editAddress">
+								<p><a href="#">編輯通訊錄</a></p>
+								<p><a href="#">刪除通訊錄</a></p>
+								<p style="font-weight: 600; font-size: 16px;"><a href="#">設為預設地址</a></p>
+							</div>
+					</div>				
+				</div>
+	
+	
+				<div class="d-flex " style="margin-top:35px;">
+					<div style="width: 50%;">
+						<button type="submit" style="background-color: #0a0a0a;
+						color: white;" id="save">新增收貨地址</button>
+					</div>
+				</div>
+	
+			</form>
+		</main>
+
+	</div>
+
+	<footer class="bg-ddprimary" style="margin-top:150px">
+		<nav class="footer_navs">
+			<ul class="footer_nav1 text-white">
+				<li><a href="#">MEN</a></li>
+				<li><a href="#">WOMEN</a></li>
+				<li><a href="#">KID</a></li>
+				<li><a href="#">COUPLE</a></li>
+				<li><a href="#">HOT</a></li>
+			</ul>
+			<ul class="footer_nav2 text-black">
+				<li><a href="#">加入會員</a></li>
+				<li><a href="#">登出</a></li>
+				<li><a href="#">會員中心</a></li>
+				<li><a href="#">關於我們</a></li>
+				<li><a href="#">客服中心</a></li>
+				<li><a href="#">回到主頁</a></li>
+				<li><a href="#">色彩學</a></li>
+			</ul>
+		</nav>
+		<div class="footer_follow">
+			<div class="follow_me">
+				<p class="follow_font">FOLLOW ME</p>
+				<ul class="footer_icons">
+					<li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+					<li><a href="#"><i class="ri-line-fill"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<small class="footer_small">Copyright © 2023 DD SHOP All Rights Reserved.</small>
+	</footer>
+
+
+
+	<!-- 引入 Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- 引入 Bootstrap Datepicker JS -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
+	<script src="./javaScript/edit-address.js"></script>
+
+	<script src="./javaScript/sidebar.js"></script>
+</body>
+
+</html>

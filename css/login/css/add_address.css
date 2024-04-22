@@ -1,0 +1,168 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+
+
+
+.container {
+	position:absolute;
+	max-width: 450px !important;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+
+label {
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid black;
+	/* 下划线颜色和样式可以根据需求进行调整 */
+	outline: none;
+	/* 去除默认的输入框轮廓样式 */
+	border-radius: 0px;
+	height: 30px;
+	/* 將高度設置為 25px */
+	background-color:rgba(var(--bs-bgColor-rgb), var(--bs-bg-opacity)) ;
+}
+
+div.phone {
+	width: 25%;
+	margin-right: 30px;
+}
+
+
+button[type="submit"] {
+	font-weight: 600;
+	width: 100%;
+	border: 1px solid #918989;
+	border-radius: 5px;
+	background-color: #ffffff;
+	color: #000000;
+	cursor: pointer;
+	font-size: 22px;
+}
+
+
+/* 当按钮被悬停时 */
+button:hover {
+	transform: translateY(-5px);
+	transition: transform 0.3s ease;
+}
+
+
+/* 調整出生年月日輸入框高度 */
+#birthdate {
+	height: 20px;
+	/* 設置輸入框高度為 30px */
+}
+
+.form-control {
+	margin-top: 5px;
+	background-color: #f8f9fa;
+	/* 设置输入框背景颜色为浅灰色 */
+}
+
+/* 将占位符颜色设置为黑色 */
+input::placeholder {
+	color: black;
+}
+
+
+.addAddress{
+	display:flex;
+	flex-wrap: wrap;
+
+}
+
+
+.addAddress div{
+	width: 40%;
+}
+
+
+.addAddress .liveAddress {
+	margin-top: 30px;
+	width:50%
+}
+
+form .phone {
+	width: 35%;
+}
+
+
+@media screen and (min-width: 1440px) {
+
+	/* 較小螢幕的調整 */
+	.container {
+		max-width: 800px !important;
+		padding: 15px;
+		/* 減少內邊距以節省空間 */
+	}
+
+	/* 調整字型大小以提升可讀性 */
+	.recipient-address {
+		font-size: 24px;
+	}
+
+	/* 減少字型大小以適應較小螢幕 */
+	.form-control {
+		font-size: 14px;
+	}
+
+
+
+	/* 調整按鈕樣式以適應較小螢幕 */
+	button[type="submit"] {
+		font-size: 22px;
+		padding: 3px;
+		/* 增加按鈕的內邊距以改善觸摸目標大小 */
+	}
+
+	/* 調整輸入框樣式以適應較小螢幕 */
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="tel"],
+	select {
+		font-size: 16px;
+		height: 35px;
+		/* 增加輸入框的高度以改善觸摸目標大小 */
+	}
+
+	.addAddress{
+	display:flex;
+	flex-wrap: nowrap;
+
+}
+
+
+.addAddress div{
+	width: 33%;
+}
+
+
+.addAddress .liveAddress {
+	margin-top: 0px;
+	width:33%
+}
+
+.phone {
+		width: 30% ;
+	}
+
+
+
+
+
+}
+

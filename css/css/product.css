@@ -1,0 +1,43 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
+.btnType {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  width: 100px;
+  line-height: 30px;
+}
+.searchGroup {
+  width: 250px;
+  height: 30px;
+}
+.searchIcon{
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+.searchInput {
+  width: 220px;
+  height: 30px;
+}
+.productTop {
+  width: 820px;
+  height: 100%;
+}
+.productTopBtg {
+  width: 550px;
+  height: 100%;
+}
+.productsSize{
+  padding: 0;
+  width: 260px;
+  height: 357px;
+}
+
+.pageUlSize{
+  margin: 0;
+  /* width: 300px;
+  height: 40px; */
+}

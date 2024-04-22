@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 背景動畫 */
+:root {
+  --twinkle-duration: 1s;
+}
+.stars-wrapper {
+  pointer-events: none;
+  background: linear-gradient(#16161d, #1f1f3a, #3b2f4a);
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+          animation: twinkle var(--twinkle-duration) ease-in-out infinite;
+}
+.stars:nth-child(2) {
+  -webkit-animation-delay: calc(var(--twinkle-duration) * -0.33);
+          animation-delay: calc(var(--twinkle-duration) * -0.33);
+}
+.stars:nth-child(3) {
+  -webkit-animation-delay: calc(var(--twinkle-duration) * -0.66);
+          animation-delay: calc(var(--twinkle-duration) * -0.66);
+}
+@-webkit-keyframes twinkle {
+  25% {
+    opacity: 0;
+  }
+}
+@keyframes twinkle {
+  25% {
+    opacity: 0;
+  }
+}
+.star {
+  fill: white;
+}
+.star:nth-child(3n) {
+  opacity: 0.8;
+}
+.star:nth-child(7n) {
+  opacity: 0.6;
+}
+.star:nth-child(13n) {
+  opacity: 0.4;
+}
+.star:nth-child(19n) {
+  opacity: 0.2;
+}
+
+.comet {
+  transform-origin: center center;
+  animation: comet 15s linear infinite;
+}
+@keyframes comet {
+  0%, 40% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60%, 100% {
+    transform: translateX(-100vmax);
+    opacity: 0;
+  }
+}
+.comet-b {
+  animation-delay: -3.3s;
+}
+.comet-c {
+  animation-delay: -5s;
+}
+.comet-d {
+  animation-delay: -2s;
+}
+.comet-e {
+  animation-delay: -4s;
+}
+.comet-f {
+  animation-delay: -1s;
+}
+.comet-g {
+  animation-delay: -3s;
+}
+.comet-h {
+  animation-delay: -2.5s;
+}
+.comet-i {
+  animation-delay: -10.3s;
+}
+.comet-j {
+  animation-delay: -7.8s;
+}
+.comet-k {
+  animation-delay: -9.8s;
+}
+.comet-l {
+  animation-delay: -12.2s;
+}
+.comet-m {
+  animation-delay: -8.2s;
+}
+.comet-n {
+  animation-delay: -13.5s;
+}
+.comet-o {
+  animation-delay: -11.5s;
+}
+.comet-p {
+  animation-delay: -2.7s;
+}
+.comet-q {
+  animation-delay: -11.7s;
+}
+.comet-r {
+  animation-delay: -1.3s;
+}
+.comet-s {
+  animation-delay: -13.3s;
+}
+.comet-t {
+  animation-delay: -13.4s;
+}
+.comet-u {
+  animation-delay: -12.4s;
+}
+.comet-v {
+  animation-delay: -2.8s;
+}
+.comet-w {
+  animation-delay: -1.9s;
+}
+.comet-x {
+  animation-delay: -10.2s;
+}
+.comet-y {
+  animation-delay: -8.8s;
+}
+.comet-z {
+  animation-delay: -11.4s;
+}
+.comet-1 {
+  animation-delay: -1.6s;
+}
+.comet-2 {
+  animation-delay: -7.2s;
+}
+.comet-3 {
+  animation-delay: -8.7s;
+}
+.comet-4 {
+  animation-delay: -9.1s;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+}
+.container {
+  height: 100svh;
+}
+main a {
+  text-decoration: none;
+  color: white;
+}
+.imgs img {
+  width: 200px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+.btn {
+  color: white;
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 1);
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+/* 滑鼠懸停時保持紫色 */
+.btn:hover {
+  background-color: #9370db;
+  color: white;
+}
+/* 點擊時保持紫色 */
+.btn:active,
+.btn:focus {
+  background-color: #9370db !important;
+  color: white;
+}
+
+/* 平板模式 */
+@media (min-width: 768px) {
+  .imgs {
+    display: flex;
+    flex-direction: row;
+  }
+  .imgs img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* 電腦模式 */
+@media screen and (min-width: 1024px) {
+}

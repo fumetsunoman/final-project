@@ -1,0 +1,93 @@
+.loginForm {
+	border:1px solid rgb(157, 145, 145);
+	border-radius: 5px;
+	width: 450px;
+}
+
+
+
+
+.btn-custom {
+	color: black;
+	/* 设置字体颜色为黑色 */
+	background-color: rgba(var(--bs-bgColor-rgb), var(--bs-bg-opacity));
+	border:1px solid rgb(157, 145, 145);
+
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+}
+
+.icon-container {
+	margin-right: 5px;
+	/* 调整图标与文字之间的间距 */
+}
+
+
+.btn.btn-outline-dark {
+	justify-content: center;
+	/* 图标和文字都居中显示 */
+}
+
+.btn-custom:hover {
+	background-color: black;
+	/* 悬停时背景颜色变为黑色 */
+	color: white;
+	/* 悬停时文字颜色变为白色 */
+}
+
+.form-control {
+	border:1px solid rgb(157, 145, 145);
+	background-color:rgba(var(--bs-bgColor-rgb), var(--bs-bg-opacity));
+}
+
+.form-check-input {
+	background-color: #cccdcf;
+	/* 设置输入框背景颜色为浅灰色 */
+}
+
+.form-control:focus {
+	border-color: #fefcfb;
+	/* 获取焦点时的外边框颜色为浅橘色 */
+	box-shadow: 0 0 0 0.1rem #fcbea9;
+	/* 可选的获取焦点时阴影效果 */
+}
+
+.quickLogin {
+	width: 40%;
+}
+
+
+
+#forgotPasswordLink:hover {
+	color: #f08d6c !important;
+}
+
+
+.text-orange {
+	color: #EEA68D !important;
+	/* 點擊註冊 橘色 */
+}
+
+.text-orange:hover {
+	color: #f08d6c !important;
+	/* 點擊註冊 橘色 */
+}
+
+@media screen and (min-width: 1440px) {
+
+	.loginForm {
+			width: 600px;
+	}
+
+	.btn-text {
+			font-size: 16px;
+	}
+
+	.quickLogin {
+			width: 40%;
+	}
+
+}

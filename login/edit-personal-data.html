@@ -1,482 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>編輯個人資料</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>編輯個人資料</title>
-	<!-- 引入 Bootstrap CSS -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
 
-	<!-- 引入 Bootstrap Datepicker CSS -->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
-		rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+		<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+	/>
 
-	<!-- 引入 jQuery -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="../scss/custom.css" />
+    <link rel="stylesheet" href="../css/header&footercssStyle.css" />
 
+    <!-- 側欄 -->
+    <link rel="stylesheet" href="./css/sidebar.css" />
+    <!-- 編輯個人資料 -->
+    <link rel="stylesheet" href="./css/edit-personal.css" />
 
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-		}
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-		.personalData{
-			display: flex;
-			justify-content: center;
-		}
+    <style></style>
+  </head>
 
-		.container {
-			max-width: 450px;
-			padding: 30px;
-			border: 1px solid #ccc;
-			border-radius: 5px;
-		}
-
-
-		.writeName div{
-			flex-wrap: rap ;
-			width: 40% ;
-		}
-
-		.writeBirthday{
-			flex-wrap: wrap ;
-		}
-
-		.writeBirthday div{
-			width:40%;
-			margin-top: 10px ;
-		}
-
-
-		.writeAddress{
-			flex-wrap: wrap ;
-		}
-
-		.writeAddress div{
-			width:40% ;
-			margin-top: 15px ;
-		}
-
-		.writeAddress .liveAddress{
-			width: 50%;
-		}
-
-		.email{
-			width: 100%;
-		}
-
-		.button div{
-			width:40% ;
-		}
-
-		label {
-			font-weight: 600;
-			margin-bottom: 0;
-		}
-
-		input[type="text"],
-		input[type="email"],
-		input[type="password"],
-		input[type="tel"],
-		select {
-			font-size: 16px;
-			width: 100%;
-			border: none;
-			border-bottom: 1px solid black;
-			/* 下划线颜色和样式可以根据需求进行调整 */
-			outline: none;
-			/* 去除默认的输入框轮廓样式 */
-			border-radius: 0px;
-			height: 30px;
-			/* 將高度設置為 25px */
-		}
-
-
-		button[type="submit"] {
-			font-weight: 600;
-			width: 100%;
-			border: 1px solid #918989;
-			border-radius: 5px;
-			background-color: #ffffff;
-			color: #000000;
-			cursor: pointer;
-
-		}
-
-		/* button[type="submit"]:hover {
-			background-color: black;
-			color: white;
-		} */
-
-		/* button[type="submit"] #cancel :hover {
-			background-color: white;
-			color: black;
-		} */
-
-		/* 当按钮被悬停时 */
-		button:hover {
-			transform: translateY(-5px);
-			transition: transform 0.3s ease;
-		}
+  <body class="bg-bgColor">
 
 
 
+		<header class="w-100">
+      <div class="header_background bg-headerColor">
+        <div class="LOGO">
+          <a href="#"><img src="../images/logo.svg" alt="" /></a>
+        </div>
+        <nav class="header_nav text-ddsecondary">
+          <ul class="header_font link-ddsecondary">
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KID</a></li>
+            <li><a href="#">HOT</a></li>
+          </ul>
+        </nav>
+        <ul class="header_icons link-ddsecondary">
+          <li>
+            <a href="#"><i class="ri-user-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-heart-3-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-shopping-cart-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-gamepad-line"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-		/* 調整出生年月日輸入框高度 */
-		#birthdate {
-			height: 20px;
-			/* 設置輸入框高度為 30px */
-		}
-
-		.form-control {
-			margin-top: 5px;
-			background-color: #f8f9fa;
-			/* 设置输入框背景颜色为浅灰色 */
-		}
-
-		.form-control:focus {
-			border-color: #EEA68D;
-			/* 获取焦点时的外边框颜色为浅橘色 */
-			box-shadow: 0 0 0 0.1rem #EEA68D;
-			/* 可选的获取焦点时阴影效果 */
-		}
-
-
-		/* 将占位符颜色设置为黑色 */
-		input::placeholder {
-			color: black;
-		}
-
-
-
-		.phone{
-			width:40%
-		}
-
-		form div div   button{
-			font-size: 22px;
-		}
-
-		@media screen and (min-width: 1440px) {
-    /* 在此處添加要應用於較小螢幕時的樣式 */
-
-		.container{
-			max-width: 800px !important;
-		}
-
-		.writeName div{
-			width: 30% ;
-		}
-
-		.writeBirthday{
-			flex-wrap: nowrap ;
-		}
-
-		.writeBirthday div{
-			width:30% ;
-			margin-top: 0px ;
-		}
-
-		.writeAddress{
-			flex-wrap: nowrap ;
-		}
-
-
-
-		.writeAddress div{
-			width:30% ;
-			margin-top: 0px;
-		}
-
-		.writeAddress  .liveAddress {
-			width:30%;
-		}
-
-
-		select {
-        font-size: 16px; /* 您可以將此值更改為您想要的字體大小 */
-    }
-
-		.email{
-			width:80% ;
-		}
-
-		.phone{
-			width: 20% ;
-			font-size: 16px;
-		}
-
-		.button div{
-			width:33% ;
-		}
-
-		form div div   button{
-			font-size: 25px;
-		}
-
-
-}
-
-	</style>
-
-
-</head>
-
-<body>
-	<div class="personalData">
-		<div class="container mt-5">
-			<div style="margin-bottom: 20px;">
-				<div style="font-size: 28px; font-weight: 600; margin-bottom: 5px;">個人資料
-					<button
-						style="height: 20px; font-size: 12px; font-weight: 600; color:white; border-radius: 5px ; border:none ; background-color: #EEA68D;outline: none;">修改</button>
+		<div style="display: flex;justify-content: center;">
+			<aside style="width:20%;margin-top:90px">
+				<div class="secondarySidebar">
+					<div><a href="#">首頁&nbsp; /</a></div>
+					<div>&nbsp; 我的帳戶&nbsp; /</div>
+					<div>&nbsp; 個人資料</div>
 				</div>
-	
-				<div style="font-size: 18px; font-weight: 600; ">完成填寫個人資料可享有更多會員專屬權益</div>
-			</div>
-	
-			<form action="/edit" method="post">
-				<div class="d-flex writeName" style="margin-top: 15px;">
-					<div style=" margin-right: 30px; ">
-						<label for="name">姓名</label><br>
-						<input type="text" id="firstName" name="name" placeholder="姓" style="height: 38px;" required>
-					</div>
-					<div style="display: flex; align-items: flex-end;">
-						<input type="text" id="lastName" name="name" placeholder="名" style="height: 38px;" required>
+				<!-- sidebar -->
+				<div class="leftSidebar">
+					<div class="sidebar">
+						<p class="member" style="font-size: 24px">會員中心</p>
+						<div><img id="bigHead" src="./images/boy.jpeg" alt="" /></div>
+						<ul class="myAccount">
+							<p style="margin-top: 10px">我的帳戶</p>
+							<li><a href="#">個人資料</a></li>
+							<li><a href="#">推薦尺寸</a></li>
+							<li><a href="#">收件地址</a></li>
+						</ul>
+						<ul class="myOrder">
+							<p>訂單中心</p>
+							<li><a href="#">購物紀錄</a></li>
+							<li><a href="#">購物車</a></li>
+						</ul>
+						<ul class="onlyForMember">
+							<p>會員專屬</p>
+							<li><a href="#">優惠券</a></li>
+							<li><a href="#">塔羅牌</a></li>
+							<li><a href="#">色彩學</a></li>
+							<li><a href="#">我的客製紀錄</a></li>
+						</ul>
 					</div>
 				</div>
+			</aside>		
+			
 	
-				<div class="d-flex justify-content-between" style="margin-top: 15px;">
-					<div style="width: 45%;">
-						<label for="email">生理性別</label>
-						<div style="margin-top: 10px;">
-							<input type="checkbox" id="male" name="gender" value="male" style="margin-right: 2px;">
-							<label for="male" style="margin-right: 10px;">男</label>
-							<input type="checkbox" id="female" name="gender" value="female" style="margin-right: 2px;">
-							<label for="female" style="margin-right: 10px;">女</label>
+			<main class="personalData" style="margin-top: 90px;width: 60%;">
+				<div class="container ">
+					<div style="margin-bottom: 20px">
+						<div style="font-size: 28px; font-weight: 600; margin-bottom: 5px">
+							個人資料
+							<button
+								style="
+									height: 20px;
+									font-size: 12px;
+									font-weight: 600;
+									color: white;
+									border-radius: 5px;
+									border: none;
+									background-color: #eea68d;
+									outline: none;
+								"
+							>
+								修改
+							</button>
+						</div>
+	
+						<div style="font-size: 18px; font-weight: 600">
+							完成填寫個人資料可享有更多會員專屬權益
 						</div>
 					</div>
+	
+					<form action="/edit" method="post">
+						<div class="d-flex writeName" style="margin-top: 15px">
+							<div style="margin-right: 30px">
+								<label for="name">姓名</label><br />
+								<input
+									type="text"
+									id="firstName"
+									name="name"
+									placeholder="姓"
+									style="height: 38px"
+									required
+								/>
+							</div>
+							<div style="display: flex; align-items: flex-end">
+								<input
+									type="text"
+									id="lastName"
+									name="name"
+									placeholder="名"
+									style="height: 38px"
+									required
+								/>
+							</div>
+						</div>
+	
+						<div class="d-flex justify-content-between" style="margin-top: 15px">
+							<div style="width: 45%">
+								<label for="email">生理性別</label>
+								<div style="margin-top: 10px">
+									<input
+										type="checkbox"
+										id="male"
+										name="gender"
+										value="male"
+										style="margin-right: 2px"
+									/>
+									<label for="male" style="margin-right: 10px">男</label>
+									<input
+										type="checkbox"
+										id="female"
+										name="gender"
+										value="female"
+										style="margin-right: 2px"
+									/>
+									<label for="female" style="margin-right: 10px">女</label>
+								</div>
+							</div>
+						</div>
+	
+						<div
+							class="d-flex writeBirthday"
+							style="margin-top: 15px; display: flex"
+						>
+							<div style="margin-right: 30px">
+								<label for="year">生日</label>
+								<select id="year" name="year">
+									<!-- 使用JavaScript生成年份选项 -->
+									<script>
+										var currentYear = new Date().getFullYear();
+										for (var year = currentYear; year >= 1900; year--) {
+											document.write(
+												'<option value="' + year + '">' + year + "</option>"
+											);
+										}
+									</script>
+								</select>
+							</div>
+							<div style="margin-right: 30px">
+								<label for="month">月份</label>
+								<select id="month" name="month">
+									<option value="1">一月</option>
+									<option value="2">二月</option>
+									<option value="3">三月</option>
+									<option value="4">四月</option>
+									<option value="5">五月</option>
+									<option value="6">六月</option>
+									<option value="7">七月</option>
+									<option value="8">八月</option>
+									<option value="9">九月</option>
+									<option value="10">十月</option>
+									<option value="11">十一月</option>
+									<option value="12">十二月</option>
+								</select>
+							</div>
+	
+							<div>
+								<label for="day">日期</label>
+								<select id="day" name="day"></select>
+							</div>
+						</div>
+	
+						<div
+							class="d-flex writeAddress"
+							style="margin-top: 20px; display: flex"
+						>
+							<div style="margin-right: 30px">
+								<label for="city">居住縣市:</label><br />
+								<select
+									id="city"
+									name="city"
+									onchange="populateDistricts()"
+									required
+								>
+									<option value="">請選擇居住縣市</option>
+									<option value="基隆市">基隆市</option>
+									<option value="台北市">台北市</option>
+									<option value="新北市">新北市</option>
+									<option value="桃園市">桃園市</option>
+									<option value="新竹市">新竹市</option>
+									<option value="新竹縣">新竹縣</option>
+									<option value="苗栗縣">苗栗縣</option>
+									<option value="台中市">台中市</option>
+									<option value="彰化縣">彰化縣</option>
+									<option value="南投縣">南投縣</option>
+									<option value="雲林縣">雲林縣</option>
+									<option value="嘉義市">嘉義市</option>
+									<option value="嘉義縣">嘉義縣</option>
+									<option value="台南市">台南市</option>
+									<option value="高雄市">高雄市</option>
+									<option value="屏東縣">屏東縣</option>
+									<option value="台東縣">台東縣</option>
+									<option value="花蓮縣">花蓮縣</option>
+									<option value="宜蘭縣">宜蘭縣</option>
+									<option value="澎湖縣">澎湖縣</option>
+									<option value="金門縣">金門縣</option>
+									<option value="連江縣">連江縣</option>
+								</select>
+							</div>
+							<div style="margin-right: 30px">
+								<label for="district">鄉鎮區</label><br />
+								<select id="district" name="district" required>
+									<option value="" class="form-control">請選擇鄉鎮區</option>
+								</select>
+							</div>
+							<div class="liveAddress">
+								<label for="address">居住地址</label><br />
+								<input
+									type="text"
+									id="address"
+									name="address"
+									placeholder="請輸入地址"
+									required
+								/>
+							</div>
+						</div>
+	
+						<div class="d-flex" style="margin-top: 20px; width: 50%">
+							<div class="email">
+								<label for="email">電子郵件地址</label><br />
+								<input
+									type="text"
+									id="email"
+									name="email"
+									style="height: 20px"
+									placeholder="請輸電子郵件"
+								/>
+							</div>
+						</div>
+	
+						<div class="d-flex" style="margin-top: 20px">
+							<div style="margin-right: 30px" class="phone">
+								<label for="phone">手機號碼</label><br />
+								<input
+									type="text"
+									id="phone"
+									name="phone"
+									style="height: 30px"
+									value="09-XXXXX001"
+									required
+								/>
+							</div>
+						</div>
+	
+						<div class="d-flex button" style="margin-top: 20px">
+							<div style="margin-right: 30px">
+								<button type="submit">取消</button>
+							</div>
+							<div>
+								<button
+									type="submit"
+									style="background-color: #0a0a0a; color: #fcf4f4"
+									id="save"
+								>
+									儲存
+								</button>
+							</div>
+						</div>
+					</form>
 				</div>
-	
-	
-				<div class="d-flex  writeBirthday" style="margin-top: 15px; display: flex;">
-					<div style="margin-right: 30px; ">
-						<label for="year">生日</label>
-						<select id="year" name="year">
-							<!-- 使用JavaScript生成年份选项 -->
-							<script>
-								var currentYear = new Date().getFullYear();
-								for (var year = currentYear; year >= 1900; year--) {
-									document.write('<option value="' + year + '">' + year + '</option>');
-								}
-							</script>
-						</select>
-					</div>
-					<div style="margin-right: 30px;">
-						<label for="month">月份</label>
-						<select id="month" name="month">
-							<option value="1">一月</option>
-							<option value="2">二月</option>
-							<option value="3">三月</option>
-							<option value="4">四月</option>
-							<option value="5">五月</option>
-							<option value="6">六月</option>
-							<option value="7">七月</option>
-							<option value="8">八月</option>
-							<option value="9">九月</option>
-							<option value="10">十月</option>
-							<option value="11">十一月</option>
-							<option value="12">十二月</option>
-						</select>
-					</div>
-	
-					<div>
-						<label for="day">日期</label>
-						<select id="day" name="day"></select>
-					</div>
-				</div>
-	
-	
-				<div class="d-flex writeAddress" style="margin-top: 20px; display:flex;">
-					<div style="margin-right: 30px;">
-						<label for="city">居住縣市:</label><br>
-						<select id="city" name="city" onchange="populateDistricts()" required>
-							<option value="">請選擇居住縣市</option>
-							<option value="基隆市">基隆市</option>
-							<option value="台北市">台北市</option>
-							<option value="新北市">新北市</option>
-							<option value="桃園市">桃園市</option>
-							<option value="新竹市">新竹市</option>
-							<option value="新竹縣">新竹縣</option>
-							<option value="苗栗縣">苗栗縣</option>
-							<option value="台中市">台中市</option>
-							<option value="彰化縣">彰化縣</option>
-							<option value="南投縣">南投縣</option>
-							<option value="雲林縣">雲林縣</option>
-							<option value="嘉義市">嘉義市</option>
-							<option value="嘉義縣">嘉義縣</option>
-							<option value="台南市">台南市</option>
-							<option value="高雄市">高雄市</option>
-							<option value="屏東縣">屏東縣</option>
-							<option value="台東縣">台東縣</option>
-							<option value="花蓮縣">花蓮縣</option>
-							<option value="宜蘭縣">宜蘭縣</option>
-							<option value="澎湖縣">澎湖縣</option>
-							<option value="金門縣">金門縣</option>
-							<option value="連江縣">連江縣</option>
-						</select>
-					</div>
-					<div style="margin-right: 30px;">
-						<label for="district">鄉鎮區</label><br>
-						<select id="district" name="district" required>
-							<option value="" class="form-control" >請選擇鄉鎮區</option>
-						</select>
-					</div>
-					<div  class="liveAddress" >
-						<label for="address">居住地址</label><br>
-						<input type="text" id="address" name="address" placeholder="請輸入地址" required>
-					</div>
-				</div>
-	
-				<div class="d-flex " style="margin-top: 20px; width:50%">
-					<div  class="email">
-						<label for="email">電子郵件地址</label><br>
-						<input type="text" id="email" name="email" style="height: 20px;" placeholder="請輸電子郵件">
-					</div>
-				</div>
-	
-				<div class="d-flex" style="margin-top: 20px;">
-					<div style="margin-right: 30px; " class="phone">
-						<label for="phone">手機號碼</label><br>
-						<input type="text" id="phone" name="phone" style="height: 30px; " value="09-XXXXX001" required>
-					</div>
-				</div>
-	
-	
-				<div class="d-flex button" style="margin-top:20px;">
-					<div style="margin-right: 30px;">
-						<button type="submit" >取消</button>
-					</div>
-					<div>
-						<button type="submit" style="background-color: #0a0a0a;
-						color: #fcf4f4;" id="save">儲存</button>
-					</div>
-				</div>
-	
-			</form>
+			</main>
+
 		</div>
 
-	</div>
-
-
-	<!-- 引入 Bootstrap JS -->
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-	<!-- 引入 Bootstrap Datepicker JS -->
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-
-
-	<script>
-		// 定義縣市與鄉鎮區的資料集合
-		var districtsByCity = {
-			"基隆市": ["仁愛區", "信義區", "中正區", "中山區", "安樂區", "七堵區"],
-			"台北市": ["中正區", "大同區", "中山區", "松山區", "大安區", "萬華區", "信義區", "士林區", "北投區", "內湖區", "南港區", "文山區"],
-			"新北市": ["板橋區", "新莊區", "中和區", "永和區", "土城區", "樹林區", "三峽區", "鶯歌區", "三重區", "蘆洲區", "五股區", "泰山區", "林口區", "八里區", "淡水區", "三芝區", "石門區"],
-			"桃園市": ["桃園區", "中壢區", "平鎮區", "八德區", "楊梅區", "蘆竹區", "大溪區", "龍潭區", "龜山區", "大園區", "觀音區", "新屋區", "復興區"],
-			"新竹市": ["東區", "北區"],
-			"新竹縣": ["竹北市", "竹東鎮", "新埔鎮", "關西鎮", "湖口鄉", "新豐鄉", "峨眉鄉", "寶山鄉", "北埔鄉", "芎林鄉", "橫山鄉", "尖石鄉", "五峰鄉"],
-			"苗栗縣": ["苗栗市", "頭份市", "竹南鎮", "後龍鎮", "通霄鎮", "苑裡鎮", "卓蘭鎮", "造橋鄉", "西湖鄉", "頭屋鄉", "公館鄉", "大湖鄉", "泰安鄉", "銅鑼鄉", "三義鄉", "獅潭鄉", "三灣鄉", "南庄鄉", "後龍鎮"],
-			"台中市": ["中區", "東區", "南區", "西區", "北區", "北屯區", "西屯區", "南屯區", "太平區", "大里區", "霧峰區", "烏日區", "豐原區", "后里區", "石岡區", "東勢區", "和平區", "新社區", "潭子區", "大雅區", "神岡區", "大肚區", "沙鹿區", "龍井區", "梧棲區", "清水區", "大甲區", "外埔區", "大安區"],
-			"彰化縣": ["彰化市", "員林市", "和美鎮", "鹿港鎮", "溪湖鎮", "二林鎮", "田中鎮", "北斗鎮", "花壇鄉", "芬園鄉", "大村鄉", "永靖鄉", "伸港鄉", "線西鄉", "福興鄉", "秀水鄉", "埔心鄉", "埔鹽鄉", "大城鄉", "芳苑鄉", "竹塘鄉", "社頭鄉", "二水鄉", "田尾鄉", "埤頭鄉", "溪州鄉"],
-			"南投縣": ["南投市", "埔里鎮", "草屯鎮", "竹山鎮", "集集鎮", "名間鄉", "鹿谷鄉", "中寮鄉", "魚池鄉", "國姓鄉", "水里鄉", "信義鄉", "仁愛鄉"],
-			"雲林縣": ["斗六市", "斗南鎮", "虎尾鎮", "西螺鎮", "土庫鎮", "北港鎮", "古坑鄉", "大埤鄉", "莿桐鄉", "林內鄉", "二崙鄉", "崙背鄉", "麥寮鄉", "東勢鄉", "褒忠鄉", "臺西鄉", "元長鄉", "四湖鄉", "口湖鄉", "水林鄉"],
-			"嘉義市": ["東區", "西區"],
-			"嘉義縣": ["太保市", "朴子市", "布袋鎮", "大林鎮", "民雄鄉", "溪口鄉", "新港鄉", "六腳鄉", "東石鄉", "義竹鄉", "鹿草鄉", "水上鄉", "中埔鄉", "竹崎鄉", "梅山鄉", "番路鄉", "大埔鄉", "阿里山鄉"],
-			"台南市": ["中西區", "東區", "南區", "北區", "安平區", "安南區", "永康區", "歸仁區", "新化區", "左鎮區", "玉井區", "楠西區", "南化區", "仁德區", "關廟區", "龍崎區", "官田區", "麻豆區", "佳里區", "西港區", "七股區", "將軍區", "學甲區", "北門區", "新營區", "後壁區", "白河區", "東山區", "六甲區", "下營區", "柳營區", "鹽水區", "善化區", "大內區", "山上區", "新市區", "安定區"],
-			"高雄市": ["楠梓區", "左營區", "鼓山區", "三民區", "鹽埕區", "前金區", "新興區", "苓雅區", "前鎮區", "旗津區", "小港區", "鳳山區", "林園區", "大寮區", "大樹區", "大社區", "仁武區", "鳥松區", "岡山區", "橋頭區", "燕巢區", "田寮區", "阿蓮區", "路竹區", "湖內區", "茄萣區", "永安區", "彌陀區", "梓官區", "旗山區", "美濃區", "六龜區", "甲仙區", "杉林區", "內門區", "茂林區", "桃源區", "那瑪夏區"],
-			"屏東縣": ["屏東市", "潮州鎮", "東港鎮", "恆春鎮", "萬丹鄉", "長治鄉", "麟洛鄉", "九如鄉", "里港鄉", "鹽埔鄉", "高樹鄉", "萬巒鄉", "內埔鄉", "竹田鄉", "新埤鄉", "枋寮鄉", "新園鄉", "崁頂鄉", "林邊鄉", "南州鄉", "佳冬鄉", "琉球鄉", "車城鄉", "滿州鄉", "枋山鄉", "霧臺鄉", "瑪家鄉", "泰武鄉", "來義鄉", "春日鄉", "獅子鄉", "牡丹鄉"],
-			"台東縣": ["台東市", "成功鎮", "關山鎮", "卑南鄉", "大武鄉", "太麻里鄉", "金峰鄉", "長濱鄉", "鹿野鄉", "池上鄉", "綠島鄉", "延平鄉", "海端鄉", "達仁鄉", "蘭嶼鄉"],
-			"花蓮縣": ["花蓮市", "鳳林鎮", "玉里鎮", "新城鄉", "吉安鄉", "壽豐鄉", "光復鄉", "豐濱鄉", "瑞穗鄉", "富里鄉", "秀林鄉", "萬榮鄉", "卓溪鄉"],
-			"宜蘭縣": ["宜蘭市", "羅東鎮", "蘇澳鎮", "頭城鎮", "礁溪鄉", "壯圍鄉", "員山鄉", "冬山鄉", "五結鄉", "三星鄉", "大同鄉", "南澳鄉"],
-			"澎湖縣": ["馬公市", "湖西鄉", "白沙鄉", "西嶼鄉", "望安鄉", "七美鄉"],
-			"金門縣": ["金城鎮", "金沙鎮", "金湖鎮", "金寧鄉", "烈嶼鄉", "烏坵鄉"],
-			"連江縣": ["南竿鄉", "北竿鄉", "莒光鄉", "東引鄉"]
-		};
-
-		// 根據選擇的縣市填充鄉鎮區選項
-		function populateDistricts() {
-			var citySelect = document.getElementById("city");
-			var districtSelect = document.getElementById("district");
-			var selectedCity = citySelect.value;
-
-			// 清空原有的鄉鎮區選項
-			districtSelect.innerHTML = "<option value=''>請選擇鄉鎮區</option>";
-
-			// 如果選擇了縣市，則填充相應的鄉鎮區選項
-			if (selectedCity && districtsByCity[selectedCity]) {
-				districtsByCity[selectedCity].forEach(function (district) {
-					var option = document.createElement("option");
-					option.text = district;
-					option.value = district;
-					districtSelect.add(option);
-				});
-
-				// 顯示鄉鎮區選項
-				document.getElementById("districtGroup").style.display = "block";
-			} else {
-				// 隱藏鄉鎮區選項
-				document.getElementById("districtGroup").style.display = "none";
-			}
-		}
-
-
-		// 初始化日期选择器
-		$(document).ready(function () {
-			$('#birthdate').datepicker({
-				format: 'yyyy-mm-dd', // 日期格式
-				autoclose: true // 选择日期后自动关闭
-			});
-		});
+		<footer class="bg-ddprimary" style="margin-top:150px">
+			<nav class="footer_navs">
+				<ul class="footer_nav1 text-white">
+					<li><a href="#">MEN</a></li>
+					<li><a href="#">WOMEN</a></li>
+					<li><a href="#">KID</a></li>
+					<li><a href="#">COUPLE</a></li>
+					<li><a href="#">HOT</a></li>
+				</ul>
+				<ul class="footer_nav2 text-black">
+					<li><a href="#">加入會員</a></li>
+					<li><a href="#">登出</a></li>
+					<li><a href="#">會員中心</a></li>
+					<li><a href="#">關於我們</a></li>
+					<li><a href="#">客服中心</a></li>
+					<li><a href="#">回到主頁</a></li>
+					<li><a href="#">色彩學</a></li>
+				</ul>
+			</nav>
+			<div class="footer_follow">
+				<div class="follow_me">
+					<p class="follow_font">FOLLOW ME</p>
+					<ul class="footer_icons">
+						<li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+						<li><a href="#"><i class="ri-line-fill"></i></a></li>
+					</ul>
+				</div>
+			</div>
+			<small class="footer_small">Copyright © 2023 DD SHOP All Rights Reserved.</small>
+		</footer>
 
 
 
 
+    <!-- 引入 Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-		// 获取年份、月份和日期的下拉菜单
-		var yearDropdown = document.getElementById("year");
-		var monthDropdown = document.getElementById("month");
-		var dayDropdown = document.getElementById("day");
+    <!-- 引入 Bootstrap Datepicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 
-		// 根据选择的年份和月份动态生成日期选项
-		function updateDays() {
-			var selectedMonth = parseInt(monthDropdown.value);
-			var selectedYear = parseInt(yearDropdown.value);
-			var daysInMonth = new Date(selectedYear, selectedMonth, 0).getDate();
-
-			// 清空日期下拉菜单
-			dayDropdown.innerHTML = "";
-
-			// 生成日期选项
-			for (var day = 1; day <= daysInMonth; day++) {
-				var option = document.createElement("option");
-				option.value = day;
-				option.text = day;
-				dayDropdown.appendChild(option);
-			}
-		}
-
-		// 当月份或年份选择发生变化时更新日期选项
-		monthDropdown.addEventListener("change", updateDays);
-		yearDropdown.addEventListener("change", updateDays);
-
-		// 页面加载时立即更新日期选项
-		updateDays();
-
-	</script>
-
-</body>
-
+    <script src="./javaScript/edit-personal.js"></script>
+  </body>
 </html>
+

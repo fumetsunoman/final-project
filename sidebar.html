@@ -8,187 +8,7 @@
 </head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
 	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-<style>
-	body {
-		font-family: Arial, sans-serif;
-	}
-
-	ul,
-	li,
-	a{
-		list-style-type: none;
-		padding: 0px;
-		margin: 0px;
-		text-decoration: none;
-	}
-
-
-	p {
-		list-style-type: none;
-		padding: 0px;
-		text-decoration: none;
-	}
-
-
-	.secondarySidebar {
-		display: none;
-	}
-
-	.sidebar {
-		width: 100%;
-	}
-
-	.sidebar a {
-		display: block;
-		color: black;
-		text-decoration: none;
-	}
-
-	.sidebar p {
-		font-size: 20px;
-		margin-bottom: 5px;
-		font-weight: 600;
-	}
-
-	.sidebar div {
-		display: flex;
-		height: 80px;
-	}
-
-	#bigHead {
-		display: block;
-		background-color: rgb(217, 238, 79);
-		height: 80px;
-		border-radius: 50%;
-		object-fit: cover;
-	}
-
-
-	.myOrder p:hover,
-	.myAccount p:hover,
-	.onlyForMember p:hover {
-		width: 100%;
-	}
-
-
-
-	.myAccount li {
-		width: 100%;
-		display: none;
-	}
-
-	.myOrder li {
-		display: none;
-	}
-
-	.onlyForMember li {
-		display: none;
-	}
-
-	.sidebar a:hover {
-		font-weight: 600;
-
-	}
-
-
-
-
-
-	@media screen and (min-width: 1440px) {
-
-
-		.sidebar {
-			width: 100px;
-
-		}
-
-		.sidebar p {
-			font-size: 20px;
-			margin-bottom: 5px;
-			font-weight: 600;
-		}
-
-		.sidebar a {
-			color: black;
-		}
-
-		.sidebar a:hover {
-			font-weight: 600;
-
-		}
-
-		.sidebar li {
-			color: black;
-			margin-bottom: 5px;
-		}
-
-		.sidebar div {
-			height: 80px;
-			/* background-color: aqua; */
-			margin-left: 5px
-		}
-
-
-		.sidebar img {
-			display: block;
-			background-color: rgb(205, 233, 23);
-
-			height: 80px;
-			border-radius: 50%;
-			object-fit: cover;
-		}
-
-		.myOrder p:hover,
-		.myAccount p:hover,
-		.onlyForMember p:hover {
-			width: auto;
-			/* 或者你想要的宽度 */
-			background-color: transparent;
-			/* 或者其他你想要的背景色 */
-		}
-
-
-		.myAccount li {
-			width: 100%;
-			display: block;
-		}
-
-		.myOrder li {
-			display: block ;
-		}
-
-		.onlyForMember li {
-			display: block ;
-		}
-
-
-		/* sub-secondary */
-
-		.secondarySidebar {
-			display: flex;
-			font-size: 14px;
-		}
-
-		.secondarySidebar div:nth-child(1) {
-			font-weight: 600;
-		}
-
-		.secondarySidebar a:nth-child(1) {
-			text-decoration: none;
-			color: black;
-		}
-
-		.secondarySidebar div:nth-child(2) {
-			font-weight: 600;
-		}
-
-		.secondarySidebar div:nth-child(3) {
-			color: rgb(131, 128, 128)
-		}
-	}
-</style>
-
+<link rel="stylesheet" href="./css/sidebar.css">
 
 <body>
 	<div class="secondarySidebar">
@@ -200,7 +20,7 @@
 	<div class="leftSidebar">
 		<div class="sidebar">
 			<p class="member" style="font-size: 24px;">會員中心</p>
-			<div><img id="bigHead" src="./public/images/boy.jpeg" alt=""></div>
+			<div><img id="bigHead" src="./images/boy.jpeg" alt=""></div>
 			<ul class="myAccount">
 				<p style="margin-top: 10px;">我的帳戶</p>
 				<li><a href="#">個人資料</a></li>
@@ -209,8 +29,7 @@
 			</ul>
 			<ul class="myOrder">
 				<p>訂單中心</p>
-				<li><a href="#">個人資料</a></li>
-				<li><a href="#">收件地址</a></li>
+				<li><a href="#">購買紀錄</a></li>
 				<li><a href="#">購物車</a></li>
 			</ul>
 			<ul class="onlyForMember">
@@ -223,37 +42,7 @@
 		</div>
 	</div>
 
-	<script>
-const leftSidebar = document.querySelector('.leftSidebar');
-const sections = {
-    '我的帳戶': '.myAccount',
-    '訂單中心': '.myOrder',
-    '會員專屬': '.onlyForMember'
-};
-
-leftSidebar.addEventListener('click', (e) => {
-    const sectionName = e.target.innerHTML;
-
-    // 只有在窗口寬度小於1440px时才執行以下代碼
-    if (window.innerWidth < 1440) {
-        // 如果点击的不是左侧边栏的列表项，则隐藏所有左侧边栏的列表项
-        const sectionSelector = sections[sectionName];
-        if (sectionSelector) {
-            // 只显示或隐藏点击的部分
-            document.querySelectorAll(sectionSelector + ' li').forEach(item => {
-                item.style.display = (item.style.display === 'none' || item.style.display === '') ? 'block' : 'none';
-            });
-
-            // 将所有部分的标题背景颜色设置为白色
-            Object.values(sections).forEach(selector => {
-                document.querySelector(selector + ' p').style.background = 'white';
-            });
-        }
-    }
-});
-
-
-	</script>
+	<script src="./javascript/sidebar.js"></script>
 
 
 </body>

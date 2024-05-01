@@ -7,396 +7,980 @@
   <title>pr-specific</title>
   <!-- 導入 bootstrap -->
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  
+
+
   <link rel="stylesheet" type="text/css" href="css/font/flaticon_april.css">
+  <!-- 插入統一的css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+  <!-- 導入scss css樣式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="../scss/custom.css" />
+  <!-- header&footer css樣式 -->
+  <link rel="stylesheet" href="../css/header&footercssStyle.css" />
   <link rel="stylesheet" href="css/pr-specific.css">
+
 
 </head>
 
 
-<!-- 
-   
+
+<!--    
     -INFO:段落
     ?(說明)
-    !(狀態改變)
-   -- >
+    !(狀態改變) -->
 
-<header>
-  <!-- ?暫定header -->
-</header>
+<body class="bg-bgColor">
 
-<div class="container">
-  <div class=" container-div px-0 ">
-
-    <!-- -前半段 :左右邊不同長度-->
-    <div class="row pr-details mx-0 px-0">
-      <!-- -照片小圖側欄 -->
-      <div class="col-2  d-flex ps-5 ">
-        <div class="side-photo-container">
-          <div class="side-photo">
-            <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt="">
-          </div>
-          <div class="side-photo">
-            <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-01.jpg?t=20240124033852" alt="">
-          </div>
-          <div class="side-photo">
-            <img src="	https://ajuga.itembox.design/product/003/000000000310/000000000310-07-s.jpg?t=20240124033852" alt="">
-          </div>
-          <div class="side-photo">
-            <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-23-s.jpg?t=20240124033852" alt="">
-          </div>
-          <div class="side-photo">
-            <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-05-s.jpg?t=20240124033852" alt="">
-          </div>
-          <div class="side-photo">
-            <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-03-s.jpg?t=20240124033852" alt="">
-          </div>
-          <div class="side-photo">
-            <img src="	https://ajuga.itembox.design/product/003/000000000310/000000000310-02-s.jpg?t=20240124033852" alt="">
-          </div>
-
-        </div>
-        <div class="scroll-container d-flex">
-          <div class="scroll"></div>
-        </div>
+  <header>
+    <div class="header_background bg-headerColor">
+      <div class="LOGO">
+        <a href="#"><img src="./LOGO.png" alt="" /></a>
       </div>
-      <!-- -左側細節 -->
-      <div class="col-4 mx-0 px-0">
-        <div class="main-photo">
-          <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-26.jpg?t=20240124033852" alt="pr-001">
-        </div>
+      <nav class="header_nav">
+        <ul class="header_font">
+          <li><a href="#" class="link-ddsecondary">TOP</a></li>
+          <li><a href="#" class="link-ddsecondary">MEN</a></li>
+          <li><a href="#" class="link-ddsecondary">WOMEN</a></li>
+          <li><a href="#" class="link-ddsecondary">NEW</a></li>
+          <li><a href="#" class="link-ddsecondary">HOT</a></li>
+        </ul>
+      </nav>
+      <ul class="header_icons">
+        <li>
+          <a href="#"><i class="ri-user-line link-ddsecondary"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="ri-heart-3-line link-ddsecondary"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="ri-shopping-cart-line link-ddsecondary"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="ri-gamepad-line link-ddsecondary"></i></a>
+        </li>
+        <li data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+          <i class="ri-menu-line link-dark"></i>
+        </li>
 
-        <div class="main-photo mt-5">
-          <img src="	https://ajuga.itembox.design/item/ajuga_novelty250.jpg">
-        </div>
-        <div class="mt-3 d-flex justify-content-between align-items-center">
-          <div class="d-flex align-items-center">&lsqb;尺寸表&rsqb;</div>
-          <div class="btn-group d-flex">
-            <button type="button" class="btn btn-secondary dropdown-toggle my-0 " data-bs-toggle="dropdown" aria-expanded="false" style="--bs-btn-padding-y: 0; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
-              切換單位
-            </button>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><button class="dropdown-item" type="button">英寸</button></li>
-              <li><button class="dropdown-item" type="button">公分</button></li>
-
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="height: 60%; width: 99%; border-radius: 20px; margin: 0 auto">
+          <div class="offcanvas-header bg-headerColor d-block" style="
+                  border-top-right-radius: 20px;
+                  border-top-left-radius: 20px;
+                padding-bottom: 0px;
+                ">
+            <button type="button" class="btn-close text-reset d-block" data-bs-dismiss="offcanvas" aria-label="Close" style="--bs-btn-close-focus-shadow: none"></button>
+            <ul class="ofs_icons link-ddsecondary">
+              <li>
+                <a href="#"><i class="ri-user-line"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ri-heart-3-line"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ri-shopping-cart-line"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="ri-gamepad-line"></i></a>
+              </li>
             </ul>
           </div>
+          <div class="offcanvas-body bg-headerColor" style="
+                  border-bottom-right-radius: 20px;
+                  border-bottom-left-radius: 20px;
+                  padding-top: 0px;
+                ">
+            <hr>
+            <nav class="ofs_navs">
+              <ul class="ofs_nav1">
+                <li><a href="#">TOP</a></li>
+                <li><a href="#">MEN</a></li>
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">COUPLE</a></li>
+                <li><a href="#">NEW</a></li>
+                <li><a href="#">HOT</a></li>
+              </ul>
+              <ul class="ofs_nav2 text-black">
+                <li><a href="#" class="fs-6">加入會員</a></li>
+                <li><a href="#">登出</a></li>
+                <li><a href="#">會員中心</a></li>
+                <li><a href="#">關於我們</a></li>
+                <li><a href="#">客服中心</a></li>
+                <li><a href="#">回到主頁</a></li>
+                <li><a href="#">色彩學</a></li>
+              </ul>
+            </nav>
+            <div class="footer_follow">
+              <div class="follow_me bg-ddprimary">
+                <p class="follow_font">FOLLOW ME</p>
+                <ul class="footer_icons">
+                  <li>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ri-line-line"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="main-photo pt-3">
-          <img src="imgs/sort=shirt,length=short.svg">
-        </div>
+      </ul>
+    </div>
+  </header>
+  <div class="container justify-content-center pt-5  ">
+    <div class="  px-0 container-div ">
 
-        <div class="d-flex  flex-column pr-details-text mt-3">
-          <div class="d-flex    ">
-            <div class="d-flex " style="padding-right: 30px;">[品質]</div>
-            <div class="d-flex">料布料：100% 聚酯纖維</div>
+      <!-- -前半段 :左右邊不同長度-->
+      <div class="row  mx-0 px-0  pt-5 ">
+
+
+        <!-- -左側細節  -->
+        <div class="col-sm-6 col-12 mx-0 pe-0 d-flex flex-sm-row ps-3 flex-column-reverse">
+          <!-- -照片小圖側欄 -->
+          <div class="d-flex  pe-5  ">
+            <div class="d-flex  side-photo-space"></div>
+            <div class="d-flex flex-column flex-sm-row ">
+              <div class="d-flex flex-sm-column flex-row side-photo-total">
+                <div class="side-photo">
+                  <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt="">
+                </div>
+                <div class="side-photo">
+                  <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-01.jpg?t=20240124033852" alt="">
+                </div>
+                <div class="side-photo">
+                  <img src="	https://ajuga.itembox.design/product/003/000000000310/000000000310-07-s.jpg?t=20240124033852" alt="">
+                </div>
+                <div class="side-photo">
+                  <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-23-s.jpg?t=20240124033852" alt="">
+                </div>
+                <div class="side-photo">
+                  <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-05-s.jpg?t=20240124033852" alt="">
+                </div>
+
+
+              </div>
+              <div class="scroll-container d-flex">
+                <div class="scroll bg-ddprimary-light"></div>
+              </div>
+            </div>
           </div>
+          <!-- -主商品圖 -->
+          <div class="d-flex pr-details-container flex-column ">
+            <div class="main-photo">
+              <img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-26.jpg?t=20240124033852" alt="pr-001">
+            </div>
+            <div class="d-flex flex-column "></div>
+            <div><a href="#" class="a-div">[搭配商品]</a></div>
+            <div class="  main-photo xxs-none" style="width:100px">
 
-          <div class="d-flex pr-details-text">
-            <div class="d-flex" style="padding-right: 10px;">[上架時間]</div>
-            <div class="d-flex">2024春季</div>
-          </div>
+              <img src="imgs/01.png">
+            </div>
+            <div class="xxs-none">
+              <div class="mt-3 d-flex justify-content-between align-items-center ">
+                <div class="d-flex align-items-center">&lsqb;尺寸表&rsqb;</div>
+                <div class="btn-group d-flex">
+                  <button type="button" class="btn btn-secondary dropdown-toggle my-0 " data-bs-toggle="dropdown" aria-expanded="false" style="--bs-btn-padding-y: 0; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                    切換單位
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item" type="button">英寸</button></li>
+                    <li><button class="dropdown-item" type="button">公分</button></li>
 
-          <div class="d-flex pr-details-text">
-            <div class="d-flex" style="padding-right: 20px;">[製造地]</div>
-            <div class="d-flex">中國</div>
-          </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="main-photo pt-3 xxs-none">
+              <img src="imgs/sort=shirt,length=short.svg">
+            </div>
+            <div class="xxs-none">
+              <div class="d-flex   pr-details-text mt-3 ">
+                <div class="d-flex   flex-column  ">
+                  <div class="d-flex ">[品質]</div>
+                  <div class="d-flex">[上架時間]</div>
+                  <div class="d-flex">[製造地]</div>
+                  <div class="d-flex">[類性]</div>
+                </div>
 
-          <div class="d-flex pr-details-text">
-            <div class="d-flex" style="padding-right: 30px;">[類性]</div>
+                <div class="d-flex pr-details-text  flex-column">
+                  <div class="d-flex">料布料：100% 聚酯纖維</div>
+                  <div class="d-flex">2024春季</div>
+                  <div class="d-flex">中國</div>
+                  <div class="d-flex">日系風</div>
+                </div>
 
-            <div class="d-flex">日系風</div>
-          </div>
-        </div>
-        <div class="details-content" style="width: 440px;">
-          <pre class="mt-3 lh-lg d-flex">
+              </div>
+            </div>
+            <div class="details-content xxs-none " style="width: 440px;">
+              <pre class="mt-3 lh-lg d-flex">
 這款媽媽托特包採用耐用的帆布面料製成，容量超大，
 看起來就像三個托特包粘在一起一樣。
 小袋上繡有 AJUGA.，容量足以容納大約 5 個尿布。
 可以保持飲料熱或冷。
 兩側都有手柄，也可用作嬰兒車包。</pre>
-        </div>
 
-      </div>
-      <!-- -右側細節 -->
-      <div class="col-6 py-0 px-5">
-        <p class="secondary-deep text-20">D.D.SHOP原創</p>
-        <p class="text-38">媽媽的帆布手提包</p>
-        <P class="secondary-deep text-16">原價<del>$9,000</del></P>
-        <p class="price text-30">$ 7,832</p>
-        <p class="secondary-deep text-16">產品編號&nbsp;6385711</p>
-        <p><i class="text-20 flaticon-upload "></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="text-20 flaticon-heart"></i></p>
-        <div class="hr">
-          <hr>
+            </div>
+
+          </div>
+
         </div>
-        <!-- ?color-suggest -->
-        <div class="d-flex flex-column color-suggest">
+        <!-- -右側細節 -->
+        <div class="col-sm-6 py-0 col-12 px-sm-5 px-0  ">
           <div class="d-flex">
-            <img src="imgs/suggest-color.svg" alt="">
+            <p class="text-danger-emphasis text-20">D.D.SHOP原創</p>
+            <div class="d-flex d-sm-none"><a href="pr-specific-size.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[尺寸表及商品評價]</a></div>
           </div>
-
-          <div class="d-flex ">
-            <div class="goods-color-radio-container-div d-flex postion-relative mb-3 py-0 ">
-              <div class="goods-color-radio-container d-flex justify-content-center align-items-center">
-                <div class="goods-color-radio d-flex"></div>
-              </div>
-            </div>
-            <div class="d-flex postion-relative mb-3 goods-color-radio-container-div py-0">
-              <div class="goods-color-radio-container d-flex justify-content-center align-items-center">
-                <div class="goods-color-radio d-flex" style="background-color: #726e6c;"></div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="hr">
-          <hr>
-        </div>
-        <!-- ?size-suggest -->
-        <div class="d-flex flex-column size-suggest ">
           <div class="d-flex">
-            <img src="imgs/suggest-size.svg" alt="">
+            <p class="text-38">媽媽的帆布手提包</p>
+            <div class="d-flex d-sm-none"><a href="pr-specific-review.html"><i class="text-20 red flaticon-star-fill"></i> 3.5/5(5)</a></div>
           </div>
-          <div class="d-flex ">
-            <div class="d-flex postion-relative mb-3 py-0 goods-color-radio-container-div ">
-              <div class="goods-size-radio-container d-flex justify-content-center align-items-center">
-                <div class="goods-size-radio d-flex align-items-center justify-content-center">S</div>
+
+          <div class="d-flex flex-row flex-sm-column">
+            <P class="text-danger-emphasis text-16">原價<del>$9,000</del></P>
+            <p class="text-price text-30">$ 7,832</p>
+          </div>
+
+          <p class="text-danger-emphasis    text-16 xxs-none">產品編號&nbsp;6385711</p>
+          
+          <div class="hr xxs-none">
+            <hr>
+          </div>
+
+          <!-- ?color-suggest -->
+          <div class="d-flex flex-column color-suggest ">
+            <div class="d-flex">
+              <img src="imgs/suggest-color.svg" alt="">
+            </div>
+
+            <div class="d-flex ">
+              <div class="goods-color-radio-container-div d-flex postion-relative mb-3 py-0 ">
+                <div class="goods-color-radio-container d-flex justify-content-center align-items-center">
+                  <div class="goods-color-radio d-flex"></div>
+                </div>
+              </div>
+              <div class="d-flex postion-relative mb-3 goods-color-radio-container-div py-0">
+                <div class="goods-color-radio-container d-flex justify-content-center align-items-center">
+                  <div class="goods-color-radio d-flex" style="background-color: #726e6c;"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="hr xxs-none">
+            <hr>
+          </div>
+          <!-- ?size-suggest -->
+          <div class="d-flex flex-column size-suggest ">
+            <div class="d-flex">
+              <img src="imgs/suggest-size.svg" alt="">
+            </div>
+            <div class="d-flex ">
+              <div class="d-flex postion-relative mb-3 py-0 goods-color-radio-container-div ">
+                <div class="bg-ddprimary-light goods-size-radio-container d-flex justify-content-center align-items-center">
+                  <div class=" d-flex align-items-center justify-content-center">S</div>
+                </div>
+              </div>
+              <div class="d-flex postion-relative mb-3 goods-color-radio-container-div py-0">
+                <div class="bg-ddprimary-light goods-size-radio-container d-flex justify-content-center align-items-center">
+                  <div class="goods-size-radio d-flex  align-items-center justify-content-center">M</div>
+                </div>
+              </div>
+              <div class="d-flex postion-relative mb-3 goods-color-radio-container-div py-0">
+                <div class="bg-ddprimary-light goods-size-radio-container d-flex justify-content-center align-items-center">
+                  <div class="goods-size-radio d-flex  align-items-center justify-content-center">L</div>
+                </div>
               </div>
             </div>
-            <div class="d-flex postion-relative mb-3 goods-color-radio-container-div py-0">
-              <div class="goods-size-radio-container d-flex justify-content-center align-items-center">
-                <div class="goods-size-radio d-flex  align-items-center justify-content-center">M</div>
+          </div>
+          <div class="hr xxs-none">
+            <hr>
+
+          </div>
+          <div class="mt-0 pt-0"><i class="text-16 flaticon-delivery-truck"></i>全館滿1,000免運</div>
+          <p><i class="text-16 flaticon-sale-label"></i>適用兩件五折</p>
+          <div class="xxs-none   ">
+            <div class="d-flex align-items-center   ">
+              <div class="d-flex align-items-center">庫存5件</div>
+              <div class="d-flex ms-5 me-2 align-items-center"><i class="text-20 flaticon-left"></i>&nbsp;&nbsp;<div class="text-20 border border-secondary ps-3 pe-3">2</div>&nbsp;&nbsp;&nbsp;<i class="text-20 flaticon-next"></i></div>
+              <div class="d-flex">
+                <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a class="a-div" href="#">ADD</a></div>
+                <div class="d-sm-none "><i class="text-20 flaticon-upload "></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="text-20 flaticon-heart"></i></div>
+              </div>
+              <div class=" d-flex align-items-end"><i class="text-20 flaticon-upload "></i>&nbsp;&nbsp;&nbsp;<i class="text-20 flaticon-heart"></i></div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center  fixed-cus bg-ddprimary d-sm-none ">
+            <div class="d-flex align-items-center">庫存5件</div>
+            <div class="d-flex ms-5 me-2 align-items-center"><i class="text-20 flaticon-left"></i>&nbsp;&nbsp;<span class="text-20">2</span>&nbsp;&nbsp;&nbsp;<i class="text-20 flaticon-next"></i></div>
+            <div class="d-flex">
+              <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a class="a-div" href="#">ADD</a></div>
+              <div class="d-sm-none "><i class="text-20 flaticon-upload "></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="text-20 flaticon-heart"></i></div>
+            </div>
+          </div>
+          <!-- -評價 -->
+          <div class="mt-3">
+            <div class="bg-ddprimary-light rounded mb-3" style="width:410px">
+              <div class="text-20"><a class="a-div" href="pr-specific-review.html">[商品評價]</a></div>
+              <div class="mt-n1"><i class="text-20 red flaticon-star-fill"></i><i class="text-20 red flaticon-star-fill"></i><i class="text-20 red flaticon-star-fill"></i><i class="text-20 red flaticon-star-half-filled"></i><i class="text-20 red flaticon-star-nofill"></i><span class="text-20">3.5/5</span>&nbsp;&nbsp;<span>(99)</span></div>
+            </div>
+            <div class="xxs-none">
+              <div class="d-flex mt-2 justify-content-between   " style="margin-right:50%;margin-bottom: 5%;">
+                <div class="d-flex text-ddsecondary"><i class="text-ddsecondary flaticon-images"></i>含照片</div>
+                <div class="d-flex text-ddsecondary"><i class="text-ddsecondary flaticon-sort"></i>由高到低</div>
+                <div class="d-flex "><i class=" flaticon-sort-asn"></i>由低到高</div>
               </div>
             </div>
-            <div class="d-flex postion-relative mb-3 goods-color-radio-container-div py-0">
-              <div class="goods-size-radio-container d-flex justify-content-center align-items-center">
-                <div class="goods-size-radio d-flex  align-items-center justify-content-center">L</div>
+
+            <!-- !評論合起來 -->
+            <div class="d-flex  flex-column" style="margin-top: -3%;">
+              <!-- ?上邊 -->
+              <div class="d-flex">
+                <!-- ?details -->
+                <div class="d-flex review-details flex-column justify-content-evenly">
+                  <div class="d-flex">
+                    <div class="d-flex">a**123</div>
+                    <div class="d-flex">尺寸:S&nbsp;顏色:黑色</div>
+                  </div>
+                  <div class="d-flex me-5 pe-5 justify-content-between">
+                    <div class="d-flex"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i></div>
+                    <div class="d-flex">2024/04/01</div>
+                  </div>
+                  <div class="d-flex text-truncate">
+                    <pre class="text-truncate"><i class="flaticon-thumbs-up"></i> 探討包包評價時，如果發現非常複雜，那麼想必不簡單，那麼想必不簡單</pre>
+                  </div>
+                </div>
+                <!-- ?照片欄 -->
+                <div class="d-flex review-photo pb-5 mb-5"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+              </div>
+              <!-- ?下邊 -->
+              <div class="xxs-none ">
+                <div class="d-flex  justify-content-center ">
+
+                  <div class="d-flex align-items-end">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></div>
+                </div>
+              </div>
+              <div class="hr" style="margin-top: -2%;">
+                <hr>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="hr">
-          <hr>
-        </div>
-        <div class="my-0"><a href="#" style="text-decoration: underline;">model穿搭搭配:XXX牛仔長褲</a></div>
-        <div class="hr">
-          <hr>
-        </div>
-        <div class="mt-0 pt-0"><i class="text-16 flaticon-delivery-truck"></i>全館滿1,000免運</div>
-        <p><i class="text-16 flaticon-sale-label"></i>適用兩件五折</p>
-        <div class="d-flex align-items-center">
-          <div class="d-flex align-items-center">庫存5件</div>
-          <div class="d-flex ms-5 me-2 align-items-center"><i class="text-20 flaticon-left"></i>&nbsp;&nbsp;<span class="text-20">2</span>&nbsp;&nbsp;&nbsp;<i class="text-20 flaticon-next"></i></div>
-          <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a href="#">ADD</a></div>
 
-        </div>
-        <!-- -評價 -->
-        <div class="text-16">[商品評價]</div>
-        <div class="mt-n1"><i class="text-20 red flaticon-star-fill"></i><i class="text-20 red flaticon-star-fill"></i><i class="text-20 red flaticon-star-fill"></i><i class="text-21 red flaticon-star-half-filled"></i><i class="text-20 red flaticon-star-nofill"></i><span class="text-20">3.5/5</span>&nbsp;&nbsp;<span>(99)</span></div>
-        <div class="d-flex mt-2 justify-content-between  " style="margin-right:50%;margin-bottom: 5%;">
-          <div class="d-flex secondary-deep"><i class="secondary-deep flaticon-images"></i>含照片</div>
-          <div class="d-flex secondary-deep"><i class="secondary-deep flaticon-sort"></i>由高到低</div>
-          <div class="d-flex "><i class="secondary-deep flaticon-sort-asn"></i>由低到高</div>
-        </div>
-
-
-        <!-- !評論合起來 -->
-        <div class="d-flex " style="margin-top: -3%;">
-          <!-- ?details -->
-          <div class="d-flex flex-column">
-            <div class="d-flex">a**123</div>
-            <div class="d-flex">2024/04/01</div>
-            <div class="d-flex">
-              <div class="d-flex"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i></div>
-              <div class="d-flex">尺寸:S&nbsp;顏色:黑色</div>
-            </div>
-            <div class="d-flex">
-              <pre> 探討包包評價時，如果發現非常複雜，那麼想必不簡單...</pre>
-            </div>
-            <div class="d-flex" style="margin-top: -5%;">
-              <i class="flaticon-thumbs-up"></i>
-            </div>
-
-          </div>
-          <!-- ?照片欄 -->
-          <div class="d-flex flex-column justify-content-around ">
-            <div class="d-flex review-photo"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
-            <div class="d-flex align-items-end">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></div>
-          </div>
-        </div>
-        <div class="hr" style="margin-top: -2%;">
-          <hr>
-        </div>
-        <!-- !評論展開 -->
-        <div class="d-flex ">
-          <!-- ?details -->
-          <div class="d-flex flex-column">
-            <div class="d-flex">a**123</div>
-            <div class="d-flex">2024/04/01</div>
-            <div class="d-flex">
-              <div class="d-flex"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i></div>
-              <div class="d-flex">尺寸:S&nbsp;顏色:黑色</div>
-            </div>
-            <div class="d-flex">
-              <pre>  探討包包評價時，如果發現非常複雜，
+            <!-- !評論展開 -->
+            <div class="d-flex  flex-column" style="margin-top: -3%;">
+              <!-- ?上邊 -->
+              <div class="d-flex">
+                <!-- ?details -->
+                <div class="d-flex review-details flex-column justify-content-evenly">
+                  <div class="d-flex">
+                    <div class="d-flex">a**123</div>
+                    <div class="d-flex">尺寸:S&nbsp;顏色:黑色</div>
+                  </div>
+                  <div class="d-flex me-5 pe-5 justify-content-between">
+                    <div class="d-flex"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i></div>
+                    <div class="d-flex">2024/04/01</div>
+                  </div>
+                  <div class="d-flex ">
+                    <pre class="xxs-none"><i class="flaticon-thumbs-up"></i> 探討包包評價時，如果發現非常複雜，
 那麼想必不簡單。回過神才發現，
 思考包包評價的存在意義，
-已讓如果你憎恨性，你就是憎恨美。性和美是不可分割的!</pre>
-            </div>
-            <div class="d-flex">
-              <i class="flaticon-thumbs-up " style="margin-top: -5%;"></i>
-            </div>
+已讓如果你憎恨性，你就是憎恨美。</pre>
+                    <pre class=" d-sm-none text-truncate"><i class="flaticon-thumbs-up "></i> 探討包包評價時，如果發現非常複雜，
+那麼想必不簡單。回過神才發現，
+思考包包評價的存在意義，
+已讓如果你憎恨性，你就是憎恨美。</pre>
+                  </div>
+                </div>
+                <!-- ?照片欄 -->
+                <div class="d-flex flex-column justify-content-evenly">
+                  <div class="d-flex review-photo"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+                  <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex review-photo-sm"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+                      <div class="d-flex  review-photo-sm"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+                    </div>
+                    <div class="d-flex review-scroll"></div>
+                  </div>
 
-          </div>
-          <!-- ?照片欄 -->
-          <div class="d-flex flex-column justify-content-evenly">
-            <div class="d-flex review-photo"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
-            <div class="d-flex flex-column">
-              <div class="d-flex justify-content-between">
-                <div class="d-flex review-photo-sm"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
-                <div class="d-flex  review-photo-sm"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+                </div>
               </div>
-              <div class="d-flex review-scroll"></div>
+              <!-- ?下邊 -->
+
+
+              <div class="hr" style="margin-top: -2%;">
+                <hr>
+              </div>
+
             </div>
+            <div class="d-flex  flex-column" style="margin-top: -3%;">
+              <!-- ?上邊 -->
+              <div class="d-flex">
+                <!-- ?details -->
+                <div class="d-flex review-details flex-column justify-content-evenly">
+                  <div class="d-flex">
+                    <div class="d-flex">a**123</div>
+                    <div class="d-flex">尺寸:S&nbsp;顏色:黑色</div>
+                  </div>
+                  <div class="d-flex me-5 pe-5 justify-content-between">
+                    <div class="d-flex"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i></div>
+                    <div class="d-flex">2024/04/01</div>
+                  </div>
+                  <div class="d-flex ">
+                    <pre class="xxs-none"><i class="flaticon-thumbs-up"></i> 探討包包評價時，如果發現非常複雜，
+  那麼想必不簡單。回過神才發現，
+  思考包包評價的存在意義，
+  已讓如果你憎恨性，你就是憎恨美。</pre>
+                    <pre class=" d-sm-none text-truncate"><i class="flaticon-thumbs-up "></i> 探討包包評價時，如果發現非常複雜，
+  那麼想必不簡單。回過神才發現，
+  思考包包評價的存在意義，
+  已讓如果你憎恨性，你就是憎恨美。</pre>
+                  </div>
+                </div>
+                <!-- ?照片欄 -->
+                <div class="d-flex flex-column justify-content-evenly">
+                  <div class="d-flex review-photo"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+                  <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex review-photo-sm"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+                      <div class="d-flex  review-photo-sm"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+                    </div>
+                    <div class="d-flex review-scroll"></div>
+                  </div>
 
+                </div>
+              </div>
+              <!-- ?下邊 -->
+
+
+              <div class="hr" style="margin-top: -2%;">
+                <hr>
+              </div>
+
+            </div>
+            <div class="d-flex  flex-column" style="margin-top: -3%;">
+              <!-- ?上邊 -->
+              <div class="d-flex">
+                <!-- ?details -->
+                <div class="d-flex review-details flex-column justify-content-evenly">
+                  <div class="d-flex">
+                    <div class="d-flex">a**123</div>
+                    <div class="d-flex">尺寸:S&nbsp;顏色:黑色</div>
+                  </div>
+                  <div class="d-flex me-5 pe-5 justify-content-between">
+                    <div class="d-flex"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i></div>
+                    <div class="d-flex">2024/04/01</div>
+                  </div>
+                  <div class="d-flex ">
+                    <pre class="xxs-none"><i class="flaticon-thumbs-up"></i> 探討包包評價時，如果發現非常複雜，
+  那麼想必不簡單。回過神才發現，
+  思考包包評價的存在意義，
+  已讓如果你憎恨性，你就是憎恨美。</pre>
+                    <pre class=" d-sm-none text-truncate"><i class="flaticon-thumbs-up "></i> 探討包包評價時，如果發現非常複雜，
+  那麼想必不簡單。回過神才發現，
+  思考包包評價的存在意義，
+  已讓如果你憎恨性，你就是憎恨美。</pre>
+                  </div>
+                </div>
+                <!-- ?照片欄 -->
+                <div class="d-flex flex-column justify-content-evenly">
+                  <div class="d-flex review-photo"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+                  <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex review-photo-sm"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+                      <div class="d-flex  review-photo-sm"><img src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+                    </div>
+                    <div class="d-flex review-scroll"></div>
+                  </div>
+
+                </div>
+              </div>
+              <!-- ?下邊 -->
+
+
+              <div class="hr" style="margin-top: -2%;">
+                <hr>
+              </div>
+
+            </div>
+            <!-- ?暫定page switch -->
+            <p class="xxs-none"><img style="width:100px;margin-left: 250px;" src="imgs/pageSwitch.svg" alt=""></p>
+            <div class="d-flex  justify-content-center d-sm-none">
+
+              <div class="d-flex align-items-end "><a href="pr-specific-review.html">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></a></div>
+            </div>
           </div>
         </div>
-        <div class="hr " style="margin-top: -2%;">
-          <hr>
-        </div>
-        <!-- ?暫定page switch -->
-        <p><img style="width:100px;margin-left: 250px;" src="imgs/pageSwitch.svg" alt=""></p>
       </div>
+
+      <!-- -推薦商品 -->
+
+      <div>
+        <p class="  d-flex justify-content-center "><a href="#" class="a-div d-flex border-bottom fs-3 fw-bold ">推薦商品</a></p>
+
+        <div class="d-flex justify-content-evenly mx-0 mx-sm-6 px-sm-5 flex-wrap">
+          <!-- -單個product-card -->
+          <div class="d-flex rounded-4 flex-column suggest-product-card  bg-ddprimary-light ">
+            <div class="d-flex w-100 suggest-product-card-img pt-2 ">
+              <div class="swiper mySwiper2 main-swiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <img src="imgs/04.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/05.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/06.jpg" class="rounded-3 " />
+                  </div>
+
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+              </div>
+
+
+            </div>
+            <div class="d-flex  h-25 suggest-product-details flex-column mt-sm-2  ps-sm-5 pe-sm-2 ps-4 pe-0  justify-content-evenly">
+              <div class="d-flex ">媽媽的手提包黑色</div>
+              <div class="d-flex ">$12,000</div>
+              <div class="d-flex "><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
+            </div>
+            <div class="d-flex justify-content-between   ">
+
+
+
+              <div thumbsSlider="" class="swiper mySwiper ms-sm-5 ms-4 ps-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="imgs/01-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/02-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/03-color.jpg" class="rounded-1 " />
+                  </div>
+
+                </div>
+              </div>
+              <div src="#" class=" me-sm-5 me-4 text-20 align-items-center d-flex "><i class="text-20 flaticon-add-to-cart"></i></div>
+            </div>
+          </div>
+
+          <div src="#" class="d-flex rounded-4 flex-column suggest-product-card  bg-ddprimary-light ">
+            <div class="d-flex w-100 suggest-product-card-img pt-2 ">
+              <div class="swiper mySwiper2 main-swiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <img src="imgs/04.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/05.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/06.jpg" class="rounded-3 " />
+                  </div>
+
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+              </div>
+            </div>
+            <div class="d-flex  h-25 suggest-product-details flex-column mt-sm-2  ps-sm-5 pe-sm-2 ps-4 pe-0  justify-content-evenly">
+              <div class="d-flex ">媽媽的手提包黑色</div>
+              <div class="d-flex ">$12,000</div>
+              <div class="d-flex "><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
+            </div>
+            <div class="d-flex justify-content-between   ">
+              <div thumbsSlider="" class="swiper mySwiper ms-sm-5 ms-4 ps-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="imgs/01-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/02-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/03-color.jpg" class="rounded-1 " />
+                  </div>
+
+                </div>
+              </div>
+              <div src="#" class=" me-sm-5 me-4 text-20 align-items-center d-flex "><i class="text-20 flaticon-add-to-cart"></i></div>
+            </div>
+          </div>
+          <div src="#" class="d-flex rounded-4 flex-column suggest-product-card  bg-ddprimary-light ">
+            <div class="d-flex w-100 suggest-product-card-img pt-2 ">
+              <div class="swiper mySwiper2 main-swiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <img src="imgs/04.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/05.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/06.jpg" class="rounded-3 " />
+                  </div>
+
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+              </div>
+
+
+            </div>
+            <div class="d-flex  h-25 suggest-product-details flex-column mt-sm-2  ps-sm-5 pe-sm-2 ps-4 pe-0  justify-content-evenly">
+              <div class="d-flex ">媽媽的手提包黑色</div>
+              <div class="d-flex ">$12,000</div>
+              <div class="d-flex "><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
+            </div>
+            <div class="d-flex justify-content-between   ">
+
+
+
+              <div thumbsSlider="" class="swiper mySwiper ms-sm-5 ms-4 ps-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="imgs/01-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/02-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/03-color.jpg" class="rounded-1 " />
+                  </div>
+
+                </div>
+              </div>
+              <div src="#" class=" me-sm-5 me-4 text-20 align-items-center d-flex "><i class="text-20 flaticon-add-to-cart"></i></div>
+            </div>
+          </div>
+          <div src="#" class="d-flex rounded-4 flex-column suggest-product-card  bg-ddprimary-light ">
+            <div class="d-flex w-100 suggest-product-card-img pt-2 ">
+              <div class="swiper mySwiper2 main-swiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <img src="imgs/04.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/05.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/06.jpg" class="rounded-3 " />
+                  </div>
+
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+              </div>
+
+
+            </div>
+            <div class="d-flex  h-25 suggest-product-details flex-column mt-sm-2  ps-sm-5 pe-sm-2 ps-4 pe-0  justify-content-evenly">
+              <div class="d-flex ">媽媽的手提包黑色</div>
+              <div class="d-flex ">$12,000</div>
+              <div class="d-flex "><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
+            </div>
+            <div class="d-flex justify-content-between   ">
+
+
+
+              <div thumbsSlider="" class="swiper mySwiper ms-sm-5 ms-4 ps-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="imgs/01-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/02-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/03-color.jpg" class="rounded-1 " />
+                  </div>
+
+                </div>
+              </div>
+              <div src="#" class=" me-sm-5 me-4 text-20 align-items-center d-flex "><i class="text-20 flaticon-add-to-cart"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- -瀏覽紀錄 -->
+      <div class="mb-5 mt-5">
+        <p class="d-flex justify-content-center "><a href="#" class="a-div d-flex border-bottom fs-3 fw-bold ">瀏覽紀錄</a></p>
+
+        <div class="d-flex justify-content-evenly mx-0 mx-sm-6 px-sm-5  flex-wrap">
+          <!-- -單個product-card -->
+          <div class="d-flex rounded-4 flex-column suggest-product-card  bg-ddprimary-light ">
+            <div class="d-flex w-100 suggest-product-card-img pt-2 ">
+              <div class="swiper mySwiper2 main-swiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <img src="imgs/04.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/05.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/06.jpg" class="rounded-3 " />
+                  </div>
+
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+              </div>
+
+
+            </div>
+            <div class="d-flex  h-25 suggest-product-details flex-column mt-sm-2  ps-sm-5 pe-sm-2 ps-4 pe-0  justify-content-evenly">
+              <div class="d-flex ">媽媽的手提包黑色</div>
+              <div class="d-flex ">$12,000</div>
+              <div class="d-flex "><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
+            </div>
+            <div class="d-flex justify-content-between   ">
+
+
+
+              <div thumbsSlider="" class="swiper mySwiper ms-sm-5 ms-4 ps-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="imgs/01-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/02-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/03-color.jpg" class="rounded-1 " />
+                  </div>
+
+                </div>
+              </div>
+              <div src="#" class=" me-sm-5 me-4 text-20 align-items-center d-flex "><i class="text-20 flaticon-add-to-cart"></i></div>
+            </div>
+          </div>
+
+          <div src="#" class="d-flex rounded-4 flex-column suggest-product-card  bg-ddprimary-light ">
+            <div class="d-flex w-100 suggest-product-card-img pt-2 ">
+              <div class="swiper mySwiper2 main-swiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <img src="imgs/04.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/05.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/06.jpg" class="rounded-3 " />
+                  </div>
+
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+              </div>
+            </div>
+            <div class="d-flex  h-25 suggest-product-details flex-column mt-sm-2  ps-sm-5 pe-sm-2 ps-4 pe-0  justify-content-evenly">
+              <div class="d-flex ">媽媽的手提包黑色</div>
+              <div class="d-flex ">$12,000</div>
+              <div class="d-flex "><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
+            </div>
+            <div class="d-flex justify-content-between   ">
+              <div thumbsSlider="" class="swiper mySwiper ms-sm-5 ms-4 ps-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="imgs/01-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/02-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/03-color.jpg" class="rounded-1 " />
+                  </div>
+
+                </div>
+              </div>
+              <div src="#" class=" me-sm-5 me-4 text-20 align-items-center d-flex "><i class="text-20 flaticon-add-to-cart"></i></div>
+            </div>
+          </div>
+          <div src="#" class="d-flex rounded-4 flex-column suggest-product-card  bg-ddprimary-light ">
+            <div class="d-flex w-100 suggest-product-card-img pt-2 ">
+              <div class="swiper mySwiper2 main-swiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <img src="imgs/04.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/05.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/06.jpg" class="rounded-3 " />
+                  </div>
+
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+              </div>
+
+
+            </div>
+            <div class="d-flex  h-25 suggest-product-details flex-column mt-sm-2  ps-sm-5 pe-sm-2 ps-4 pe-0  justify-content-evenly">
+              <div class="d-flex ">媽媽的手提包黑色</div>
+              <div class="d-flex ">$12,000</div>
+              <div class="d-flex "><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
+            </div>
+            <div class="d-flex justify-content-between   ">
+
+
+
+              <div thumbsSlider="" class="swiper mySwiper ms-sm-5 ms-4 ps-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="imgs/01-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/02-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/03-color.jpg" class="rounded-1 " />
+                  </div>
+
+                </div>
+              </div>
+              <div src="#" class=" me-sm-5 me-4 text-20 align-items-center d-flex "><i class="text-20 flaticon-add-to-cart"></i></div>
+            </div>
+          </div>
+          <div src="#" class="d-flex rounded-4 flex-column suggest-product-card  bg-ddprimary-light ">
+            <div class="d-flex w-100 suggest-product-card-img pt-2 ">
+              <div class="swiper mySwiper2 main-swiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <img src="imgs/04.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/05.jpg" class="rounded-3 " />
+                  </div>
+                  <div class="swiper-slide ">
+                    <img src="imgs/06.jpg" class="rounded-3 " />
+                  </div>
+
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> -->
+              </div>
+
+
+            </div>
+            <div class="d-flex  h-25 suggest-product-details flex-column mt-sm-2  ps-sm-5 pe-sm-2 ps-4 pe-0  justify-content-evenly">
+              <div class="d-flex ">媽媽的手提包黑色</div>
+              <div class="d-flex ">$12,000</div>
+              <div class="d-flex "><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
+            </div>
+            <div class="d-flex justify-content-between   ">
+
+
+
+              <div thumbsSlider="" class="swiper mySwiper ms-sm-5 ms-4 ps-1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="imgs/01-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/02-color.jpg" class="rounded-1 " />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="imgs/03-color.jpg" class="rounded-1 " />
+                  </div>
+
+                </div>
+              </div>
+              <div src="#" class=" me-sm-5 me-4 text-20 align-items-center d-flex "><i class="text-20 flaticon-add-to-cart"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class=" parallax-scrolling-bg parallax-BGimg mb-5  d-flex justify-content-center align-items-center">
+        <div class=" d-flex">
+          <img src="imgs/scroll-logo.png" alt="">
+        </div>
+
+      </section>
+
+
     </div>
-
-    <!-- -推薦商品 -->
-
-    <div>
-      <a href="#" class="d-flex border-bottom justify-content-center fs-3 fw-bold">
-        <p class="d-flex justify-content-center suggest-product ">推薦商品</p>
-      </a>
-
-      <div class="d-flex justify-content-evenly mx-6 px-5">
-        <div class="d-flex rounded-1 flex-column suggest-product-card ">
-          <div class="d-flex suggest-product-card-img "><img class=" rounded-1" src="imgs/suggest-product1.png" alt=""></div>
-          <div class="d-flex flex-column ps-5 pe-2 ">
-            <p class="d-flex my-1">媽媽的手提包黑色</p>
-            <p class="d-flex my-1">$12,000</p>
-            <div class="d-flex my-1"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
-          </div>
-          <div class="d-flex justify-content-around">
-            <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a href="#">ADD</a></div>
-            <div class="  align-items-end d-flex ">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></div>
-          </div>
-        </div>
-
-        <div class="d-flex rounded-1 flex-column suggest-product-card ">
-          <div class="d-flex suggest-product-card-img "><img class=" rounded-1" src="imgs/suggest-product1.png" alt=""></div>
-          <div class="d-flex flex-column ps-5 pe-2 ">
-            <p class="d-flex my-1">媽媽的手提包黑色</p>
-            <p class="d-flex my-1">$12,000</p>
-            <div class="d-flex my-1"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
-          </div>
-          <div class="d-flex justify-content-around">
-            <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a href="#">ADD</a></div>
-            <div class="  align-items-end d-flex ">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></div>
-          </div>
-        </div>
-        <div class="d-flex rounded-1 flex-column suggest-product-card ">
-          <div class="d-flex suggest-product-card-img "><img class=" rounded-1" src="imgs/suggest-product1.png" alt=""></div>
-          <div class="d-flex flex-column ps-5 pe-2 ">
-            <p class="d-flex my-1">媽媽的手提包黑色</p>
-            <p class="d-flex my-1">$12,000</p>
-            <div class="d-flex my-1"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
-          </div>
-          <div class="d-flex justify-content-around">
-            <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a href="#">ADD</a></div>
-            <div class="  align-items-end d-flex ">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></div>
-          </div>
-        </div>
-        <div class="d-flex rounded-1 flex-column suggest-product-card ">
-          <div class="d-flex suggest-product-card-img "><img class=" rounded-1" src="imgs/suggest-product1.png" alt=""></div>
-          <div class="d-flex flex-column ps-5 pe-2 ">
-            <p class="d-flex my-1">媽媽的手提包黑色</p>
-            <p class="d-flex my-1">$12,000</p>
-            <div class="d-flex my-1"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
-          </div>
-          <div class="d-flex justify-content-around">
-            <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a href="#">ADD</a></div>
-            <div class="  align-items-end d-flex ">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- -瀏覽紀錄 -->
-    <div class="my-5">
-      <p class="d-flex justify-content-center "><a href="#" class="d-flex border-bottom fs-3 fw-bold ">瀏覽紀錄</a></p>
-      <div class="d-flex justify-content-evenly mx-6 px-5">
-        <!-- -單個product-card -->
-        <div class="d-flex rounded-1 flex-column suggest-product-card ">
-          <div class="d-flex suggest-product-card-img "><img class=" rounded-1" src="imgs/suggest-product1.png" alt=""></div>
-          <div class="d-flex flex-column ps-5 pe-2 ">
-            <p class="d-flex my-1">媽媽的手提包黑色</p>
-            <p class="d-flex my-1">$12,000</p>
-            <div class="d-flex my-1"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
-          </div>
-          <div class="d-flex justify-content-around">
-            <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a href="#">ADD</a></div>
-            <div class="  align-items-end d-flex ">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></div>
-          </div>
-        </div>
-        <div class="d-flex rounded-1 flex-column suggest-product-card ">
-          <div class="d-flex suggest-product-card-img "><img class=" rounded-1" src="imgs/suggest-product1.png" alt=""></div>
-          <div class="d-flex flex-column ps-5 pe-2 ">
-            <p class="d-flex my-1">媽媽的手提包黑色</p>
-            <p class="d-flex my-1">$12,000</p>
-            <div class="d-flex my-1"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
-          </div>
-          <div class="d-flex justify-content-around">
-            <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a href="#">ADD</a></div>
-            <div class="  align-items-end d-flex ">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></div>
-          </div>
-        </div>
-        <div class="d-flex rounded-1 flex-column suggest-product-card ">
-          <div class="d-flex suggest-product-card-img "><img class=" rounded-1" src="imgs/suggest-product1.png" alt=""></div>
-          <div class="d-flex flex-column ps-5 pe-2 ">
-            <p class="d-flex my-1">媽媽的手提包黑色</p>
-            <p class="d-flex my-1">$12,000</p>
-            <div class="d-flex my-1"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
-          </div>
-          <div class="d-flex justify-content-around">
-            <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a href="#">ADD</a></div>
-            <div class="  align-items-end d-flex ">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></div>
-          </div>
-        </div>
-        <div class="d-flex rounded-1 flex-column suggest-product-card ">
-          <div class="d-flex suggest-product-card-img "><img class=" rounded-1" src="imgs/suggest-product1.png" alt=""></div>
-          <div class="d-flex flex-column ps-5 pe-2 ">
-            <p class="d-flex my-1">媽媽的手提包黑色</p>
-            <p class="d-flex my-1">$12,000</p>
-            <div class="d-flex my-1"><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><i class="red flaticon-star-fill"></i><span>(34)</span></div>
-          </div>
-          <div class="d-flex justify-content-around">
-            <div class="d-flex add-button mx-2 align-items-center justify-content-center "><a href="#">ADD</a></div>
-            <div class="  align-items-end d-flex ">MORE&nbsp;&nbsp;<i class="text-10 flaticon-plus"></i></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section class="container-fluid parallax-scrolling-bg parallax-BGimg-01 mb-5  d-flex justify-content-center align-items-center">
-      <div class=" d-flex">
-        <img src="imgs/scroll-logo.png" alt="">
-      </div>
-
-    </section>
-    <!-- ?暫定footer -->
-    <footer></footer>
   </div>
-</div>
-<!-- 導入js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script></script>
+  <footer class="bg-ddprimary">
+    <nav class="footer_navs">
+      <ul class="footer_nav1 text-white">
+        <li><a href="#">TOP</a></li>
+        <li><a href="#">MEN</a></li>
+        <li><a href="#">WOMEN</a></li>
+        <li><a href="#">COUPLE</a></li>
+        <li><a href="#">NEW</a></li>
+        <li><a href="#">HOT</a></li>
+      </ul>
+      <ul class="footer_nav2 text-black">
+        <li><a href="#">加入會員</a></li>
+        <li><a href="#">登出</a></li>
+        <li><a href="#">會員中心</a></li>
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">客服中心</a></li>
+        <li><a href="#">回到主頁</a></li>
+        <li><a href="#">色彩學</a></li>
+      </ul>
+    </nav>
+    <div class="footer_follow">
+      <div class="follow_me">
+        <p class="follow_font">FOLLOW ME</p>
+        <ul class="footer_icons">
+          <li>
+            <a href="#"><i class="ri-instagram-fill"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-line-fill"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <small class="footer_small">Copyright © 2023 DD SHOP All Rights Reserved.</small>
+  </footer>
+
+  <!-- 導入js -->
+  <script src="../javaScript/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ 
+
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+  </script>
+   <script src="../javaScript/sidebar.js"></script>
 </body>
 
 </html>

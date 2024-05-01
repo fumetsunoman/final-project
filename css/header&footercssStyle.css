@@ -58,10 +58,8 @@
   font-style: italic;
 }
 
-
 * {
   box-sizing: border-box;
-  font-family: "Noto Sans TC", "Noto Sans KR", sans-serif;
   font-optical-sizing: auto;
 }
 
@@ -75,7 +73,7 @@ head {
   font-weight: 500;
 }
 
-header ul{
+header ul {
   margin: 0;
   list-style: none;
   padding: 0;
@@ -92,7 +90,6 @@ header ul{
   justify-content: space-between;
   align-items: center;
 }
-
 
 .LOGO {
   color: black;
@@ -140,7 +137,9 @@ header ul{
 .header_font a {
   color: inherit;
 }
-
+.header_icons li:nth-child(5) {
+  display: none;
+}
 /* footer css */
 
 footer {
@@ -152,7 +151,7 @@ footer {
   font-weight: 500;
 }
 
-footer ul{
+footer ul {
   margin: 0;
   list-style: none;
   padding: 0;
@@ -161,7 +160,6 @@ footer ul{
 .footer_nav1 {
   display: flex;
   justify-content: center;
-
 }
 
 .footer_nav1 li {
@@ -204,13 +202,18 @@ footer ul{
   background-color: white;
   border-radius: 2rem;
 }
-.follow_me p{
+.follow_me p {
   margin: 0;
+  margin-right: 7px;
   padding: 0;
 }
 .follow_font {
   padding-right: 5px;
   font-size: 14px;
+}
+
+.footer_icons > :nth-child(1) {
+  margin-right: 2px;
 }
 
 .footer_icons {
@@ -223,4 +226,94 @@ footer ul{
   padding: 20px;
   width: 100%;
   display: block;
+}
+
+/* 手機版樣式 */
+@media (max-width: 768px) {
+  /* header css */
+  .header_background {
+    padding: 0 1rem;
+  }
+  .header_nav {
+    display: none;
+  }
+
+  .header_icons {
+    justify-content: flex-end;
+    width: 180px;
+  }
+
+  .header_icons > li:nth-child(2) {
+    display: none;
+  }
+
+  .header_icons > li:nth-child(4) {
+    display: none;
+  }
+
+  .header_icons > li:nth-child(5) {
+    display: flex;
+    margin-left: 10px;
+  }
+  .ofs_icons {
+    display: flex;
+    justify-content: center;
+  }
+  .header_icons li {
+    padding: 0 5px;
+  }
+  /* footer css */
+
+  footer {
+    width: 95%;
+    margin: 0 auto 20px auto;
+    padding: 2.5rem 1rem 1.5rem 1rem;
+  }
+
+  .footer_navs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  .footer_nav1 {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .footer_nav2 {
+    gap: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 16px;
+    padding: 0px;
+  }
+  .ofs_navs {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .ofs_nav1 {
+    font-size: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .ofs_nav2 {
+    gap: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 16px;
+    padding: 0px;
+  }
+  .ofs_nav1 a {
+    font-size: 16px;
+  }
+  .ofs_nav2 a {
+    font-size: 16px;
+  }
 }

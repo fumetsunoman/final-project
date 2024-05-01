@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DD Shop 討論區</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- 贴过去时以下link都要贴上去!!!!!!!!! -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- scss  -->
+    <link rel="stylesheet" href="/scss/custom.css" />
+    <!-- header&footer css樣式 -->
+    <link rel="stylesheet" href="/css/header&footercssStyle.css" />
+    <link rel="stylesheet" href="/forum/css/timeline.css" />
+  </head>
+  <body class="bg-bgColor">
+    <header>
+      <div class="header_background bg-headerColor">
+        <div class="LOGO">
+          <a href="#"><img src="./LOGO.png" alt="" /></a>
+        </div>
+        <nav class="header_nav text-ddsecondary">
+          <ul class="header_font link-ddsecondary">
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KID</a></li>
+            <li><a href="#">HOT</a></li>
+          </ul>
+        </nav>
+        <ul class="header_icons link-ddsecondary">
+          <li>
+            <a href="#"><i class="ri-user-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-heart-3-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-shopping-cart-line"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-gamepad-line"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section id="page-title" class="d-flex justify-content-center">
+      <div class="title h2 my-4 bg-bgColor">討論區</div>
+    </section>
+    <div class="container row mx-auto bg-bgColor">
+      <aside class="left col">
+        <section>
+          <div class="side-profile">
+            <a href="#">
+              <img id="side-avatar" src="img/user-avatar.png" alt="" />
+            </a>
+            <div class="badges">
+              <div class="user-badges">
+                <i class="ri-award-fill"></i>
+                <i class="ri-award-fill"></i>
+                <i class="ri-award-fill"></i>
+              </div>
+            </div>
+            <div class="user-title">
+              <div class="username h4">山田</div>
+              <div class="uid">@yamada114514</div>
+              <a href="#">我的主頁</a>
+            </div>
+          </div>
+        </section>
+        <section #side-nav>
+          <h5>分類</h5>
+          <ul class="list-unstyled">
+            <li>男裝</li>
+            <li>女裝</li>
+            <li>上衣</li>
+            <li>褲子</li>
+            <li>裙子</li>
+          </ul>
+          <h5>買家秀</h5>
+        </section>
+      </aside>
+      <main class="col">
+        <section>
+          <div id="compose-container">
+            <div class="compose-top mb-1">
+              <span class="avatar">
+                <img src="img/user-avatar.png" alt="" />
+              </span>
+              <span class="username h6">山田</span>
+              <span class="uid">@yamada9487</span>
+            </div>
+            <textarea name="forum-post" id="" rows="5" class="form-control">
+            </textarea>
+          </div>
+        </section>
+        <section
+          id="trending-posts"
+          class="d-flex flex-column justify-content-center"
+        >
+          <h4 class="my-4 mx-auto">熱門文章</h4>
+          <div id="trending-post-list" class="">
+            <ul class="list-unstyled d-flex gap-1">
+              <li>
+                <div class="trending-post-item">
+                  <img src="./img/pop_cat.jpg" alt="" class="img-fluid" />
+                </div>
+                <div class="post-desc">2024-03-31</div>
+              </li>
+              <li>
+                <div class="trending-post-item">
+                  <img src="./img/pop_cat.jpg" alt="" class="img-fluid" />
+                </div>
+                <div class="post-desc">2024-03-31</div>
+              </li>
+              <li>
+                <div class="trending-post-item">
+                  <img src="./img/pop_cat.jpg" alt="" class="img-fluid" />
+                </div>
+                <div class="post-desc">2024-03-31</div>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="timeline-posts">
+          <div
+            class="tiemline-post-item bg-light border border-ddprimary rounded"
+          >
+            <div class="post-top p-2">
+              <span class="avatar">
+                <img src="img/user-avatar.png" alt="" />
+              </span>
+              <span class="username">山田</span>
+              <span class="uid">@yamada9487</span>
+              <span class="date ml-auto">2024-03-31</span>
+            </div>
+            <div class="post-img">
+              <img class="img-fluid" src="./img/pop_cat.jpg" alt="" />
+            </div>
+            <div class="post-text m-2">
+              <p>
+                儘管如此，我們仍然需要對今天的穿搭保持懷疑的態度。若能夠洞悉今天的穿搭各種層面的含義，勢必能讓思維再提高一個層級。我們都知道，只要有意義，那麼就必須慎重考慮。在人生的歷程中，今天的穿搭的出現是必然的。劉鶚曾說過一句意義深遠的話，同君一席話，勝讀十年書。帶著這句話，我們還要更加慎重的審視這個……
+              </p>
+            </div>
+            <div class="action-bar d-flex gap-3 m-2">
+              <div class="action-like">
+                <i class="ri-heart-line"></i>
+                讚
+              </div>
+              <div class="action-comment">
+                <i class="ri-chat-1-line"></i>
+                留言
+              </div>
+              <div class="action-share">
+                <i class="ri-share-line"></i>
+                分享
+              </div>
+              <div class="action-bookmark">
+                <i class="ri-bookmark-line"></i>
+                收藏
+              </div>
+            </div>
+            <div class="comments m-2">
+              <div class="comment d-flex">
+                <div class="avatar me-2">
+                  <img src="./img/pop_cat.jpg" alt="" />
+                </div>
+                <div class="comment-right d-flex flex-column">
+                  <div class="comment-top">
+                    <span class="username">山田</span>
+                    <span class="comment-time">10秒前</span>
+                  </div>
+                  <p class="comment-text mb-0">啊是不會趕快跑喔還發文</p>
+                  <div class="comment-actions d-flex gap-3">
+                    <div class="action-like">
+                      <i class="ri-heart-line"></i>
+                      讚
+                    </div>
+                    <div class="action-comment">
+                      <i class="ri-chat-1-line"></i>
+                      留言
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <aside class="right col">
+        <section>
+          <div id="search">
+            <input type="text" class="form-control" placeholder="搜尋" />
+          </div>
+        </section>
+        <section>
+          <div class="hashtag-title my-4">
+            <h4>熱門話題</h4>
+          </div>
+          <div class="hashtag-list text-ddprimary">
+            <ul class="list-unstyled">
+              <li>#本日穿搭</li>
+              <li>#休閒</li>
+              <li>#運動</li>
+              <li>#復古</li>
+              <li>#牛仔褲</li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

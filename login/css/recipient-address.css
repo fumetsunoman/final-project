@@ -10,7 +10,7 @@ input[type="tel"],
 select {
 	width: 100%;
 	border: none;
-	border-bottom: 1px solid rgb(157, 145, 145);
+	border-bottom: 1px solid black;
 	/* 下划线颜色和样式可以根据需求进行调整 */
 	outline: none;
 	/* 去除默认的输入框轮廓样式 */

@@ -1,21 +1,59 @@
 body {
-	font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+}
+
+aside {
+  display: none;
+}
+
+main {
+  width: 80%;
+  margin-top: 90px;
+  border: 2px solid #abc8bc;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+
+main>div>div{
+  margin-bottom:20px;
 }
 
 
 
-
-.container {
-	position:absolute;
-	max-width: 450px !important;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+form div:nth-child(1){
+  margin-left:20px;
 }
 
+form div:nth-child(2){
+  margin-left:20px
+}
+
+form div:nth-child(3){
+  margin-top: 15px;
+  margin-left:20px
+}
+
+
+
+.recipient-address {
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+}
+
+.subTitle {
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
 
 label {
-	font-weight: 600;
-	margin-bottom: 0;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 input[type="text"],
@@ -23,146 +61,224 @@ input[type="email"],
 input[type="password"],
 input[type="tel"],
 select {
-	width: 100%;
-	border: none;
-	border-bottom: 1px solid black;
-	/* 下划线颜色和样式可以根据需求进行调整 */
-	outline: none;
-	/* 去除默认的输入框轮廓样式 */
-	border-radius: 0px;
-	height: 30px;
-	/* 將高度設置為 25px */
-	background-color:rgba(var(--bs-bgColor-rgb), var(--bs-bg-opacity)) ;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #abc8bc;
+  /* 下划线颜色和样式可以根据需求进行调整 */
+  outline: none;
+  /* 去除默认的输入框轮廓样式 */
+  border-radius: 0px;
+  height: 30px;
+  /* 將高度設置為 25px */
+  background-color: rgba(var(--bs-bgColor-rgb), var(--bs-bg-opacity));
 }
 
 div.phone {
-	width: 25%;
-	margin-right: 30px;
+  width: 30%;
+  margin-right: 15px;
 }
 
-
-button[type="submit"] {
-	font-weight: 600;
-	width: 100%;
-	border: 1px solid #918989;
-	border-radius: 5px;
-	background-color: #ffffff;
-	color: #000000;
-	cursor: pointer;
-	font-size: 22px;
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+  transition: transform 0.3s ease;
 }
-
-
-/* 当按钮被悬停时 */
-button:hover {
-	transform: translateY(-5px);
-	transition: transform 0.3s ease;
+.btn-7 {
+  background: #00917c;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
 }
-
+.btn-7 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #00917c;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
+    -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.btn-7:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-7:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-7:hover {
+  color: #00917c;
+  background: transparent;
+  font-weight: bold;
+  transform: scale(1.1);
+}
+.btn-7:hover:before {
+  height: 100%;
+}
+.btn-7:hover:after {
+  width: 100%;
+}
+.btn-7 span:before,
+.btn-7 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #00917c;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
+    -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.btn-7 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-7 span:after {
+  height: 2px;
+  width: 0%;
+}
+.btn-7 span:hover:before {
+  height: 100%;
+}
+.btn-7 span:hover:after {
+  width: 100%;
+}
 
 /* 調整出生年月日輸入框高度 */
 #birthdate {
-	height: 20px;
-	/* 設置輸入框高度為 30px */
+  height: 20px;
+  /* 設置輸入框高度為 30px */
 }
 
 .form-control {
-	margin-top: 5px;
-	background-color: #f8f9fa;
-	/* 设置输入框背景颜色为浅灰色 */
+  margin-top: 5px;
+  background-color: #f8f9fa;
+  /* 设置输入框背景颜色为浅灰色 */
 }
 
 /* 将占位符颜色设置为黑色 */
 input::placeholder {
-	color: black;
+  color: black;
 }
 
-
-.addAddress{
-	display:flex;
-	flex-wrap: wrap;
-
+.addAddress {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-
-.addAddress div{
-	width: 40%;
+.addAddress div {
+  width: 33%;
 }
-
 
 .addAddress .liveAddress {
-	margin-top: 30px;
-	width:50%
+  margin-top: 15px;
+  width: 33%;
 }
 
-form .phone {
-	width: 35%;
+footer {
+  margin-top: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  aside {
+    display: block;
+    margin-top: 90px;
+    width: 20%;
+  }
 
-@media screen and (min-width: 1440px) {
+  main {
+    width: 600px;
+  }
 
-	/* 較小螢幕的調整 */
-	.container {
-		max-width: 800px !important;
-		padding: 15px;
-		/* 減少內邊距以節省空間 */
-	}
+  main>div>div{
+    margin-bottom:40px;
+  }
 
-	/* 調整字型大小以提升可讀性 */
-	.recipient-address {
-		font-size: 24px;
-	}
+  form div:nth-child(1){
+    margin-left:0px
+  }
+  
+  form div:nth-child(2){
+    margin-left:0px
+  }
+  
+  form div:nth-child(3){
+    margin-left:0px
+  }
+  
 
-	/* 減少字型大小以適應較小螢幕 */
-	.form-control {
-		font-size: 14px;
-	}
 
 
 
-	/* 調整按鈕樣式以適應較小螢幕 */
-	button[type="submit"] {
-		font-size: 22px;
-		padding: 3px;
-		/* 增加按鈕的內邊距以改善觸摸目標大小 */
-	}
+  .recipient-address {
+    font-size: 28px;
+    display: flex;
+    justify-content:flex-start;
+  }
+  
+  .subTitle {
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+  }
 
-	/* 調整輸入框樣式以適應較小螢幕 */
-	input[type="text"],
-	input[type="email"],
-	input[type="password"],
-	input[type="tel"],
-	select {
-		font-size: 16px;
-		height: 35px;
-		/* 增加輸入框的高度以改善觸摸目標大小 */
-	}
+  /* 較小螢幕的調整 */
+  .container {
+    max-width: 800px !important;
+    padding: 15px;
+    /* 減少內邊距以節省空間 */
+  }
 
-	.addAddress{
-	display:flex;
-	flex-wrap: nowrap;
+  /* 調整字型大小以提升可讀性 */
+  .recipient-address {
+    font-size: 24px;
+  }
 
+  /* 減少字型大小以適應較小螢幕 */
+  .form-control {
+    font-size: 14px;
+  }
+
+  .addAddress {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .addAddress .liveAddress {
+    margin-top: 0px;
+    width: 33%;
+  }
+  
+
+  .phone {
+    width: 100%;
+  }
+
+  footer {
+    margin-top: 30px;
+  }
 }
-
-
-.addAddress div{
-	width: 33%;
-}
-
-
-.addAddress .liveAddress {
-	margin-top: 0px;
-	width:33%
-}
-
-.phone {
-		width: 30% ;
-	}
-
-
-
-
-
-}
-

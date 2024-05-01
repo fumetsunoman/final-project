@@ -26,12 +26,13 @@
         <div class="LOGO">
           <a href="#"><img src="../LOGO.png" alt="" /></a>
         </div>
-        <nav class="header_nav text-ddsecondary">
+        <nav class="header_nav">
           <ul class="header_font">
-            <li><a href="#">MEN</a></li>
-            <li><a href="#">WOMEN</a></li>
-            <li><a href="#">KID</a></li>
-            <li><a href="#">HOT</a></li>
+            <li><a href="#" class="link-ddsecondary">TOP</a></li>
+            <li><a href="#" class="link-ddsecondary">MEN</a></li>
+            <li><a href="#" class="link-ddsecondary">WOMEN</a></li>
+            <li><a href="#" class="link-ddsecondary">NEW</a></li>
+            <li><a href="#" class="link-ddsecondary">HOT</a></li>
           </ul>
         </nav>
         <ul class="header_icons">
@@ -49,16 +50,107 @@
           <li>
             <a href="#"><i class="ri-gamepad-line link-ddsecondary"></i></a>
           </li>
+          <li
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasTop"
+            aria-controls="offcanvasTop"
+          >
+            <i class="ri-menu-line link-dark"></i>
+          </li>
+
+          <div
+            class="offcanvas offcanvas-top"
+            tabindex="-1"
+            id="offcanvasTop"
+            aria-labelledby="offcanvasTopLabel"
+            style="height: 60%; width: 99%; border-radius: 20px; margin: 0 auto"
+          >
+            <div
+              class="offcanvas-header bg-headerColor d-block"
+              style="
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px;
+              padding-bottom: 0px;
+              "
+            >
+              <button
+                type="button"
+                class="btn-close text-reset d-block"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+                style="--bs-btn-close-focus-shadow: none"
+              ></button>
+              <ul class="ofs_icons link-ddsecondary">
+                <li>
+                  <a href="#"><i class="ri-user-line"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-heart-3-line"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-shopping-cart-line"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-gamepad-line"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="offcanvas-body bg-headerColor"
+              style="
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                padding-top: 0px;
+              "
+            >
+            <hr>
+              <nav class="ofs_navs">
+                <ul class="ofs_nav1">
+                  <li><a href="#">TOP</a></li>
+                  <li><a href="#">MEN</a></li>
+                  <li><a href="#">WOMEN</a></li>
+                  <li><a href="#">COUPLE</a></li>
+                  <li><a href="#">NEW</a></li>
+                  <li><a href="#">HOT</a></li>
+                </ul>
+                <ul class="ofs_nav2 text-black">
+                  <li><a href="#" class="fs-6">加入會員</a></li>
+                  <li><a href="#">登出</a></li>
+                  <li><a href="#">會員中心</a></li>
+                  <li><a href="#">關於我們</a></li>
+                  <li><a href="#">客服中心</a></li>
+                  <li><a href="#">回到主頁</a></li>
+                  <li><a href="#">色彩學</a></li>
+                </ul>
+              </nav>
+              <div class="footer_follow">
+                <div class="follow_me bg-ddprimary">
+                  <p class="follow_font">FOLLOW ME</p>
+                  <ul class="footer_icons">
+                    <li>
+                      <a href="#"><i class="ri-instagram-line"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="ri-line-line"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </ul>
       </div>
     </header>
+
+
+
     <div class="container">
       <div class="title">
         <p>購物車</p>
       </div>
 
       <section class="cart_session1">
-        <div class="part_left border-ddsecondary">
+        <div class="part_left">
           <table class="table table-bordered cart_table border-ddsecondary">
             <thead class="table-ddprimary">
               <tr class="mx-auto">
@@ -71,7 +163,7 @@
                 <th scope="col" class="col-2 fw-bold fs-6 text-white"></th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="products-info">
               <tr>
                 <th scope="row" class="product_info">
                   <img src="imgs/000000000311-05-xs.jpg" alt="商品圖" />
@@ -84,12 +176,11 @@
                 <td>
                   <input
                     type="number"
-                    class="form-control fw-bold border-ddsecondary"
-                    id="Product_count"
+                    class="form-control fw-bold border-ddsecondary Product_count"
                   />
                 </td>
-                <td>$4000</td>
-                <td>$4000</td>
+                <td>$4,000</td>
+                <td>$4,000</td>
                 <td style="font-size: 14px" class="text-ddsecondary">
                   <button class="productRow_button">刪除</button>
                   <hr class="text-dark" />
@@ -108,12 +199,11 @@
                 <td>
                   <input
                     type="number"
-                    class="form-control border-ddsecondary"
-                    id="Product_count"
+                    class="form-control border-ddsecondary Product_count"
                   />
                 </td>
-                <td>$4000</td>
-                <td>$4000</td>
+                <td>$4,000</td>
+                <td>$4,000</td>
                 <td style="font-size: 14px" class="text-ddsecondary">
                   <button class="productRow_button">刪除</button>
                   <hr class="text-dark" />
@@ -126,18 +216,17 @@
                   <div class="product_name">
                     <p>手提包</p>
                     <p style="font-size: 12px; color: #a2a2a2">(黑色的)</p>
-                    <p>$3500</p>
+                    <p>$3,500</p>
                   </div>
                 </th>
                 <td>
                   <input
                     type="number"
-                    class="form-control border-ddsecondary"
-                    id="Product_count"
+                    class="form-control border-ddsecondary Product_count"
                   />
                 </td>
-                <td>$4000</td>
-                <td>$4000</td>
+                <td>$4,000</td>
+                <td>$4,000</td>
                 <td style="font-size: 14px" class="text-ddsecondary">
                   <button class="productRow_button">刪除</button>
                   <hr class="text-dark" />
@@ -147,19 +236,22 @@
             </tbody>
           </table>
         </div>
-        <div class="part_right border-ddsecondary">
+        <div class="part_right">
           <ul class="part_right_count border-ddsecondary">
             <li>數量</li>
             <li>3</li>
           </ul>
           <ul class="part_right_count border-ddsecondary">
             <li>商品總計</li>
-            <li style="font-weight: bold">$14700</li>
+            <li style="font-weight: bold" class="text-price">$14,700</li>
           </ul>
-          <p style="font-size: 12px; margin: 30px 0 10px 20px">繼續訂購流程</p>
-          <button type="button" class="btn btn-ddprimary payment_btn">
-            <a class="text-white" href="./order.html">前往付款頁面</a>
+          <p class="keep_ordering_font">繼續訂購流程</p>
+          <button type="submit" class="custom-btn btn-7 ">
+            <span><a class="text-reset" href="./order.html">前往付款頁面</a></span>
           </button>
+          <!-- <button type="button" class="btn btn-ddprimary payment_btn">
+            <a class="text-white w-100 d-block" href="./order.html">前往付款頁面</a>
+          </button> -->
         </div>
       </section>
       <section class="cart_session2">
@@ -197,7 +289,6 @@
           <li style="position: relative">
             <a href="#"
               ><img
-                style="width: 250px"
                 src="imgs/000000000379-05-l.jpg"
                 alt="最愛商品"
               />
@@ -210,7 +301,6 @@
           <li style="position: relative">
             <a href="#"
               ><img
-                style="width: 250px"
                 src="imgs/000000000379-05-l.jpg"
                 alt="最愛商品"
               />
@@ -223,7 +313,6 @@
           <li style="position: relative">
             <a href="#"
               ><img
-                style="width: 250px"
                 src="imgs/000000000379-05-l.jpg"
                 alt="最愛商品"
               />
@@ -277,6 +366,6 @@
         >Copyright © 2023 DD SHOP All Rights Reserved.</small
       >
     </footer>
-    <script src="./javaScript/bootstrap.bundle.min.js"></script>
+    <script src="../javaScript/bootstrap.bundle.min.js"></script>
   </body>
 </html>

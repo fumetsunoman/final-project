@@ -22,18 +22,6 @@
     <link rel="stylesheet" href="../css/header&footercssStyle.css" />
     <link rel="stylesheet" href="../css/sidebar.css" />
     <link rel="stylesheet" href="./css/order-list.css" />
-
-    <style>
-      .title {
-        font-size: 30px;
-        text-align: center;
-        padding-top: 100px;
-        border-bottom: 3px solid black;
-        width: 120px;
-        margin: auto;
-        padding-bottom: 15px;
-      }
-    </style>
   </head>
 
   <body class="bg-bgColor">
@@ -42,12 +30,13 @@
         <div class="LOGO">
           <a href="#"><img src="../LOGO.png" alt="" /></a>
         </div>
-        <nav class="header_nav text-ddsecondary">
+        <nav class="header_nav">
           <ul class="header_font">
-            <li><a href="#">MEN</a></li>
-            <li><a href="#">WOMEN</a></li>
-            <li><a href="#">KID</a></li>
-            <li><a href="#">HOT</a></li>
+            <li><a href="#" class="link-ddsecondary">TOP</a></li>
+            <li><a href="#" class="link-ddsecondary">MEN</a></li>
+            <li><a href="#" class="link-ddsecondary">WOMEN</a></li>
+            <li><a href="#" class="link-ddsecondary">NEW</a></li>
+            <li><a href="#" class="link-ddsecondary">HOT</a></li>
           </ul>
         </nav>
         <ul class="header_icons">
@@ -65,36 +54,121 @@
           <li>
             <a href="#"><i class="ri-gamepad-line link-ddsecondary"></i></a>
           </li>
+          <li
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasTop"
+            aria-controls="offcanvasTop"
+          >
+            <i class="ri-menu-line link-dark"></i>
+          </li>
+
+          <div
+            class="offcanvas offcanvas-top"
+            tabindex="-1"
+            id="offcanvasTop"
+            aria-labelledby="offcanvasTopLabel"
+            style="height: 60%; width: 99%; border-radius: 20px; margin: 0 auto"
+          >
+            <div
+              class="offcanvas-header bg-headerColor d-block"
+              style="
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px;
+                padding-bottom: 0px;
+              "
+            >
+              <button
+                type="button"
+                class="btn-close text-reset d-block"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+                style="--bs-btn-close-focus-shadow: none"
+              ></button>
+              <ul class="ofs_icons link-ddsecondary">
+                <li>
+                  <a href="#"><i class="ri-user-line"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-heart-3-line"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-shopping-cart-line"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-gamepad-line"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="offcanvas-body bg-headerColor"
+              style="
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                padding-top: 0px;
+              "
+            >
+              <hr />
+              <nav class="ofs_navs">
+                <ul class="ofs_nav1">
+                  <li><a href="#">TOP</a></li>
+                  <li><a href="#">MEN</a></li>
+                  <li><a href="#">WOMEN</a></li>
+                  <li><a href="#">COUPLE</a></li>
+                  <li><a href="#">NEW</a></li>
+                  <li><a href="#">HOT</a></li>
+                </ul>
+                <ul class="ofs_nav2 text-black">
+                  <li><a href="#" class="fs-6">加入會員</a></li>
+                  <li><a href="#">登出</a></li>
+                  <li><a href="#">會員中心</a></li>
+                  <li><a href="#">關於我們</a></li>
+                  <li><a href="#">客服中心</a></li>
+                  <li><a href="#">回到主頁</a></li>
+                  <li><a href="#">色彩學</a></li>
+                </ul>
+              </nav>
+              <div class="footer_follow">
+                <div class="follow_me bg-ddprimary">
+                  <p class="follow_font">FOLLOW ME</p>
+                  <ul class="footer_icons">
+                    <li>
+                      <a href="#"><i class="ri-instagram-line"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="ri-line-line"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </ul>
       </div>
     </header>
     <div class="container">
-      <div class="title">
-        <p>購買紀錄</p>
-      </div>
+      <div class="title" style="padding-top: 15px"></div>
 
       <section class="orderList_session">
         <div class="part_left">
           <div class="secondarySidebar">
             <div><a href="#">首頁&nbsp; /</a></div>
-            <div>&nbsp; 我的帳戶&nbsp; /</div>
+            <div>&nbsp; 我的帳戶&nbsp; / </div>
             <div>&nbsp; 個人資料</div>
           </div>
           <!-- sidebar -->
           <div class="leftSidebar">
             <div class="sidebar">
-              <p class="member" style="font-size: 24px">會員中心</p>
-              <div><img id="bigHead" src="../images/boy.jpeg" alt="" /></div>
+              <p class="member" style="font-size: 24px;">會員中心</p>
+              <div><img id="bigHead" src="../images/boy.jpeg" alt=""></div>
               <ul class="myAccount">
-                <p style="margin-top: 10px">我的帳戶</p>
+                <p style="margin-top: 10px;">我的帳戶</p>
                 <li><a href="#">個人資料</a></li>
                 <li><a href="#">推薦尺寸</a></li>
                 <li><a href="#">收件地址</a></li>
               </ul>
               <ul class="myOrder">
                 <p>訂單中心</p>
-                <li><a href="#">個人資料</a></li>
-                <li><a href="#">收件地址</a></li>
+                <li><a href="#">購買紀錄</a></li>
                 <li><a href="#">購物車</a></li>
               </ul>
               <ul class="onlyForMember">
@@ -107,6 +181,7 @@
             </div>
           </div>
         </div>
+
         <div class="part_right">
           <div
             class="ords_list_select row bg-ddprimary text-center text-white align-items-center border-primary"
@@ -118,7 +193,6 @@
             <a href="" class="col-2"><span>取消</span></a>
             <a href="" class="col-2"><span>退貨/退款</span></a>
           </div>
-
           <div
             class="input-group mb-3 bg-white p-2 align-items-center"
             style="display: flex; gap: 5px"
@@ -131,213 +205,65 @@
               style="flex: 1; border: none"
             />
           </div>
-          <div class="border-ddsecondary buyingRecord_table">
-            <table
-              class="table table-bordered buyingRecord_table border-ddsecondary"
-            >
-              <thead class="table-ddprimary">
-                <tr class="mx-auto">
-                  <th scope="col" class="col-1 fw-bold fs-6 text-white">
-                    訂單編號
-                  </th>
-                  <th scope="col" class="col-1 fw-bold fs-6 text-white">
-                    訂購日期
-                  </th>
-                  <th scope="col" class="col-1 fw-bold fs-6 text-white">
-                    訂購數量
-                  </th>
-                  <th scope="col" class="col-1 fw-bold fs-6 text-white">
-                    收件人
-                  </th>
-                  <th scope="col" class="col-1 fw-bold fs-6 text-white">
-                    訂單狀態
-                  </th>
-                  <th scope="col" class="col-1 fw-bold fs-6 text-white">
-                    訂單金額
-                  </th>
-                  <th scope="col" class="col-1 fw-bold fs-6 text-white">
-                    產品詳情
-                  </th>
-                  <th scope="col" class="col-1 fw-bold fs-6 text-white">
-                    訂單明細
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">4123GBAWQ</th>
-                  <td>2024/04/06</td>
-                  <td>3</td>
-                  <td>宋雨琪</td>
-                  <td>已完成</td>
-                  <td>$4000</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-ords"
-                      data-bs-toggle="modal"
-                      data-bs-target="#ordsModal"
-                    >
-                      展開產品詳情
-                    </button>
-                  </td>
-                  <td class="goOrds">
-                    <a href="./order-details.html">前往訂單明細</a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">4123GBAWQ</th>
-                  <td>2024/04/06</td>
-                  <td>3</td>
-                  <td>宋雨琪</td>
-                  <td>送貨中</td>
-                  <td>$4000</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-ords"
-                      data-bs-toggle="modal"
-                      data-bs-target="#ordsModal"
-                    >
-                      展開產品詳情
-                    </button>
-                  </td>
-                  <td class="goOrds">
-                    <a href="./order-details.html">前往訂單明細</a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">4123GBAWQ</th>
-                  <td>2024/04/06</td>
-                  <td>3</td>
-                  <td>宋雨琪</td>
-                  <td>退貨</td>
-                  <td>$4000</td>
-                  <td>
-                    <button
-                      type="button"
-                      class="btn btn-ords"
-                      data-bs-toggle="modal"
-                      data-bs-target="#ordsModal"
-                    >
-                      展開產品詳情
-                    </button>
 
-                    <!-- 展開商品詳情Modal -->
-                    <div
-                      class="modal fade"
-                      id="ordsModal"
-                      tabindex="-1"
-                      aria-labelledby="ordsModalLabel"
-                      aria-hidden="true"
-                    >
-                      <div class="modal-dialog modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="ordsModalLabel">
-                              產品詳情
-                            </h5>
-                            <button
-                              type="button"
-                              class="btn-close"
-                              data-bs-dismiss="modal"
-                              aria-label="Close"
-                            ></button>
-                          </div>
-                          <div class="modal-body">
-                            <table
-                              class="table table-bordered border-ddsecondary"
-                            >
-                              <thead class="border-ddsecondary table-ddprimary">
-                                <tr class="mx-auto">
-                                  <th scope="col" class="col-1 fw-bold fs-6">
-                                    商品名稱
-                                  </th>
-                                  <th scope="col" class="col-1 fw-bold fs-6">
-                                    數量
-                                  </th>
-                                  <th scope="col" class="col-1 fw-bold fs-6">
-                                    單價
-                                  </th>
-                                  <th scope="col" class="col-1 fw-bold fs-6">
-                                    總價
-                                  </th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <th scope="row" class="product_info">
-                                    <img
-                                      src="imgs/000000000311-05-xs.jpg"
-                                      alt="商品圖"
-                                    />
-                                    <div class="product_name">
-                                      <p>背包</p>
-                                      <p
-                                        style="font-size: 12px; color: #a2a2a2"
-                                      >
-                                        (黑色的)
-                                      </p>
-                                      <p>$4000</p>
-                                    </div>
-                                  </th>
-                                  <td>1</td>
-                                  <td>$4000</td>
-                                  <td>$4000</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row" class="product_info">
-                                    <img
-                                      src="imgs/000000000310-07-xs.jpg"
-                                      alt="商品圖"
-                                    />
-                                    <div class="product_name">
-                                      <p>帆布手提包</p>
-                                      <p
-                                        style="font-size: 12px; color: #a2a2a2"
-                                      >
-                                        (棕色的)
-                                      </p>
-                                      <p>$7200</p>
-                                    </div>
-                                  </th>
-                                  <td>1</td>
-                                  <td>$4000</td>
-                                  <td>$4000</td>
-                                </tr>
-                                <tr>
-                                  <th scope="row" class="product_info">
-                                    <img
-                                      src="imgs/000000000354-08-xs.jpg"
-                                      alt="商品圖"
-                                    />
-                                    <div class="product_name">
-                                      <p>手提包</p>
-                                      <p
-                                        style="font-size: 12px; color: #a2a2a2"
-                                      >
-                                        (黑色的)
-                                      </p>
-                                      <p>$3500</p>
-                                    </div>
-                                  </th>
-                                  <td>1</td>
-                                  <td>$4000</td>
-                                  <td>$4000</td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                  <td class="goOrds">
-                    <a href="./order-details.html">前往訂單明細</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="buyingRecord d-grid gap-3">
+            <div class="buyingRecordItem bg-white p-3">
+              <div class="d-flex justify-content-between mb-2">
+                <i class="ri-file-list-line me-2"
+                  ><span class="ms-2">4123GBAWQ</span></i
+                >
+
+                <p class="text-price">已完成</p>
+              </div>
+
+              <div class="border-top">
+                <a
+                  class="d-flex justify-content-between align-items-center text-reset"
+                  href="./order-details.html"
+                >
+                  <div class="d-flex align-items-center">
+                    <img src="./imgs/000000000310-07-xs.jpg" alt="" />
+                    <ul>
+                      <li>媽媽喜歡的背包</li>
+                      <li class="text-secondary" style="font-size: 14px">
+                        規格:黑色
+                      </li>
+                      <li>x1</li>
+                    </ul>
+                    <p>...</p>
+                  </div>
+                  <p>訂單金額:<span class="text-price">$17600</span></p>
+                </a>
+              </div>
+            </div>
+
+            <div class="buyingRecordItem bg-white p-3">
+              <div class="d-flex justify-content-between mb-2">
+                <div>
+                  <i class="ri-file-list-line me-2"></i><span>4123GBAWQ</span>
+                </div>
+                <p class="text-price">已完成</p>
+              </div>
+              <div class="border-top">
+                <a
+                  class="d-flex justify-content-between align-items-center text-reset"
+                  href="./order-details.html"
+                >
+                  <div class="d-flex align-items-center">
+                    <img src="./imgs/000000000310-07-xs.jpg" alt="" />
+                    <ul>
+                      <li>媽媽喜歡的背包</li>
+                      <li class="text-secondary" style="font-size: 14px">
+                        規格:黑色
+                      </li>
+                      <li>x1</li>
+                    </ul>
+                    <p>...</p>
+                  </div>
+                  <p>訂單金額:<span class="text-price">$17600</span></p>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

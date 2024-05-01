@@ -9,144 +9,193 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
     <!-- 導入scss css樣式 -->
     <link rel="stylesheet" href="./scss/custom.css" />
     <!-- header&footer css樣式 -->
     <link rel="stylesheet" href="./css/header&footercssStyle.css" />
-    <style>
-        section{
-          width: auto;
-          margin:  auto;
-        }
-        .container {
-          padding: 7px;
-          /* background-color: rgb(24, 179, 179); */
-        }
-        #s1 {
-          height: 500px;
-        }
-        .card{
-          border-radius: 20px;
-          margin-top: 10px;
-          width: 396px; 
-          height: 688px;
-          /* position: "static"; */
-        }
-        .card-img-top{
-          border-radius: 20px 20px 0 0 ; 
-          width: 100%; 
-          height: 415px;  
-      }
-      .hot-text{
-          width: 100%;
-          height: 60px;
-          text-align: center;
-          line-height: 60px;
-          margin: 10px 0 0 0;
-      }
-      .card-body{
-        margin-top: -150px;
-          padding: 0;
-          gap: 45px;
-          height: 310px;
-      }
-      .pr-midden{
-          width: 100%;
-          height: 240px;
-      }
-      .more-block{
-        width: 100%;
-        height: auto;
-        gap: 215px;
-        align-self: stretch;
-      }
-      .pr-min-img{
-          width: 150px;
-          height: 150px;
-          border-radius: 50% ;
-          background-color: antiquewhite;
-      }
-      .pr-min-img img{
-          border-radius: 50%;
-      }
-      .pr-min-text h2{
-        margin: 0;
-      }
-      .pr-more-bt{
-          width: 77px;
-          height: 24px;
-          line-height: 24px;
-          padding: 0;
-      }
-      .pr-more-text{
-          margin: 0;
-      }
-      .rank-card{
-        width: 300px;
-        height: 220px;
-        border: solid 1px black;
-        border-radius: 20px;
-      }
-      .rank-img{
-        width: 160px;
-        height: 100%;
-        border-radius: 20px 0  0 20px;
-      }
-      .rank-img img{
-        border-radius: 20px 0  0 20px;
-      }
-      .rank-text-group{
-        width: 100px;
-        height: 100%;
-      }
-      #rankCarousel{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-      .carousel-inner {
-        width: 300px;
-      }
-
-      </style>
+    <link rel="stylesheet" href="./css/index.css">
   </head>
   
   <body>
     <header>
       <div class="header_background bg-headerColor">
-        <h1 class="LOGO"><a href="#"><img src="LOGO.png" alt=""></a></h1>
-        <nav class="header_nav text-ddsecondary">
-          <ul class="header_font link-ddsecondary">
-            <li><a href="#">MEN</a></li>
-            <li><a href="#">WOMEN</a></li>
-            <li><a href="#">KID</a></li>
-            <li><a href="#">HOT</a></li>
+        <div class="LOGO">
+          <a href="#"><img src="./LOGO.png" alt="" /></a>
+        </div>
+        <nav class="header_nav">
+          <ul class="header_font">
+            <li><a href="#" class="link-ddsecondary">TOP</a></li>
+            <li><a href="#" class="link-ddsecondary">MEN</a></li>
+            <li><a href="#" class="link-ddsecondary">WOMEN</a></li>
+            <li><a href="#" class="link-ddsecondary">NEW</a></li>
+            <li><a href="#" class="link-ddsecondary">HOT</a></li>
           </ul>
         </nav>
-        <ul class="header_icons link-ddsecondary">
-          <li><a href="#"><i class="ri-user-line"></i></a></li>
-          <li><a href="#"><i class="ri-heart-3-line"></i></a></li>
-          <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
-          <li><a href="#"><i class="ri-gamepad-line"></i></a></li>
+        <ul class="header_icons">
+          <li>
+            <a href="#"><i class="ri-user-line link-ddsecondary"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-heart-3-line link-ddsecondary"></i></a>
+          </li>
+          <li>
+            <a href="#"
+              ><i class="ri-shopping-cart-line link-ddsecondary"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="ri-gamepad-line link-ddsecondary"></i></a>
+          </li>
+          <li
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasTop"
+            aria-controls="offcanvasTop"
+          >
+            <i class="ri-menu-line link-dark"></i>
+          </li>
+
+          <div
+            class="offcanvas offcanvas-top"
+            tabindex="-1"
+            id="offcanvasTop"
+            aria-labelledby="offcanvasTopLabel"
+            style="height: 60%; width: 99%; border-radius: 20px; margin: 0 auto"
+          >
+            <div
+              class="offcanvas-header bg-headerColor d-block"
+              style="
+                border-top-right-radius: 20px;
+                border-top-left-radius: 20px;
+              padding-bottom: 0px;
+              "
+            >
+              <button
+                type="button"
+                class="btn-close text-reset d-block"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+                style="--bs-btn-close-focus-shadow: none"
+              ></button>
+              <ul class="ofs_icons link-ddsecondary">
+                <li>
+                  <a href="#"><i class="ri-user-line"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-heart-3-line"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-shopping-cart-line"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-gamepad-line"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="offcanvas-body bg-headerColor"
+              style="
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                padding-top: 0px;
+              "
+            >
+            <hr>
+              <nav class="ofs_navs">
+                <ul class="ofs_nav1">
+                  <li><a href="#">TOP</a></li>
+                  <li><a href="#">MEN</a></li>
+                  <li><a href="#">WOMEN</a></li>
+                  <li><a href="#">COUPLE</a></li>
+                  <li><a href="#">NEW</a></li>
+                  <li><a href="#">HOT</a></li>
+                </ul>
+                <ul class="ofs_nav2 text-black">
+                  <li><a href="#" class="fs-6">加入會員</a></li>
+                  <li><a href="#">登出</a></li>
+                  <li><a href="#">會員中心</a></li>
+                  <li><a href="#">關於我們</a></li>
+                  <li><a href="#">客服中心</a></li>
+                  <li><a href="#">回到主頁</a></li>
+                  <li><a href="#">色彩學</a></li>
+                </ul>
+              </nav>
+              <div class="footer_follow">
+                <div class="follow_me bg-ddprimary">
+                  <p class="follow_font">FOLLOW ME</p>
+                  <ul class="footer_icons">
+                    <li>
+                      <a href="#"><i class="ri-instagram-line"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="ri-line-line"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </ul>
       </div>
     </header>
-    <section id="s1" class="bg-bgColor">
-        <div class="container"></div>
+
+    <section id="indexCarouselBlock " class="bg-bgColor">
+        <!-- <div class="container"> -->
+          <div id="indexCarousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators index-indicators top-50 start-100 translate-middle">
+              <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">1</button>
+              <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="1" aria-label="Slide 2">2</button>
+              <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="2" aria-label="Slide 3">3</button>
+              <button type="button" data-bs-target="#indexCarousel" data-bs-slide-to="3" aria-label="Slide 4">4</button>
+            </div>
+            <div class="carousel-inner index-inner">
+              <div class="carousel-item h-100 active ">
+                <img src="./indexImgs/mv_slide05.jpg" class="d-block   img-thumbnail" alt="...">
+                <div class="carousel-caption d-none d-md-block indexCarousel-img">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item h-100 ">
+                <img src="./indexImgs/mv_slide06.jpg" class="d-block  img-thumbnail" alt="...">
+                <div class="carousel-caption d-none d-md-block indexCarousel-img">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item h-100 ">
+                <img src="./indexImgs/mv_slide05.jpg" class="d-block  img-thumbnail" alt="...">
+                <div class="carousel-caption d-none d-md-block indexCarousel-img">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item h-100 ">
+                <img src="./indexImgs/mv_slide06.jpg" class="d-block  img-thumbnail " alt="...">
+                <div class="carousel-caption d-none d-md-block indexCarousel-img">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev indexBtnL" type="button" data-bs-target="#indexCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next indexBtnR" type="button" data-bs-target="#indexCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <!-- </div> -->
     </section>
-    <section id="s2" class=" bg-bgColor" >
-      <div class="container d-flex flex-column justify-content-evenly align-items-center">
-        <h2 class="text-black hot-text">熱門商品</h2>
+
+    <section id="hotBlock" class="bg-bgColor " >
+      <div class="container d-flex flex-column flex-xxl-row  justify-content-between align-items-center flex-wrap">
+        <h1 class="text-black hot-text">熱門商品</h1>
         <!-- 卡片 -->
-        <div class="card bg-ddsecondary" >
-            <img src="/487PrXS.jpg" class="card-img-top" alt="...">
-            <div class="card-body d-flex flex-column justify-content-center">
+          <div class="topcard bg-ddsecondary" >
+            <img src="/indexImgs/hot_01.jpg" class="card-img-top" alt="...">
+            <div class="card-body hotcard-body d-flex flex-column justify-content-center ">
               <div class="pr-midden  d-flex flex-column justify-content-center align-items-center">
                 
                 <div class="pr-min-img">
@@ -157,25 +206,100 @@
                     <h2 >PARENTS</h2>
                 </div>
               </div>
-              <div class="more-block  d-flex justify-content-center align-items-center ">
+              <div class="more-block  d-flex justify-content-around  align-items-center ">
+                <p class="text-black pr-more-text">デイパック</p>
+                <button type="button" class="btn btn-dark pr-more-bt">MORE</button>
+              </div>
+            </div>
+          </div>        
+          <div class="topcard bg-ddsecondary" >
+            <img src="/indexImgs/hot_04.jpg" class="card-img-top" alt="...">
+            <div class="card-body hotcard-body d-flex flex-column justify-content-center">
+              <div class="pr-midden  d-flex flex-column justify-content-center align-items-center">
+                
+                <div class="pr-min-img">
+                    <img src="..." class="img-fluid" alt="">
+                </div>
+                <div class="pr-min-text d-flex flex-column w-75">
+                    <h2 >PARENTS</h2>
+                    <h2 >PARENTS</h2>
+                </div>
+              </div>
+              <div class="more-block  d-flex  justify-content-around  align-items-center ">
                 <p class="text-black pr-more-text">デイパック</p>
                 <button type="button" class="btn btn-dark pr-more-bt">MORE</button>
               </div>
             </div>
           </div>
-         
+          <div class="bottomcard bg-ddsecondary" >
+            <img src="/indexImgs/hot_02.jpg" class="card-img-top" alt="...">
+            <div class="card-body hotcard-body d-flex flex-column justify-content-center">
+              <div class="pr-midden  d-flex flex-column justify-content-center align-items-center">
+                
+                <div class="pr-min-img">
+                    <img src="..." class="img-fluid" alt="">
+                </div>
+                <div class="pr-min-text d-flex flex-column w-75">
+                    <h2 >PARENTS</h2>
+                    <h2 >PARENTS</h2>
+                </div>
+              </div>
+              <div class="more-block  d-flex justify-content-around align-items-center ">
+                <p class="text-black pr-more-text">デイパック</p>
+                <button type="button" class="btn btn-dark pr-more-bt">MORE</button>
+              </div>
+            </div>
+          </div>
+          <div class="bottomcard bg-ddsecondary" >
+            <img src="/indexImgs/hot_03.jpg" class="card-img-top" alt="...">
+            <div class="card-body hotcard-body d-flex flex-column justify-content-center">
+              <div class="pr-midden  d-flex flex-column justify-content-center align-items-center">
+                
+                <div class="pr-min-img">
+                    <img src="..." class="img-fluid" alt="">
+                </div>
+                <div class="pr-min-text d-flex flex-column w-75">
+                    <h2 >PARENTS</h2>
+                    <h2 >PARENTS</h2>
+                </div>
+              </div>
+              <div class="more-block  d-flex justify-content-around align-items-center ">
+                <p class="text-black pr-more-text">デイパック</p>
+                <button type="button" class="btn btn-dark pr-more-bt">MORE</button>
+              </div>
+            </div>
+          </div>
+          <div class="bottomcard bg-ddsecondary" >
+            <img src="/indexImgs/hot_05.jpg" class="card-img-top" alt="...">
+            <div class="card-body hotcard-body d-flex flex-column justify-content-center">
+              <div class="pr-midden  d-flex flex-column justify-content-center align-items-center">
+                
+                <div class="pr-min-img">
+                    <img src="..." class="img-fluid" alt="">
+                </div>
+                <div class="pr-min-text d-flex flex-column w-75">
+                    <h2 >PARENTS</h2>
+                    <h2 >PARENTS</h2>
+                </div>
+              </div>
+              <div class="more-block  d-flex justify-content-around align-items-center ">
+                <p class="text-black pr-more-text">デイパック</p>
+                <button type="button" class="btn btn-dark pr-more-bt">MORE</button>
+              </div>
+            </div>
+          </div>
       </div>
     </section>
     
-    <section id="Rank">
-        <div class="container d-flex flex-column align-items-center"
+    <section id="Rank" class="bg-bgColor">
+        <div class="container d-flex flex-column align-items-center "
         style="height: 500px;">
             <h1>排名</h1>
             <!-- 排名按鈕 -->
-            <div>
-                <button></button>
-                <button></button>
-                <button></button>
+            <div class="d-flex justify-content-evenly  w-100 ">
+              <a href="" class="rankA h2" >全部</a>
+              <a href="" class="rankA h2" >男裝</a>
+              <a href="" class="rankA h2" >女裝</a>     
             </div>
             <!-- 排名區 -->
             <div id="rankCarousel" class="carousel carousel-dark slide"  data-bs-interval="false">
@@ -183,7 +307,7 @@
                     <span class="carousel-control-prev-icon " aria-hidden="true"></span>
                     <span class="visually-hidden ">Previous</span>
                   </button>
-                <div class="carousel-inner">
+                <div class="carousel-inner rankCarouselInner">
                   <div class="carousel-item active ">
                     <div class="rank-card d-flex justify-content-between  align-items-center bg-ddsecondary">
                         <div class="rank-img">
@@ -229,7 +353,7 @@
 
     </section>
     
-    <footer class="bg-ddprimary">
+    <footer class="bg-ddprimary " >
       <nav class="footer_navs">
         <ul class="footer_nav1 text-white">
           <li><a href="#">MEN</a></li>

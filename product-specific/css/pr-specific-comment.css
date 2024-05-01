@@ -1,0 +1,115 @@
+/* :root {
+    --price-color: #c1886f;
+    --secondary-deep: #f7f4ef;
+    --secondary-light: #fdfcfb;
+    --primary-deep: #857367;
+    --primary-regular: #b6b7a9;
+} */
+.price-color {
+    color: var(--price-color);
+}
+.secondary-deep {
+    color: var(--secondary-deep);
+}
+.secondary-light {
+    background-color: var(--secondary-light);
+}
+.primary-deep {
+    color: var(--primary-deep);
+}
+.primary-regular {
+    color: var(--primary-regular);
+}
+
+/* -font size */
+.text-10 {
+    font-size: 0.625rem;
+}
+.text-16 {
+    font-size: 1rem;
+}
+.text-20 {
+    font-size: 1.25rem;
+}
+.text-21 {
+    font-size: 1.3125rem;
+}
+.text-30 {
+    font-size: 1.875rem;
+}
+.text-38 {
+    font-size: 2.375rem;
+    font-weight: 600;
+}
+
+/*?computer */
+header div {
+    background-color: var(--secondary-light);
+}
+footer {
+    background-color: var(--primary-regular);
+}
+.body-cus {
+    background-color: var(--secondary-deep);
+}
+.review-select {
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    margin-right: 50%;
+    border: #b6b7a9 1px solid;
+    border-radius: 5%;
+}
+
+.pr-comment-photo {
+    width: 4rem;
+}
+#checkbox input[type="checkbox"] {
+    display: none;
+}
+#checkbox input:checked + .button {
+    background: var(--primary-deep);
+    color: var(--secondary-light);
+}
+#checkbox .button {
+    display: inline-block;
+    margin: 0 5px 10px 0;
+    padding: 5px 10px;
+    background: var(--secondary-deep);
+    color: black;
+    cursor: pointer;
+}
+#checkbox .button:hover {
+    background: var(--primary-regular);
+    color: var(--secondary-light);
+}
+#checkbox .round {
+    border-radius: 5px;
+}
+.my-btn {
+    border-color: var(--primary-deep);
+}
+.imgbox,
+.show-img {
+    width: 10rem;
+}
+/*?cell */
+@media screen and (max-width: 414px) {
+    .text-30 {
+        font-size: 1.5rem;
+    }
+    .xxs-none {
+        display: none;
+    }
+    .review-select {
+        margin-right: 0;
+    }
+
+    .pr-comment-photo {
+        width: 14rem;
+    }
+    .cell-pr {
+        align-items: center;
+        margin-top: 2%;
+    }
+}

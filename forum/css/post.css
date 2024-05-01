@@ -1,0 +1,23 @@
+.container {
+  padding-top: 70px;
+}
+
+.post-left {
+  margin-right: 60px;
+}
+
+.post-left .photo-main {
+  width: 600px;
+  height: 600px;
+}
+
+.thumb-link-img {
+  width: 200px;
+  height: 200px;
+}
+
+.avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}

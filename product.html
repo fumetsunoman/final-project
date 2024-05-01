@@ -4,8 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- 插入統一的css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- 導入scss css樣式 -->
-    <link rel="stylesheet" href="./scss/custom.css" />
+    <link rel="stylesheet" href="../scss/custom.css" />
+    <!-- header&footer css樣式 -->
+    <link rel="stylesheet" href="../css/header&footercssStyle.css" />
 
     <link rel="stylesheet" href="./css/product.css" />
     <link rel="stylesheet" href="./product-specific/css/pr-specific.css" />
@@ -23,8 +36,8 @@
         box-shadow: 0 0 3px black;
         /* 还可以添加其他样式，如背景颜色、大小等 */
       }
-      .form-check-input:not(:checked){
-        box-shadow:none;
+      .form-check-input:not(:checked) {
+        box-shadow: none;
       }
       .form-check {
         height: 35px;
@@ -37,17 +50,36 @@
         height: 29px;
         width: 29px;
       }
-      .card-header{
-        background-color:white;
+      .card-header {
+        background-color: white;
       }
     </style>
   </head>
   <body>
-    <header></header>
-    <section>
-      <div class="container container-xxl bg-bgColor">
-        <div class="row">
-          <p class="text-price">.text-primary</p>
+    <header>
+      <div class="header_background bg-headerColor">
+        <div class="LOGO"><a href="#"><img src="./LOGO.png" alt=""></a></div>
+        <nav class="header_nav text-ddsecondary">
+          <ul class="header_font link-ddsecondary">
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KID</a></li>
+            <li><a href="#">HOT</a></li>
+          </ul>
+        </nav>
+        <ul class="header_icons link-ddsecondary">
+          <li><a href="#"><i class="ri-user-line"></i></a></li>
+          <li><a href="#"><i class="ri-heart-3-line"></i></a></li>
+          <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+          <li><a href="#"><i class="ri-gamepad-line"></i></a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="bg-bgColor">
+      <div class="container container-xxl ">
+        <div class="row ">
+          <h1 class="text-center" style="margin-top: 100px;">男裝</h1>
           <!-- 側邊攔 -->
           <div class="col-xxl-3 d-flex flex-column justify-content-start">
             <button
@@ -62,35 +94,90 @@
             </button>
             <div id="productCollaps">
               <div class="card border-primary mb-3" style="max-width: 18rem">
-                <div class="card-header " >顏色</div>
+                <div class="card-header">顏色</div>
                 <div class="card-body d-flex justify-content-start flex-wrap">
                   <!-- checkbox -->
-                  <div class="form-check d-flex justify-content-center align-items-center">
-                    <input class="form-check-input bg-info" type="checkbox" value="" id="flexCheckDefault">
+                  <div
+                    class="form-check d-flex justify-content-center align-items-center"
+                  >
+                    <input
+                      class="form-check-input bg-info"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
                   </div>
 
-                  <div class="form-check d-flex justify-content-center align-items-center">
-                    <input class="form-check-input bg-black" type="checkbox" value="" id="flexCheckChecked" checked>
-                  </div>
-                 
-                  <div class="form-check d-flex justify-content-center align-items-center">
-                    <input class="form-check-input bg-success" type="checkbox" value="" id="flexCheckChecked" checked>
-                  </div>
-
-                  <div class="form-check d-flex justify-content-center align-items-center">
-                    <input class="form-check-input bg-danger" type="checkbox" value="" id="flexCheckChecked" checked>
-                  </div>
-
-                  <div class="form-check d-flex justify-content-center align-items-center">
-                    <input class="form-check-input bg-white" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <div
+                    class="form-check d-flex justify-content-center align-items-center"
+                  >
+                    <input
+                      class="form-check-input bg-black"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
                   </div>
 
-                  <div class="form-check d-flex justify-content-center align-items-center">
-                    <input class="form-check-input bg-dark " type="checkbox" value="" id="flexCheckChecked" checked>
+                  <div
+                    class="form-check d-flex justify-content-center align-items-center"
+                  >
+                    <input
+                      class="form-check-input bg-success"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
                   </div>
 
-                  <div class="form-check d-flex justify-content-center align-items-center">
-                    <input class="form-check-input bg-warning" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <div
+                    class="form-check d-flex justify-content-center align-items-center"
+                  >
+                    <input
+                      class="form-check-input bg-danger"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                  </div>
+
+                  <div
+                    class="form-check d-flex justify-content-center align-items-center"
+                  >
+                    <input
+                      class="form-check-input bg-white"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                  </div>
+
+                  <div
+                    class="form-check d-flex justify-content-center align-items-center"
+                  >
+                    <input
+                      class="form-check-input bg-dark"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                  </div>
+
+                  <div
+                    class="form-check d-flex justify-content-center align-items-center"
+                  >
+                    <input
+                      class="form-check-input bg-warning"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
                   </div>
                 </div>
               </div>
@@ -108,11 +195,11 @@
           </div>
 
           <!-- 商品陳列主區塊 -->
-          <div class="col-xxl-9">
+          <div class="col-xxl-9 mb-5">
             <!-- 商品上方區塊 -->
             <div
-              class="row justify-content-start"
-              style="height: 40px; padding-left: 22px"
+              class="row justify-content-start mb-3"
+              style="height: 40px; padding-left: 10px"
             >
               <!-- 上方列表 -->
               <div
@@ -162,8 +249,7 @@
             </div>
             <!-- 商品列表區 -->
             <div
-              class="row row-cols-2 row-cols-xxl-4 justify-content-around align-items-center"
-              style="height: 1100px"
+              class="row row-cols-2 row-cols-xxl-4 justify-content-around align-items-center gap-3"
             >
               <div
                 class="d-flex rounded-1 flex-column suggest-product-card productsSize"
@@ -497,11 +583,41 @@
               </nav>
             </div>
           </div>
+          
         </div>
       </div>
     </section>
 
-    <footer></footer>
+    <footer class="bg-ddprimary">
+    <nav class="footer_navs">
+      <ul class="footer_nav1 text-white">
+        <li><a href="#">MEN</a></li>
+        <li><a href="#">WOMEN</a></li>
+        <li><a href="#">KID</a></li>
+        <li><a href="#">COUPLE</a></li>
+        <li><a href="#">HOT</a></li>
+      </ul>
+      <ul class="footer_nav2 text-black">
+        <li><a href="#">加入會員</a></li>
+        <li><a href="#">登出</a></li>
+        <li><a href="#">會員中心</a></li>
+        <li><a href="#">關於我們</a></li>
+        <li><a href="#">客服中心</a></li>
+        <li><a href="#">回到主頁</a></li>
+        <li><a href="#">色彩學</a></li>
+      </ul>
+    </nav>
+    <div class="footer_follow">
+      <div class="follow_me">
+        <p class="follow_font">FOLLOW ME</p>
+        <ul class="footer_icons">
+          <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+          <li><a href="#"><i class="ri-line-fill"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <small class="footer_small">Copyright © 2023 DD SHOP All Rights Reserved.</small>
+  </footer>
     <script src="./javaScript/bootstrap.bundle.min.js"></script>
   </body>
 </html>

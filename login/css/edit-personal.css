@@ -2,17 +2,8 @@ body {
 	font-family: Arial, sans-serif;
 }
 
-.personalData{
-	display: flex;
-	justify-content: center;
-}
 
-.container {
-	max-width: 450px;
-	padding: 30px;
-	border: 1px solid rgb(157, 145, 145);
-	border-radius: 5px;
-}
+
 
 
 .writeName div{
@@ -143,9 +134,7 @@ form div div   button{
 @media screen and (min-width: 1440px) {
 /* 在此處添加要應用於較小螢幕時的樣式 */
 
-.container{
-	max-width: 800px !important;
-}
+
 
 .writeName div{
 	width: 30% ;

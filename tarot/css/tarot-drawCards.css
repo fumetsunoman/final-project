@@ -60,25 +60,26 @@
 
 .comet {
   transform-origin: center center;
-  animation: comet 15s linear infinite;
+  animation: comet 8s linear infinite;
 }
 @keyframes comet {
-  0%,
-  40% {
+  0%, 40% {
     transform: translateX(0);
     opacity: 0;
   }
   50% {
     opacity: 1;
   }
-  60%,
-  100% {
+  60%, 100% {
     transform: translateX(-100vmax);
     opacity: 0;
   }
 }
+.comet-a {
+  animation-delay: -1.7s;
+}
 .comet-b {
-  animation-delay: -3.3s;
+  animation-delay: -2s;
 }
 .comet-c {
   animation-delay: -5s;
@@ -99,43 +100,43 @@
   animation-delay: -2.5s;
 }
 .comet-i {
-  animation-delay: -10.3s;
+  animation-delay: -6.3s;
 }
 .comet-j {
-  animation-delay: -7.8s;
+  animation-delay: -5.8s;
 }
 .comet-k {
-  animation-delay: -9.8s;
+  animation-delay: -4.8s;
 }
 .comet-l {
-  animation-delay: -12.2s;
+  animation-delay: -3.2s;
 }
 .comet-m {
-  animation-delay: -8.2s;
+  animation-delay: -2.2s;
 }
 .comet-n {
-  animation-delay: -13.5s;
+  animation-delay: -1.5s;
 }
 .comet-o {
-  animation-delay: -11.5s;
+  animation-delay: -6.5s;
 }
 .comet-p {
   animation-delay: -2.7s;
 }
 .comet-q {
-  animation-delay: -11.7s;
+  animation-delay: -5.7s;
 }
 .comet-r {
   animation-delay: -1.3s;
 }
 .comet-s {
-  animation-delay: -13.3s;
+  animation-delay: -4.3s;
 }
 .comet-t {
-  animation-delay: -13.4s;
+  animation-delay: -3.4s;
 }
 .comet-u {
-  animation-delay: -12.4s;
+  animation-delay: -2.4s;
 }
 .comet-v {
   animation-delay: -2.8s;
@@ -144,25 +145,25 @@
   animation-delay: -1.9s;
 }
 .comet-x {
-  animation-delay: -10.2s;
+  animation-delay: -1.2s;
 }
 .comet-y {
-  animation-delay: -8.8s;
+  animation-delay: -6.8s;
 }
 .comet-z {
-  animation-delay: -11.4s;
+  animation-delay: -5.4s;
 }
 .comet-1 {
   animation-delay: -1.6s;
 }
 .comet-2 {
-  animation-delay: -7.2s;
+  animation-delay: -4.2s;
 }
 .comet-3 {
-  animation-delay: -8.7s;
+  animation-delay: -3.7s;
 }
 .comet-4 {
-  animation-delay: -9.1s;
+  animation-delay: -2.1s;
 }
 
 .container {
@@ -272,43 +273,189 @@ main {
 
 main img {
   width: 100px;
+  border-radius: 5px;
 }
 
 .modal {
-  display: none;
   position: absolute;
   top: 50%; /* 垂直置中 */
   left: 50%; /* 水平置中 */
   transform: translate(-50%, -50%); /* 置中 */
-  width: 280px;
   height: 300px;
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
-.modalContent {
+.modal-body {
   height: 258.4px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-.btn {
-  background-color: #9370db;
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.btn-7 {
+  background: linear-gradient(to bottom, #9370db, #7654bb, #593a9b, #3d207d, #1f0660);
+
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-7 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #9370db;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
+    -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.btn-7:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-7:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-7:hover,
+.btn-7 a:hover {
+  color: #9370db;
+  background: transparent;
+}
+.btn-7:hover:before {
+  height: 100%;
+}
+.btn-7:hover:after {
+  width: 100%;
+}
+.btn-7 span:before,
+.btn-7 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #9370db;
+  box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.9),
+    -4px -4px 5px 0px rgba(255, 255, 255, 0.9),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.2), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.btn-7 span:before,
+.btn-7 a:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-7 span:after,
+.btn-7 a:after {
+  height: 2px;
+  width: 0%;
+}
+.btn-7 span:hover:before,
+.btn-7 a:hover:before {
+  height: 100%;
+}
+.btn-7 span:hover:after,
+.btn-7 a:hover:after {
+  width: 100%;
+}
+.btn-7 a {
+  text-decoration: none;
   color: white;
 }
+
+.btn-11 {
+  overflow: hidden;
+  /* 添加右邊框線 */
+  border-right: 2px solid transparent;
+}
+.btn-11:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+/* 添加按鈕懸停時的邊框顏色 */
+.btn-11:hover {
+  border-right-color: #9370db;
+}
+.custom-btn.btn-11:hover:before {
+ /* 滑鼠懸停時的邊框閃爍效果 */
+  animation: none; /* 禁用動畫 */
+}
+@-webkit-keyframes shiny-btn1 {
+  0% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  61% {
+    -webkit-transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* .btn {
+  background-color: #9370db;
+  color: white;
+  transition: transform 0.3s ease;
+} */
 /* 滑鼠懸停時保持紫色 */
-.btn:hover {
+/* .btn:hover {
   background-color: #9370db;
   color: white;
-}
+  transform: scale(1.1);
+} */
 /* 點擊時保持紫色 */
-.btn:active,
+/* .btn:active,
 .btn:focus {
   background-color: #9370db !important;
   color: white;
+}
+.btn a{
+  text-decoration: none;
+  color: white;
+} */
+
+/* 手機XR模式 */
+@media screen and (min-width: 414px) {
+  main h5 {
+    font-size: calc(1.275rem + 0.3vw);
+  }
 }
 
 /* 平板模式 */
@@ -449,15 +596,9 @@ main img {
   }
 
   .modal {
-    width: 450px;
-    height: 400px;
-  }
-  .modalContent {
-    height: 358px;
-  }
-  main h5 {
-    font-size: calc(1.275rem + 0.3vw);
-  }
+    width: 350px;
+    height: 500px;
+  } 
 }
 
 /* 電腦模式 */

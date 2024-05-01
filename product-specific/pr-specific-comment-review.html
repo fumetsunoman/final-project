@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>comment-review</title>
+  <link rel="stylesheet" type="text/css" href="css/font/flaticon_april.css">
+  
+  <link rel="stylesheet" href="../css/sidebar.css">
+  <!-- 插入統一的css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+TC:wght@100..900&display=swap&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+  <!-- 導入scss css樣式 -->
+ 
+  <link rel="stylesheet" href="../scss/custom.css" />
+  <!-- header&footer css樣式 -->
+
+  <link rel="stylesheet" href="../css/header&footercssStyle.css" />
+  <link rel="stylesheet" href="css/pr-specific-comment.css">
+</head>
+
+<body class="body-cus">
+
+    <header>
+      <div class="header_background bg-headerColor">
+        <h1 class="LOGO"><a href="#"><img src="LOGO.png" alt=""></a></h1>
+        <nav class="header_nav text-ddsecondary">
+          <ul class="header_font link-ddsecondary">
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KID</a></li>
+            <li><a href="#">HOT</a></li>
+          </ul>
+        </nav>
+        <ul class="header_icons link-ddsecondary">
+          <li><a href="#"><i class="ri-user-line"></i></a></li>
+          <li><a href="#"><i class="ri-heart-3-line"></i></a></li>
+          <li><a href="#"><i class="ri-shopping-cart-line"></i></a></li>
+          <li><a href="#"><i class="ri-gamepad-line"></i></a></li>
+        </ul>
+      </div>
+    </header>
+ 
+ 
+  <div class="container  ">
+    
+    <div class="row mb-5">
+
+      <div class="col-sm-3  col-12 xxs-none mt-5 pt-5">
+        <div class="sidebar ">
+          <p class="member" style="font-size: 24px;">會員中心</p>
+          <div><img id="bigHead" src="../images/boy.jpeg" alt=""></div>
+          <ul class="myAccount">
+            <p style="margin-top: 10px;">我的帳戶</p>
+            <li><a href="#">個人資料</a></li>
+            <li><a href="#">推薦尺寸</a></li>
+            <li><a href="#">收件地址</a></li>
+          </ul>
+          <ul class="myOrder">
+            <p>訂單中心</p>
+            <li><a href="#">個人資料</a></li>
+            <li><a href="#">收件地址</a></li>
+            <li><a href="#">購物車</a></li>
+          </ul>
+          <ul class="onlyForMember">
+            <p>會員專屬</p>
+            <li><a href="#">優惠券</a></li>
+            <li><a href="#">塔羅牌</a></li>
+            <li><a href="#">色彩學</a></li>
+            <li><a href="#">我的客製紀錄</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-9 col-12 mt-sm-5 pt-sm-5 mt-0 pt-0 ">
+        <div class="d-flex justify-content-start">
+            <div class=" my-0"><i class=" text-30 flaticon-previous"></i></div>
+          </div>
+        <div class="d-flex  flex-column mt-sm-1 pt-sm-1 mt-0 pt-0 cell-pr">
+          <!-- -此商品概要 -->
+          <div class="d-flex  flex-sm-row flex-column cell-pr">
+            <div class="d-flex pr-comment-photo"><img class="w-100" src="https://ajuga.itembox.design/product/003/000000000310/000000000310-27.jpg?t=20240124033852" alt=""></div>
+            <div class="d-flex flex-column ms-3">
+              <div class="d-flex text-30">媽媽的帆布袋</div>
+              <div class="d-flex">尺寸s顏色黑</div>
+            </div>
+          </div>
+          <div class="d-flex ">
+            <div class="d-flex text-21"><span class=" comment-title">總體星數</span></div>
+            <div class="d-flex ps-2"><i class=" text-30 flaticon-star-nofill"></i><i class=" text-30 flaticon-star-nofill"></i><i class=" text-30 flaticon-star-nofill"></i><i class=" text-30 flaticon-star-nofill"></i><i class=" text-30 flaticon-star-nofill"></i></div>
+          </div>
+          <div class="d-flex flex-column mt-3 mb-1">
+            <div class="d-flex text-20"><span class=" comment-title d-flex">商品評價標籤<span class="d-flex align-items-end text-10">(此為複選)</span></span></div>
+          </div>
+
+          <div class="d-flex flex-column review-select">
+            <div id="checkbox">材質
+              <label><input type="checkbox" name="variety" value="材質舒服" checked="checked" /><span class="round button">綜藝</span></label>
+              <label><input type="checkbox" name="variety" value="材質厚度剛好" checked="checked" /><span class="round button">節目</span></label>
+              <label><input type="checkbox" name="variety" value="做工精緻" checked="checked" /><span class="round button">隨選隨看</span></label>
+            </div>
+            <div id="checkbox">外型
+              <label><input type="checkbox" name="variety" value="與圖片無落差" checked="checked" /><span class="round button">綜藝</span></label>
+              <label><input type="checkbox" name="variety" value="沒有色差" checked="checked" /><span class="round button">節目</span></label>
+              <label><input type="checkbox" name="variety" value="長度剛好" checked="checked" /><span class="round button">隨選隨看</span></label>
+            </div>
+            <div id="checkbox">尺寸
+              <label><input type="checkbox" name="variety" value="尺碼相符" checked="checked" /><span class="round button">綜藝</span></label>
+              <label><input type="checkbox" name="variety" value="有彈性" checked="checked" /><span class="round button">節目</span></label>
+              <label><input type="checkbox" name="variety" value="可自由伸縮" checked="checked" /><span class="round button">隨選隨看</span></label>
+            </div>
+          </div>
+          <div class="d-flex flex-column">
+            <label for="review" class="text-20 d-flex "><span class="d-flex comment-title">評論區<span class="d-flex align-items-end text-10">(30/100)</span></span></label>
+            <textarea rows="10" cols="50" placeholder="***店鋪評分是匿名的。
+       請您根據本次交易，給予真實、客觀、仔細地評估。 
+       您的評價將是其他會員的參考，也是我們前進的動力。
+       可於完成訂單後30天內評價，
+       評價如超過30字並含有照片即可或的優惠卷一張!
+       " style="font-size: 14px;"></textarea>
+          </div>
+          <div class="d-flex price-color"><i class="flaticon-loud-speaker"></i>評價如超過30字並含有照片即可獲得優惠卷一張!</div>
+          <div class="d-flex">上傳照片<span class="text-10 align-items-end d-flex">(限5張)</span></div>
+          <div class="d-block">
+
+            <input type="file" id="upfile" onchange="showImg(this)">
+            <div class="imgbox">
+              <div id="img" class="show-img "></div>
+              <img id="showimg" src="" class="w-100">
+            </div>
+          </div>
+          <div class="d-flex justify-content-around px-5 mx-5" >
+            <div  class="d-flex ms-5 ps-5"><a class="btn my-btn" href="#" role="button">取消</a></div>
+            <div  class="d-flex ms-5 ps-5"><button  type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                送出
+              </button></div>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">已送出您寶貴的評價</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              恭喜或的優惠卷一張!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn  btn-outline-secondary" data-bs-dismiss="modal">編輯評價</button>
+              <button type="button" class="btn  btn-outline-success">查收優惠卷</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer class="bg-ddprimary">
+      <nav class="footer_navs">
+        <ul class="footer_nav1 text-white">
+          <li><a href="#">MEN</a></li>
+          <li><a href="#">WOMEN</a></li>
+          <li><a href="#">KID</a></li>
+          <li><a href="#">COUPLE</a></li>
+          <li><a href="#">HOT</a></li>
+        </ul>
+        <ul class="footer_nav2 text-black">
+          <li><a href="#">加入會員</a></li>
+          <li><a href="#">登出</a></li>
+          <li><a href="#">會員中心</a></li>
+          <li><a href="#">關於我們</a></li>
+          <li><a href="#">客服中心</a></li>
+          <li><a href="#">回到主頁</a></li>
+          <li><a href="#">色彩學</a></li>
+        </ul>
+      </nav>
+      <div class="footer_follow">
+        <div class="follow_me">
+          <p class="follow_font">FOLLOW ME</p>
+          <ul class="footer_icons">
+            <li><a href="#"><i class="ri-instagram-fill"></a></i></li>
+            <li><a href="#"><i class="ri-line-fill"></a></i></li>
+          </ul>
+        </div>
+      </div>
+      <small class="footer_small">Copyright © 2023 DD SHOP All Rights Reserved.</small>
+    </footer>
+ 
+  <script>
+    function showImg(thisimg) {
+      var showimg = document.getElementById("showimg");
+      showimg.src = ""; //每一次顯示圖片時將上一次的圖片清空
+      var file = thisimg.files[0]; //調用FileList第一個 File 型別物件
+
+
+      var fr = new FileReader(); //建立新的 FileReader 物件
+      fr.onloadend = function(even) {
+        showimg.src = even.target.result; //透過其回傳參數 event.target.result 取得讀取的內容
+      };
+
+      fr.readAsDataURL(file); // 調用readAsDataURL() 方法 將file 物件為參數傳入
+
+
+    }
+  </script>
+  <script src="../javaScript/bootstrap.bundle.min.js"></script>
+  <script src="../javaScript/sidebar.js"></script>
+</body>
+
+</html>

@@ -90,7 +90,7 @@ justify-content:center;
 
 
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
 
 	.leftSidebar{
 		display:flex;
@@ -167,7 +167,7 @@ justify-content:center;
 
 	.secondarySidebar {
 		display: flex;
-		font-size: 14px;
+		font-size: 12px;
 	}
 
 	.secondarySidebar div:nth-child(1) {
